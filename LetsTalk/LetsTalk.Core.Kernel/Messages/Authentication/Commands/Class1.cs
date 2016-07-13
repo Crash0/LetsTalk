@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LetsTalk.Kernel
+namespace LetsTalk.Kernel.Messages.Authentication.Commands
 {
-    public class Class1
+    class Class1
     {
     }
 }

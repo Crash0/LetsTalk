@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LetsTalk.Kernel")]
+[assembly: AssemblyTitle("LetsTalk.Core.Common.Contracts")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LetsTalk.Kernel")]
+[assembly: AssemblyProduct("LetsTalk.Core.Common.Contracts")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fcadd41c-8be3-469e-94a9-25e3f79508b8")]
+[assembly: Guid("2d8d79f4-8974-4830-8f87-ec6d4247c9cd")]
 
 // Version information for an assembly consists of the following four values:
 //
