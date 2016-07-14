@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LetsTalk.Business.Mannagers.Tests
+namespace LetsTalk.Business.Managers.Tests
 {
     [TestClass]
     public class UnitTest1

@@ -21,6 +21,7 @@ namespace LetsTalk.Surveys.Data.Tests
         }
 
         [TestMethod]
+        [TestCategory("Integration")]
         public void test_repository_usage_integration()
         {
             var repositoryTestClass = new RepositoryTestClass();
@@ -56,6 +57,7 @@ namespace LetsTalk.Surveys.Data.Tests
         }
 
         [TestMethod]
+        [TestCategory("Integration")]
         public void test_repositoryFactory_IntegrationUsage()
         {
             var rtc = new RepositoryFactoryTestClass();

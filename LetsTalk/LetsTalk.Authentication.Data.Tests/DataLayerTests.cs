@@ -21,6 +21,7 @@ namespace LetsTalk.Authentication.Data.Tests
         }
 
         [TestMethod]
+        [TestCategory("Integration")]
         public void test_repository_Usage_Integration()
         {
             var repositoryTestClass = new RepositoryTestClass();
@@ -58,7 +59,8 @@ namespace LetsTalk.Authentication.Data.Tests
         }
 
         [TestMethod]
-        public void test_repositoryFactory_usage()
+        [TestCategory("Integration")]
+        public void test_repositoryFactory_usage_Integration()
         {
            RepositoryFactoryTestClass repositoryFactoryTest = new RepositoryFactoryTestClass();
             var accounts = repositoryFactoryTest.GetUserAccounts();
