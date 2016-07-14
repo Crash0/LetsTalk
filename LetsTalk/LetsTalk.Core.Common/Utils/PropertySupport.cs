@@ -1,10 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿#region Header
+
+// <copyright file="PropertySupport.cs" company="GoDialog AS">
+// File Created:  2016 07 13
+// Last Modified: 2016 201607 13 
+// All rights reserved. 2016
+// </copyright>
+// <summary>  
+// <summary>
+
+#endregion
+
+#region Usings
+
+using System;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+
+#endregion
 
 namespace LetsTalk.Core.Common.Utils
 {

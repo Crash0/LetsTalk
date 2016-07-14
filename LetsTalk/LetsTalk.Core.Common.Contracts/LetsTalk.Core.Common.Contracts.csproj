@@ -40,7 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBusinessEngine.cs" />
+    <Compile Include="IBusinessFactory.cs" />
+    <Compile Include="IDataRepositoryFactory.cs" />
+    <Compile Include="DataRepository.cs" />
+    <Compile Include="IDataRepository.cs" />
     <Compile Include="IDirtyCapable.cs" />
+    <Compile Include="IIdentifiableEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
