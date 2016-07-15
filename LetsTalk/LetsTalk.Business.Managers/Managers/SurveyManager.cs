@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Security.Permissions;
 using System.ServiceModel;
-using LetsTalk.Business.Contracts.Service_Contracts;
+using LetsTalk.Business.Contracts;
 using LetsTalk.Business.Entities.Surveys;
 using LetsTalk.Core.Common.Exceptions;
 
-namespace LetsTalk.Business.Managers.Managers
+namespace LetsTalk.Business.Managers
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall,
         ConcurrencyMode = ConcurrencyMode.Multiple,
         ReleaseServiceInstanceOnTransactionComplete = false)]
-    public class SurveyMannager : ManagerBase, ISurveyService
+    public class SurveyManager : ManagerBase, ISurveyService
     {
-
         public Survey GetSurvey(string id)
         {
             return
@@ -65,7 +63,7 @@ namespace LetsTalk.Business.Managers.Managers
         [OperationBehavior(TransactionScopeRequired = true)]
         public void DeleteSurvey(string id)
         {
-           //delete
+            //delete
         }
     }
 }

@@ -14,6 +14,7 @@ namespace LetTalk.Test
         public void UsingTestTypeEnum_Description_ShouldReturnEnumName()
         {
             Assert.IsTrue(TestType.Integration.ToString() == "Integration");
+
         }
     }
 }

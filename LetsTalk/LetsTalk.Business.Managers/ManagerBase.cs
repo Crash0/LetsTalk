@@ -1,17 +1,18 @@
 ﻿using System;
 using System.ServiceModel;
+using LetsTalk.Core.Common.Exceptions;
 
 namespace LetsTalk.Business.Managers
 {
     public class ManagerBase
     {
-        protected string _loginTolken ;
+        protected string LoginToken ;
         public ManagerBase()
         {
             var operationContext = OperationContext.Current;
             if (operationContext != null)
             {
-                _loginTolken = operationContext.IncomingMessageHeaders.GetHeader<string>("String", "System");
+                LoginToken = operationContext.IncomingMessageHeaders.GetHeader<string>("String", "System");
                 //TODO:MEssage Authserver and Authorize token
             }
         }

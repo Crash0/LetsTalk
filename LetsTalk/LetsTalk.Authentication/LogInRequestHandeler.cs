@@ -8,7 +8,7 @@ using NServiceBus;
 
 namespace LetsTalk.Authentication
 {
-    public class LogInRecquestHandeler : IHandleMessages<LoginRequestLoginCommand>
+    public class LogInRequestHandeler : IHandleMessages<LoginRequestLoginCommand>
     {
         public void Handle(LoginRequestLoginCommand message)
         {

@@ -43,7 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ManagerBase.cs" />
-    <Compile Include="Managers\SurveyMannager.cs" />
+    <Compile Include="Managers\AuthenticationManager.cs" />
+    <Compile Include="Managers\SurveyManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

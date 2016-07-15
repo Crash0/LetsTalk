@@ -4,13 +4,12 @@ using LetsTalk.Business.Entities.Surveys;
 using LetsTalk.Core.Common.Contracts;
 using LetsTalk.Core.Common.Exceptions;
 
-namespace LetsTalk.Business.Contracts.Service_Contracts
+namespace LetsTalk.Business.Contracts
 {
     [ServiceContract]
     public interface ISurveyService
     {
         [OperationContract]
-        [FaultContract(typeof(NotFoundException))]
         Survey GetSurvey(string id);
 
         [OperationContract]
