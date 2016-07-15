@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Composition;
 using LetsTalk.Authentication.Data.Contracts;
+using LetsTalk.Authentication.Data.Tests.TestClasses;
 using LetsTalk.Business.Bootstrapper;
 using LetsTalk.Business.Entities.Authentication;
 using LetsTalk.Core.Common.Contracts;
@@ -20,15 +20,7 @@ namespace LetsTalk.Authentication.Data.Tests
             ObjectBase.Container = MEFLoader.Init();
         }
 
-        [TestMethod]
-        [TestCategory("Integration")]
-        public void test_repository_Usage_Integration()
-        {
-            var repositoryTestClass = new RepositoryTestClass();
-            var accounts = repositoryTestClass.GetAccounts();
-            Assert.IsTrue(accounts != null, "accounts is null");
-        }
-
+        
         [TestMethod]
         public void test_repository_Mocking()
         {
@@ -58,16 +50,7 @@ namespace LetsTalk.Authentication.Data.Tests
             Assert.IsTrue(Equals(userAccounts, result), "List from repository does not match the class passed into the mock");
         }
 
-        [TestMethod]
-        [TestCategory("Integration")]
-        public void test_repositoryFactory_usage_Integration()
-        {
-           RepositoryFactoryTestClass repositoryFactoryTest = new RepositoryFactoryTestClass();
-            var accounts = repositoryFactoryTest.GetUserAccounts();
-
-            Assert.IsTrue(accounts != null,"Returned Accounts is null");
-        }
-
+        
         [TestMethod]
         public void test_repositoryFactory_mockUsage()
         {
@@ -98,54 +81,5 @@ namespace LetsTalk.Authentication.Data.Tests
         }
 
 
-    }
-
-
-    public class RepositoryFactoryTestClass
-    {
-        public RepositoryFactoryTestClass()
-        {
-            ObjectBase.Container.SatisfyImportsOnce(this);
-        }
-
-        [Import]
-        private IDataRepositoryFactory _dataRepositoryFactory;
-
-        public RepositoryFactoryTestClass(IDataRepositoryFactory dataRepositoryFactory)
-        {
-            _dataRepositoryFactory = dataRepositoryFactory;
-        }
-
-        public IEnumerable<UserAccount> GetUserAccounts()
-        {
-            var accountRepository
-                = _dataRepositoryFactory.GetDataRepository<IAccountRepository>();
-
-            var userAccounts = accountRepository.Get();
-
-            return userAccounts;
-        }
-    }
-
-    public class RepositoryTestClass
-    {
-        [Import]
-        private IAccountRepository _accountRepository;
-
-        public RepositoryTestClass()
-        {
-            ObjectBase.Container.SatisfyImportsOnce(this);
-        }
-
-        public RepositoryTestClass(IAccountRepository accountRepository)
-        {
-            _accountRepository = accountRepository;
-        }
-
-        public IEnumerable<UserAccount> GetAccounts()
-        {
-            var accounts = _accountRepository.Get();
-            return accounts;
-        }
     }
 }

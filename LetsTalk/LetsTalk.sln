@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Authentication", "LetsTalk.Authentication\LetsTalk.Authentication.csproj", "{683C9BC5-E226-497E-9B2C-4F38DE547E79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Letstalk.Client.Enitites", "Letstalk.Client.Enitites\Letstalk.Client.Enitites.csproj", "{5578418C-82E6-45E4-8083-07AEC8B672D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Letstalk.Client.Entites", "Letstalk.Client.Enitites\Letstalk.Client.Entites.csproj", "{5578418C-82E6-45E4-8083-07AEC8B672D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Core.Common", "LetsTalk.Core.Common\LetsTalk.Core.Common.csproj", "{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}"
 EndProject
@@ -67,11 +67,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Survey.Data.Tests"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{15BFADFB-E22D-478F-BCE3-D8B8EBB3414B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{025241C8-61BA-4FEC-8F54-FCE2D71AA1BB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Surveys.Business.Engine.Tests", "LetsTalk.Surveys.Business.Engine\LetsTalk.Surveys.Business.Engine.Tests.csproj", "{D930D0DF-687C-4326-9016-E350FB568336}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Business.Mannagers.Tests", "LetsTalk.Business.Mannagers.Tests\LetsTalk.Business.Mannagers.Tests.csproj", "{E3186353-1140-4D4E-A4C9-6FA37C59EF41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Business.Managers.Tests", "LetsTalk.Business.Mannagers.Tests\LetsTalk.Business.Managers.Tests.csproj", "{E3186353-1140-4D4E-A4C9-6FA37C59EF41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Client.Contracts", "LetsTalk.Client.Contracts\LetsTalk.Client.Contracts.csproj", "{969E9D32-09F0-417B-B628-30B625303743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Client.Bootstrapper", "LetsTalk.Client.Bootstrapper\LetsTalk.Client.Bootstrapper.csproj", "{6F974F9E-88BF-4932-8AEF-22A7BEDFA60A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Client.Proxies", "LetsTalk.Client.Proxies\LetsTalk.Client.Proxies.csproj", "{21C9342E-9EA1-42FF-9C0D-64B55460AE21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetTalk.Test", "LetTalk.Test\LetTalk.Test.csproj", "{A73C3742-8895-4CF7-B131-386710E53593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Core.Common.ServiceModel", "LetsTalk.Core.Common.ServiceModel\LetsTalk.Core.Common.ServiceModel.csproj", "{6E29A410-8B2A-4BCE-813D-3AE79A7D52D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -167,6 +175,26 @@ Global
 		{E3186353-1140-4D4E-A4C9-6FA37C59EF41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3186353-1140-4D4E-A4C9-6FA37C59EF41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3186353-1140-4D4E-A4C9-6FA37C59EF41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{969E9D32-09F0-417B-B628-30B625303743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{969E9D32-09F0-417B-B628-30B625303743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969E9D32-09F0-417B-B628-30B625303743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{969E9D32-09F0-417B-B628-30B625303743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F974F9E-88BF-4932-8AEF-22A7BEDFA60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F974F9E-88BF-4932-8AEF-22A7BEDFA60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F974F9E-88BF-4932-8AEF-22A7BEDFA60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F974F9E-88BF-4932-8AEF-22A7BEDFA60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21C9342E-9EA1-42FF-9C0D-64B55460AE21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C9342E-9EA1-42FF-9C0D-64B55460AE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C9342E-9EA1-42FF-9C0D-64B55460AE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C9342E-9EA1-42FF-9C0D-64B55460AE21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A73C3742-8895-4CF7-B131-386710E53593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A73C3742-8895-4CF7-B131-386710E53593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A73C3742-8895-4CF7-B131-386710E53593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A73C3742-8895-4CF7-B131-386710E53593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E29A410-8B2A-4BCE-813D-3AE79A7D52D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E29A410-8B2A-4BCE-813D-3AE79A7D52D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E29A410-8B2A-4BCE-813D-3AE79A7D52D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E29A410-8B2A-4BCE-813D-3AE79A7D52D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -199,5 +227,10 @@ Global
 		{15BFADFB-E22D-478F-BCE3-D8B8EBB3414B} = {9891BC90-DF50-4CB6-A14D-7ADDF92C1B7C}
 		{D930D0DF-687C-4326-9016-E350FB568336} = {1CD437F0-906D-49ED-A759-3043FE7BBCDC}
 		{E3186353-1140-4D4E-A4C9-6FA37C59EF41} = {15BFADFB-E22D-478F-BCE3-D8B8EBB3414B}
+		{969E9D32-09F0-417B-B628-30B625303743} = {25DDB70E-35C9-4377-8045-26416B4D7735}
+		{6F974F9E-88BF-4932-8AEF-22A7BEDFA60A} = {25DDB70E-35C9-4377-8045-26416B4D7735}
+		{21C9342E-9EA1-42FF-9C0D-64B55460AE21} = {25DDB70E-35C9-4377-8045-26416B4D7735}
+		{A73C3742-8895-4CF7-B131-386710E53593} = {9891BC90-DF50-4CB6-A14D-7ADDF92C1B7C}
+		{6E29A410-8B2A-4BCE-813D-3AE79A7D52D3} = {9D34DFC6-3A83-4CF8-9665-A0D0BFBD2703}
 	EndGlobalSection
 EndGlobal

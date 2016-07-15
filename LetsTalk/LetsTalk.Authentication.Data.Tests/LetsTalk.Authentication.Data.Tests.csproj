@@ -70,8 +70,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DataLayerIntegrationTests.cs" />
     <Compile Include="DataLayerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestClasses\RepositoryFactoryTestClass.cs" />
+    <Compile Include="TestClasses\RepositoryTestClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -101,6 +104,10 @@
     <ProjectReference Include="..\LetsTalk.Core.Common\LetsTalk.Core.Common.csproj">
       <Project>{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}</Project>
       <Name>LetsTalk.Core.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetTalk.Test\LetTalk.Test.csproj">
+      <Project>{A73C3742-8895-4CF7-B131-386710E53593}</Project>
+      <Name>LetTalk.Test</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

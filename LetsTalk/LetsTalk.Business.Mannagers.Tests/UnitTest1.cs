@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LetsTalk.Business.Managers.Tests
 {
@@ -9,6 +8,7 @@ namespace LetsTalk.Business.Managers.Tests
         [TestMethod]
         public void TestMethod1()
         {
+            
         }
     }
 }

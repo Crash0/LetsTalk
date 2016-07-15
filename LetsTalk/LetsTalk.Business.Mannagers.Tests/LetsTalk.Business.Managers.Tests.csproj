@@ -6,8 +6,8 @@
     <ProjectGuid>{E3186353-1140-4D4E-A4C9-6FA37C59EF41}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LetsTalk.Business.Mannagers.Tests</RootNamespace>
-    <AssemblyName>LetsTalk.Business.Mannagers.Tests</AssemblyName>
+    <RootNamespace>LetsTalk.Business.Managers.Tests</RootNamespace>
+    <AssemblyName>LetsTalk.Business.Managers.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
