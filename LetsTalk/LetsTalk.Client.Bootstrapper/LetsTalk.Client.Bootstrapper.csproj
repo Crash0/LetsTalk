@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>6f974f9e-88bf-4932-8aef-22a7bedfa60a</ProjectGuid>
+    <ProjectGuid>{6F974F9E-88BF-4932-8AEF-22A7BEDFA60A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LetsTalk.Client.Bootstrapper</RootNamespace>
@@ -30,24 +30,42 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="MEFLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LetsTalk.Client.Contracts\LetsTalk.Client.Contracts.csproj">
+      <Project>{969E9D32-09F0-417B-B628-30B625303743}</Project>
+      <Name>LetsTalk.Client.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Client.Proxies\LetsTalk.Client.Proxies.csproj">
+      <Project>{21C9342E-9EA1-42FF-9C0D-64B55460AE21}</Project>
+      <Name>LetsTalk.Client.Proxies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
+      <Project>{2D8D79F4-8974-4830-8F87-EC6D4247C9CD}</Project>
+      <Name>LetsTalk.Core.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common.ServiceModel\LetsTalk.Core.Common.ServiceModel.csproj">
+      <Project>{6E29A410-8B2A-4BCE-813D-3AE79A7D52D3}</Project>
+      <Name>LetsTalk.Core.Common.ServiceModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common\LetsTalk.Core.Common.csproj">
+      <Project>{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}</Project>
+      <Name>LetsTalk.Core.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -57,5 +75,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>

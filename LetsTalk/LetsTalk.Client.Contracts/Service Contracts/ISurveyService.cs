@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ServiceModel;
 using System.Threading.Tasks;
-using Letstalk.Client.Entities;
+using Letstalk.Client.Entities.Survey;
 using LetsTalk.Core.Common.Contracts;
 using LetsTalk.Core.Common.Exceptions;
 

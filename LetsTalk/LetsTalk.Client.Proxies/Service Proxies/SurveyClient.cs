@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Letstalk.Client.Entities;
+using Letstalk.Client.Entities.Survey;
 using LetsTalk.Client.Contracts;
 using LetsTalk.Core.Common.ServiceModel;
 
 namespace LetsTalk.Client.Proxies
 {
+    [Export(typeof(ISurveyService))]
+    [PartCreationPolicy(CreationPolicy.NonShared)]
     public class SurveyClient : UserClientBase<ISurveyService>, ISurveyService
     {
         public Survey GetSurvey(string id)

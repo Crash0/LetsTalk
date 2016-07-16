@@ -1,4 +1,5 @@
 ﻿#region Header
+
 // <copyright file="AuthenticationClient.cs" company="GoDialog AS">
 // File Created:  2016 07 15
 // Last Modified: 2016 201607 15 
@@ -6,15 +7,20 @@
 // </copyright>
 // <summary>  
 // <summary>
+
 #endregion
 
+using System.ComponentModel.Composition;
 using System.ServiceModel;
 using System.Threading.Tasks;
 using LetsTalk.Client.Contracts;
+using LetsTalk.Core.Common.ServiceModel;
 
 namespace LetsTalk.Client.Proxies
 {
-    public class AuthenticationClient : ClientBase<IAuthenticationService>,IAuthenticationService
+    [Export(typeof(IAuthenticationService))]
+    [PartCreationPolicy(CreationPolicy.NonShared)]
+    public class AuthenticationClient : UserClientBase<IAuthenticationService>, IAuthenticationService
     {
         public string GetAuthenticationToken(string loginId, string passHash)
         {

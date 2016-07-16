@@ -12,15 +12,16 @@ namespace LetsTalkDataService
 {
     public class WebRole : RoleEntryPoint
     {
-        private SM.ServiceHost _authenticationServiceHost;
+        private List<SM.ServiceHost> _hosts;
         public override bool OnStart()
         {
 
             try
             {
-                _authenticationServiceHost = new WebServiceHost(typeof(AuthenticationManager));
-                _authenticationServiceHost.Open();
-
+                Console.WriteLine("Starting Services");
+                StartService(typeof(AuthenticationManager));
+                StartService(typeof(SurveyManager));
+                Console.WriteLine("Services OK");
                 return true;
 
             }
@@ -32,9 +33,24 @@ namespace LetsTalkDataService
             }
         }
 
+        private void StartService(Type serviceMannager)
+        {
+            Console.WriteLine($"Started service of type {serviceMannager}");
+            if (_hosts == null)
+                _hosts = new List<SM.ServiceHost>();
+            
+
+            var host = new WebServiceHost(serviceMannager);
+            host.Open();
+            _hosts.Add(host);
+        }
+
         public override void OnStop()
         {
-            _authenticationServiceHost.Close();
+            foreach (var serviceHost in _hosts)
+            {
+                serviceHost.Close();
+            }
         }
     }
 }
