@@ -72,6 +72,18 @@
       <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.5.2.14\lib\net45\NServiceBus.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NServiceBus.Transports.RabbitMQ, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.RabbitMQ.3.3.3\lib\net45\NServiceBus.Transports.RabbitMQ.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=3.6.3.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>..\packages\RabbitMQ.Client.3.6.3\lib\net45\RabbitMQ.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Spatial, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Spatial.5.7.0\lib\net40\System.Spatial.dll</HintPath>
       <Private>True</Private>
@@ -140,6 +152,10 @@
     <ProjectReference Include="..\LetsTalk.Core.Common\LetsTalk.Core.Common.csproj">
       <Project>{e19d81a5-bbf6-413e-a62d-a31307bbdbbc}</Project>
       <Name>LetsTalk.Core.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Kernel\LetsTalk.Core.Kernel.csproj">
+      <Project>{FCADD41C-8BE3-469E-94A9-25E3F79508B8}</Project>
+      <Name>LetsTalk.Core.Kernel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

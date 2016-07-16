@@ -9,7 +9,7 @@ using LetsTalk.Core.Common.Core;
 
 namespace LetsTalk.Core.Common.BusinessEngine
 {
-    class BusinessEngineFactory : IBusinessFactory
+    class BusinessEngineEngineFactory : IBusinessEngineFactory
     {
         public T GetBusinessEngine<T>() where T : IBusinessEngine
         {

@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.5.2.14\lib\net45\NServiceBus.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,7 +48,7 @@
     <Compile Include="IIdentityContainer.cs" />
     <Compile Include="IServiceContract.cs" />
     <Compile Include="IBusinessEngine.cs" />
-    <Compile Include="IBusinessFactory.cs" />
+    <Compile Include="IBusinessEngineFactory.cs" />
     <Compile Include="IDataRepositoryFactory.cs" />
     <Compile Include="DataRepository.cs" />
     <Compile Include="IDataRepository.cs" />
@@ -52,6 +56,9 @@
     <Compile Include="IIdentifiableEntity.cs" />
     <Compile Include="IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

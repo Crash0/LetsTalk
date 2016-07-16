@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication\UserAccount.cs" />
+    <Compile Include="Client\Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Survey\Survey.cs" />
   </ItemGroup>

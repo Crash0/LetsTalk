@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LetsTalk.Core.Common.Contracts
 {
-    public interface IBusinessFactory
+    public interface IBusinessEngineFactory
     {
         T GetBusinessEngine<T>() where T : IBusinessEngine;
     }

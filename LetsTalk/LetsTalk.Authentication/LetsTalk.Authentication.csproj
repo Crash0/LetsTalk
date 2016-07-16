@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{683C9BC5-E226-497E-9B2C-4F38DE547E79}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LetsTalk.Authentication</RootNamespace>
     <AssemblyName>LetsTalk.Authentication</AssemblyName>
@@ -29,6 +29,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LetsTalk.Authentication.AuthenticationService</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
       <HintPath>..\packages\NServiceBus.5.0.0\lib\net45\NServiceBus.Core.dll</HintPath>
@@ -38,7 +41,16 @@
       <HintPath>..\packages\NServiceBus.Host.6.0.0\lib\net45\NServiceBus.Host.exe</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NServiceBus.Transports.RabbitMQ, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.RabbitMQ.3.3.3\lib\net45\NServiceBus.Transports.RabbitMQ.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=3.6.3.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>..\packages\RabbitMQ.Client.3.6.3\lib\net45\RabbitMQ.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,15 +60,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthenticationService.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="LogInRequestHandeler.cs" />
     <Compile Include="EndpointConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LetsTalk.Authentication.Data.Contracts\LetsTalk.Authentication.Data.Contracts.csproj">
+      <Project>{092bce8f-65bd-45f0-89c6-a07bdeaaa6d1}</Project>
+      <Name>LetsTalk.Authentication.Data.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Authentication.Data\LetsTalk.Authentication.Data.csproj">
+      <Project>{66c9d553-1dcc-478d-a066-e64fbdad00f4}</Project>
+      <Name>LetsTalk.Authentication.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
+      <Project>{2d8d79f4-8974-4830-8f87-ec6d4247c9cd}</Project>
+      <Name>LetsTalk.Core.Common.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Kernel\LetsTalk.Core.Kernel.csproj">
       <Project>{fcadd41c-8be3-469e-94a9-25e3f79508b8}</Project>
       <Name>LetsTalk.Core.Kernel</Name>
