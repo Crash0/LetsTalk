@@ -29,6 +29,7 @@ namespace LetsTalk.Host.Azure.AzureWebService.Tests
         }
 
         [TestMethod]
+        [TestOfType(TestType.Integration)]
         public void test_Client_manager_as_Service()
         {
             var channelFactory =
