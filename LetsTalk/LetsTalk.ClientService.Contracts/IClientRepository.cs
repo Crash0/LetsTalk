@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LetsTalk.Business.Entities.Client;
+using LetsTalk.Business.Entities;
 
 namespace LetsTalk.ClientService.Contracts
 {

@@ -20,5 +20,18 @@ namespace LetsTalk.Client.Proxies.Tests
             AuthenticationClient proxy = new AuthenticationClient();
             proxy.Open();
         }
+
+        [TestMethod]
+        [TestOfType(TestType.Integration)]
+        public void test_Client_client_connection()
+        {
+            ClientClient proxy = new ClientClient();
+            proxy.Open();
+
+            var s = proxy.GetClients();
+
+            Assert.IsTrue(s.Any());
+
+        }
     }
 }

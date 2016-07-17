@@ -66,6 +66,10 @@
       <Project>{969E9D32-09F0-417B-B628-30B625303743}</Project>
       <Name>LetsTalk.Client.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Letstalk.Client.Enitites\Letstalk.Client.Entites.csproj">
+      <Project>{5578418c-82e6-45e4-8083-07aec8b672d1}</Project>
+      <Name>Letstalk.Client.Entites</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Client.Proxies\LetsTalk.Client.Proxies.csproj">
       <Project>{21C9342E-9EA1-42FF-9C0D-64B55460AE21}</Project>
       <Name>LetsTalk.Client.Proxies</Name>
@@ -89,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service Proxies\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

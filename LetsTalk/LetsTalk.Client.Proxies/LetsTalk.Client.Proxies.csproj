@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Service Proxies\ClientClient.cs" />
     <Compile Include="ServiceFactory.cs" />
     <Compile Include="Service Proxies\AuthenticationClient.cs" />
     <Compile Include="Service Proxies\SurveyClient.cs" />

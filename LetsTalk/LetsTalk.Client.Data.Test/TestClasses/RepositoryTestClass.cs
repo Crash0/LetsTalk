@@ -20,7 +20,7 @@ namespace LetsTalk.Client.Data.Tests.TestClasses
             _accountRepository = accountRepository;
         }
 
-        public IEnumerable<Business.Entities.Client.Client> GetAccounts()
+        public IEnumerable<Business.Entities.Client> GetAccounts()
         {
             var clients = _accountRepository.Get();
             return clients;

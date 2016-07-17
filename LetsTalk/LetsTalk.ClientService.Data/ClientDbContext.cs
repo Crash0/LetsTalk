@@ -8,7 +8,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using LetsTalk.Business.Entities.Client;
+using LetsTalk.Business.Entities;
 using LetsTalk.Core.Common.Contracts;
 
 namespace LetsTalk.ClientService.Data

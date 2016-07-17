@@ -1,8 +1,9 @@
 using System;
+using LetsTalk.Core.Common.Core;
 
-namespace Letstalk.Client.Entities.Survey
+namespace Letstalk.Client.Entities
 {
-    public class Survey 
+    public class Survey : ObjectBase
     {
         public Guid Id { get; set; }
         

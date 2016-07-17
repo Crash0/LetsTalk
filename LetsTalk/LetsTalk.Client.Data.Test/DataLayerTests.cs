@@ -24,15 +24,15 @@ namespace LetsTalk.Client.Data.Tests
         [TestMethod]
         public void test_repository_Mocking()
         {
-            var userAccounts = new List<Business.Entities.Client.Client>
+            var userAccounts = new List<Business.Entities.Client>
             {
-                new Business.Entities.Client.Client
+                new Business.Entities.Client
                 {
                     ClientId = Guid.Parse("3A557B7B-073F-4CCA-B834-CDA95850213E"),
                     CorrelationGuid = Guid.Parse("3A557B7B-073F-4CCA-B834-CDA95850213E"),
                     Email = "user1@user.com"
                 },
-                new Business.Entities.Client.Client
+                new Business.Entities.Client
                 {
                     ClientId = Guid.Parse("07971F9F-14D8-4127-A5F8-D1B77DCBC218"),
                     CorrelationGuid = Guid.Parse("07971F9F-14D8-4127-A5F8-D1B77DCBC218"),
@@ -54,15 +54,15 @@ namespace LetsTalk.Client.Data.Tests
         [TestMethod]
         public void test_repositoryFactory_mockUsage()
         {
-            var value = new List<Business.Entities.Client.Client>
+            var value = new List<Business.Entities.Client>
             {
-                new Business.Entities.Client.Client()
+                new Business.Entities.Client()
                 {
                     ClientId = Guid.Parse("3A557B7B-073F-4CCA-B834-CDA95850213E"),
                     CorrelationGuid = Guid.Parse("3A557B7B-073F-4CCA-B834-CDA95850213E"),
                     Email = "user1@user.com"
                 },
-                new Business.Entities.Client.Client()
+                new Business.Entities.Client()
                 {
                     ClientId = Guid.Parse("07971F9F-14D8-4127-A5F8-D1B77DCBC218"),
                     CorrelationGuid = Guid.Parse("07971F9F-14D8-4127-A5F8-D1B77DCBC218"),

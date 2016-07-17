@@ -37,5 +37,5 @@ using System.Runtime.Serialization;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: ContractNamespace("http://crash0.com/LetsTalk",
+[assembly: ContractNamespace("http://www.Crash0.com/LetsTalk",
                               ClrNamespace = "LetsTalk.Business.Contracts")]

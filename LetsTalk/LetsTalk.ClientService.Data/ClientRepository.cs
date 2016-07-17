@@ -4,7 +4,7 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LetsTalk.Business.Entities.Client;
+using LetsTalk.Business.Entities;
 using LetsTalk.ClientService.Contracts;
 using LetsTalk.Core.Common.Contracts;
 using LetsTalk.Core.Common.Data;

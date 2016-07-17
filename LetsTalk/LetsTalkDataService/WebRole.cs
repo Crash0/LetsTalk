@@ -30,6 +30,7 @@ namespace LetsTalkDataService
                 Console.WriteLine("Starting Services");
                 StartService(typeof(AuthenticationManager));
                 StartService(typeof(SurveyManager));
+                StartService(typeof(ClientManager));
                 Console.WriteLine("Services OK");
                 
                 

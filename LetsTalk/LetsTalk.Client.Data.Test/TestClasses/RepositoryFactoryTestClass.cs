@@ -21,7 +21,7 @@ namespace LetsTalk.Client.Data.Tests.TestClasses
             _dataRepositoryFactory = dataRepositoryFactory;
         }
 
-        public IEnumerable<Business.Entities.Client.Client> GetClients()
+        public IEnumerable<Business.Entities.Client> GetClients()
         {
             var repository
                 = _dataRepositoryFactory.GetDataRepository<IClientRepository>();

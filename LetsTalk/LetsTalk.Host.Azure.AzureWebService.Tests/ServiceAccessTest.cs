@@ -29,6 +29,22 @@ namespace LetsTalk.Host.Azure.AzureWebService.Tests
         }
 
         [TestMethod]
+        public void test_Client_manager_as_Service()
+        {
+            var channelFactory =
+                new ChannelFactory<IClientService>("");
+
+            var proxy = channelFactory.CreateChannel();
+
+            var communicationObject = proxy as ICommunicationObject;
+            if (communicationObject == null)
+                Assert.Fail("proxy as ICommunicationObject is null");
+
+            communicationObject.Open();
+            channelFactory.Close();
+        }
+
+        [TestMethod]
         [TestOfType(TestType.Integration)]
         public void test_Authentication_manager_as_service()
         {
