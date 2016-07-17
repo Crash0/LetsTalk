@@ -9,6 +9,7 @@ namespace LetsTalk.Client.Test
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
