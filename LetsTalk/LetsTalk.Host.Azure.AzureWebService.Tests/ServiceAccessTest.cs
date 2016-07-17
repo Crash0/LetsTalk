@@ -4,6 +4,7 @@ using System.ServiceModel;
 using LetsTalk.Business.Contracts;
 using LetTalk.Test;
 using LetTalk.Test.Attributes;
+// ReSharper disable SuspiciousTypeConversion.Global
 
 namespace LetsTalk.Host.Azure.AzureWebService.Tests
 {
@@ -53,7 +54,7 @@ namespace LetsTalk.Host.Azure.AzureWebService.Tests
                 new ChannelFactory<IAuthenticationService>("");
 
             IAuthenticationService proxy = channelFactory.CreateChannel();
-
+            
             var communicationObject = proxy as ICommunicationObject;
             if (communicationObject == null)
                 Assert.Fail("proxy as ICommunicationObject is null");
@@ -61,5 +62,7 @@ namespace LetsTalk.Host.Azure.AzureWebService.Tests
             communicationObject.Open();
             channelFactory.Close();
         }
+
+
     }
 }
