@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using LetsTalk.Business.Bootstrapper;
-using LetsTalk.Business.Entities.Authentication;
 using LetsTalk.Client.Data.Tests.TestClasses;
 using LetsTalk.ClientService.Contracts;
 using LetsTalk.Core.Common.Contracts;
