@@ -1,15 +1,18 @@
-﻿using LetsTalk.Client.AgentClient.ViewModels;
+﻿using System.ComponentModel.Composition.Primitives;
+using LetsTalk.Client.AgentClient.ViewModels;
 using LetsTalk.Core.Common.Core;
 using MahApps.Metro.Controls;
+using System.ComponentModel.Composition;
 
 namespace LetsTalk.Client.AgentClient.Windows
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Shell.xaml
     /// </summary>
-    public partial class MainWindow : MetroWindow
+    [Export]
+    public partial class Shell : MetroWindow
     {
-        public MainWindow()
+        public Shell()
         {
             InitializeComponent();
             MainView.DataContext = ObjectBase.Container.GetExportedValue<MainViewModel>();

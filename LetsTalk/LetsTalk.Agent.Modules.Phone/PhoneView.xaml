@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="LetsTalk.Agent.Modules.Phone.PhoneView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:LetsTalk.Agent.Modules.Phone"
+             xmlns:vm="clr-namespace:LetsTalk.Agent.Modules.Phone"
+             mc:Ignorable="d"
+             MinHeight="600"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Background>
+        <SolidColorBrush Color="AliceBlue" />
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*" />
+            <RowDefinition Height="148*" />
+            <RowDefinition Height="87*" />
+        </Grid.RowDefinitions>
+        <Border Grid.Row="2">
+            <StackPanel>
+                <Button x:Name="CloseCallButton"
+                        Content="Close Call"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Width="75" Height="20"
+                        Margin="10" />
+                <Button x:Name="HangupButton"
+                        Content="Hangup"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Width="75" Height="20"
+                        Margin="0,0,10,10" />
+            </StackPanel>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="45" Margin="10,10,0,0"
+                VerticalAlignment="Top" Width="280">
+            <Label x:Name="CallerNameLabel" Content="{Binding CallerName}" />
+        </Border>
+    </Grid>
+</UserControl>

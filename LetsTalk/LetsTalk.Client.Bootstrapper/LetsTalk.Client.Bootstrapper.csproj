@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -62,10 +66,17 @@
       <Project>{6E29A410-8B2A-4BCE-813D-3AE79A7D52D3}</Project>
       <Name>LetsTalk.Core.Common.ServiceModel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common.UI.Core\LetsTalk.Core.Common.UI.csproj">
+      <Project>{156D9B41-CB9C-4E3A-8B2F-296163492F49}</Project>
+      <Name>LetsTalk.Core.Common.UI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common\LetsTalk.Core.Common.csproj">
       <Project>{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}</Project>
       <Name>LetsTalk.Core.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

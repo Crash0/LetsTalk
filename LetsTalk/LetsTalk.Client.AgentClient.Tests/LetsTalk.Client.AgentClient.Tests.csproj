@@ -30,8 +30,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Moq, Version=4.5.13.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.5.13\lib\net45\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Prism">
+      <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,9 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\MainViewModelTests.cs" />
     <Compile Include="ViewModel\PhoneViewModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -67,9 +82,25 @@
       <Project>{56b05394-3053-4685-8fa4-eb4421fe4bab}</Project>
       <Name>LetsTalk.Client.AgentClient</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Client.Bootstrapper\LetsTalk.Client.Bootstrapper.csproj">
+      <Project>{6F974F9E-88BF-4932-8AEF-22A7BEDFA60A}</Project>
+      <Name>LetsTalk.Client.Bootstrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Client.Contracts\LetsTalk.Client.Contracts.csproj">
+      <Project>{969E9D32-09F0-417B-B628-30B625303743}</Project>
+      <Name>LetsTalk.Client.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
       <Project>{2D8D79F4-8974-4830-8F87-EC6D4247C9CD}</Project>
       <Name>LetsTalk.Core.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common.UI.Core\LetsTalk.Core.Common.UI.csproj">
+      <Project>{156D9B41-CB9C-4E3A-8B2F-296163492F49}</Project>
+      <Name>LetsTalk.Core.Common.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common\LetsTalk.Core.Common.csproj">
+      <Project>{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}</Project>
+      <Name>LetsTalk.Core.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

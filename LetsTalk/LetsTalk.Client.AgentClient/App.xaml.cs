@@ -15,12 +15,15 @@ namespace LetsTalk.Client.AgentClient
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+            //TODO: consolidate with MefBootstrapper from prism!
             base.OnStartup(e);
 
             ObjectBase.Container = MEFLoader.Init(new List<ComposablePartCatalog>
             {
                 new AssemblyCatalog(Assembly.GetExecutingAssembly())
             });
+
+            this.ShutdownMode = ShutdownMode.OnMainWindowClose;
         }
     }
 }

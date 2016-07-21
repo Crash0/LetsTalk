@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.Composition.Hosting;
+﻿using System;
+using System.ComponentModel.Composition.Hosting;
 using LetsTalk.Authentication.Data;
 using LetsTalk.ClientService.Data;
 using LetsTalk.Core.Common.Data;
@@ -9,6 +10,7 @@ namespace LetsTalk.Business.Bootstrapper
     //todo: This should be exclusive to eatch project
     public static class MEFLoader
     {
+        [Obsolete]
         public static CompositionContainer Init()
         {
             var catalog = new AggregateCatalog();

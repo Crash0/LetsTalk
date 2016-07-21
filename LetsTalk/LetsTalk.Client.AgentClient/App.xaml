@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:EmployeeClient"
              xmlns:viewModels="clr-namespace:LetsTalk.Client.AgentClient.ViewModels"
              xmlns:views="clr-namespace:LetsTalk.Client.AgentClient.Views"
-             StartupUri="Windows/MainWindow.xaml">
+             StartupUri="Windows/Shell.xaml">
     <Application.Resources>
         <Style x:Key="MenuLink" TargetType="{x:Type Hyperlink}">
             <Style.Triggers>
@@ -45,5 +45,10 @@
         <DataTemplate DataType="{x:Type viewModels:ClientViewModel}">
             <views:ClientView/>
         </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type viewModels:PhoneViewModel}">
+            <views:PhoneView/>
+        </DataTemplate>
+        
     </Application.Resources>
 </Application>

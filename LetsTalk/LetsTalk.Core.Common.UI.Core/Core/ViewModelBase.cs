@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 using LetsTalk.Core.Common.Core;
+using Prism.Commands;
 
 namespace LetsTalk.Core.Common.UI.Core
 {

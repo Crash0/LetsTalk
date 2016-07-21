@@ -12,17 +12,20 @@
 
 #region Usings
 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
 using LetsTalk.Client.Proxies;
 using LetsTalk.Core.Common.Contracts;
 using LetsTalk.Core.Common.Identity;
+using LetsTalk.Core.Common.UI.Events;
 
 #endregion
 
 namespace LetsTalk.Client.Bootstrapper
 {
+    [Obsolete]
     public static class MEFLoader
     {
         public static CompositionContainer Init()
@@ -36,6 +39,7 @@ namespace LetsTalk.Client.Bootstrapper
 
             catalog.Catalogs.Add(new AssemblyCatalog(typeof(AuthenticationClient).Assembly));
             catalog.Catalogs.Add(new AssemblyCatalog(typeof(IdentityContainer).Assembly));
+            catalog.Catalogs.Add(new AssemblyCatalog(typeof(OpenCallerViewEvent).Assembly));
             if (catalogParts == null)
                 return new CompositionContainer(catalog);
 

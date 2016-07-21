@@ -7,17 +7,31 @@
              xmlns:core="http://www.Crash0.com/Core"
              xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              xmlns:viewModels="clr-namespace:LetsTalk.Client.AgentClient.ViewModels"
+             xmlns:conv="clr-namespace:LetsTalk.Client.AgentClient.Support"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" d:DataContext="{viewModels:MainViewModel}">
+    <UserControl.Resources>
+        <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </UserControl.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TabControl Grid.Row="1">
+        <Border Grid.Row="1" Grid.Column="0" Margin="10" BorderBrush="SteelBlue" BorderThickness="1" Background="Goldenrod"
+              >
+            <ContentControl Content="{Binding PhoneViewModel}"/>
+        </Border>
+        <TabControl Grid.Row="1" Grid.Column="1">
             <TabItem Header="{Binding DashboardViewModel.ViewTitle}" Content="{Binding DashboardViewModel }"/>
             <TabItem Header="{Binding SurveyViewModel.ViewTitle}" Content="{Binding SurveyViewModel }"/>
             <TabItem Header="{Binding ClientViewModel.ViewTitle}" Content="{Binding ClientViewModel}"/>
+            
         </TabControl>
+        <Button Click="ButtonBase_OnClick"></Button>
     </Grid>
 </UserControl>

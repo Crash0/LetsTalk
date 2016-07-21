@@ -19,6 +19,7 @@ namespace LetsTalk.Core.Common.Core
 {
     public abstract class ObjectBase : NotificationObject, IDirtyCapable, IExtensibleDataObject, IDataErrorInfo
     {
+
         public ObjectBase()
         {
             _Validator = GetValidator();
@@ -69,7 +70,7 @@ namespace LetsTalk.Core.Common.Core
 
             return isDirty;
         }
-
+  
         public List<IDirtyCapable> GetDirtyObjects()
         {
             List<IDirtyCapable> dirtyObjects = new List<IDirtyCapable>();
@@ -86,6 +87,7 @@ namespace LetsTalk.Core.Common.Core
             return dirtyObjects;
         }
 
+        //
         public void CleanAll()
         {
             WalkObjectGraph(

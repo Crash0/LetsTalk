@@ -12,6 +12,7 @@ namespace LetsTalk.Client.AgentClient.ViewModels
     public class ClientViewModel : ViewModelBase
     {
         private IServiceFactory _serviceFactory;
+
         private ObservableCollection<CE.Client> _clients;
 
         public ObservableCollection<CE.Client> Clients

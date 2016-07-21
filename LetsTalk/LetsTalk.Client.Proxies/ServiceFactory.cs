@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.Composition;
+using System.ServiceModel;
 using LetsTalk.Core.Common.Contracts;
 using LetsTalk.Core.Common.Core;
 

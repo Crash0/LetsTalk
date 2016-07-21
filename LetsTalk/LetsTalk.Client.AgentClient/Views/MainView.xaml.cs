@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LetsTalk.Client.AgentClient.ViewModels;
+using LetsTalk.Client.Contracts;
 
 namespace LetsTalk.Client.AgentClient.Views
 {
@@ -23,6 +25,11 @@ namespace LetsTalk.Client.AgentClient.Views
         public MainView()
         {
             InitializeComponent();
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            ((MainViewModel)DataContext).PhoneViewModel.Caller = new CallerInfo();
         }
     }
 }

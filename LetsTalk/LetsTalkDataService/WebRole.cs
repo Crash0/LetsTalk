@@ -21,19 +21,26 @@ namespace LetsTalkDataService
 
             try
             {
-                Console.WriteLine("Starting NServiceBus");
-                var busconfig = BusConfigurator.CreateConfig(EndPoint.WebService);
-                var bus = Bus.Create(busconfig);
-                bus.Start();
-                Console.WriteLine("Bus Start OK");
-                Console.WriteLine("__________________________________________");
+                
                 Console.WriteLine("Starting Services");
                 StartService(typeof(AuthenticationManager));
                 StartService(typeof(SurveyManager));
                 StartService(typeof(ClientManager));
+                StartSingletonService(new TelephonyManager());
                 Console.WriteLine("Services OK");
-                
-                
+
+                Console.WriteLine("__________________________________________");
+
+                Console.WriteLine("Starting NServiceBus");
+                var busconfig = BusConfigurator.CreateConfig(EndPoint.WebService);
+                busconfig.RegisterComponents((components =>
+                {
+                    components.RegisterSingleton(typeof(IList<SM.ServiceHost>), _hosts);
+                }));
+                var bus = Bus.Create(busconfig);
+                bus.Start();
+                Console.WriteLine("Bus Start OK");
+
 
                 return true;
 
@@ -51,9 +58,23 @@ namespace LetsTalkDataService
             Console.WriteLine($"Started service of type {serviceMannager}");
             if (_hosts == null)
                 _hosts = new List<SM.ServiceHost>();
-            
+
 
             var host = new WebServiceHost(serviceMannager);
+           
+            host.Open();
+            _hosts.Add(host);
+        }
+        private void StartSingletonService(ManagerBase serviceMannager)
+        {
+            Console.WriteLine($"Started service of type {serviceMannager}");
+            if (_hosts == null)
+                _hosts = new List<SM.ServiceHost>();
+
+
+            var host = new WebServiceHost(serviceMannager);
+
+
             host.Open();
             _hosts.Add(host);
         }
