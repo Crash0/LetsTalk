@@ -13,11 +13,14 @@ namespace LetsTalk.Agent.Modules.Phone
         [ImportingConstructor]
         public PhoneViewModel()
         {
-            AvailableCommands.Add(new PhoneActionViewModel { DisplayName = "Testing name1" });
-            AvailableCommands.Add(new PhoneActionViewModel { DisplayName = "Testing name2" });
-            AvailableCommands.Add(new PhoneActionViewModel { DisplayName = "Testing name3" });
-            AvailableCommands.Add(new PhoneActionViewModel { DisplayName = "Testing name4" });
-            AvailableCommands.Add(new PhoneActionViewModel { DisplayName = "Testing name5" });
+            AvailableCommands = new ObservableCollection<PhoneActionViewModel>
+            {
+                new PhoneActionViewModel {DisplayName = "Testing name1"},
+                new PhoneActionViewModel {DisplayName = "Testing name2"},
+                new PhoneActionViewModel {DisplayName = "Testing name3"},
+                new PhoneActionViewModel {DisplayName = "Testing name4"},
+                new PhoneActionViewModel {DisplayName = "Testing name5"}
+            };
 
             Caller = new CallerInfo {CallerName = "Jonas Viktor Fjeld", CallerNumber = 98608900};
         }
