@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.Composition;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel.Composition;
 using System.Windows.Input;
 using LetsTalk.Client.Contracts;
 using Prism.Mvvm;
@@ -16,5 +17,7 @@ namespace LetsTalk.Agent.Modules.Phone
 
         public CallerInfo Caller { get; set; }
         public ICommand CallCommand { get; }
+
+        public ObservableCollection<ICommand> AvailableCommands { get; set; }
     }
 }

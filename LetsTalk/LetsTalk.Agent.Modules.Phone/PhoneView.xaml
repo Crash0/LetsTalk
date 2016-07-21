@@ -8,45 +8,70 @@
              xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
              mc:Ignorable="d"
              MinHeight="600"
+             d:DataContext="{d:DesignInstance Type=local:PhoneViewModel}"
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Width" Value="70"/>
+        <Style x:Key="CallButtonStyle" TargetType="Button">
+            <Setter  Property="Width" Value="70"/>
+            <Setter Property="Margin" Value="2.5,0,2.5,0"/>
+        </Style>
+        <Style x:Key="ActionButtonStyle" TargetType="Button">
+            <Setter Property="Margin" Value="2,7,2,2"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+        </Style>
+        <Style x:Key="CallerNameLabel" TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="20"></Setter>
         </Style>
     </UserControl.Resources>
     <Grid>
+        <Grid.Resources>
+            <Style x:Key="BorderStyle" TargetType="Border">
+                <Setter Property="BorderBrush" Value="DarkGray" />
+                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="VerticalAlignment" Value="Stretch" />
+                <Setter Property="BorderThickness" Value="3" />
+                <Setter Property="Padding" Value="10" />
+            </Style>
+        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="200" />
             <RowDefinition Height="*" />
             <RowDefinition Height="87" />
         </Grid.RowDefinitions>
         
-        <Border BorderBrush="DarkGray" BorderThickness="3" HorizontalAlignment="Stretch" Margin="10"
-                VerticalAlignment="Stretch">
-            <Label x:Name="CallerNameLabel" Content="{Binding CallerName}" />
+        <Border Style="{StaticResource BorderStyle}">
+            <Label x:Name="CallerNameLabel" Style="{StaticResource CallerNameLabel}" 
+                   Content="{Binding Caller.CallerName}"/>
         </Border>
         <Border
-            BorderBrush="DarkGray" 
-            BorderThickness="3"
-            Grid.Row="1"
-            HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch">
-            
+            Grid.Row="1" Style="{StaticResource BorderStyle}">
+            <ItemsControl ItemsSource="{Binding AvailableCommands}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </Border>
             <Border Grid.Row="2"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch"
-                BorderThickness="1"
-                BorderBrush="Black">
+                Style="{StaticResource BorderStyle}"
+                    >
             <StackPanel 
                Orientation="Horizontal" >
                 <Button x:Name="CallButton"
                         Content="Call"
-                        Margin="10"
+                        Style="{StaticResource CallButtonStyle}" 
                         />
                 <Button x:Name="CloseCallButton"
                         Content="Hangup"
-                        Margin="10" />
+                        Style="{StaticResource CallButtonStyle}" />
             </StackPanel>
         </Border>
         
