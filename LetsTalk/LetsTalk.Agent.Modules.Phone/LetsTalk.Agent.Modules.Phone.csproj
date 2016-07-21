@@ -75,11 +75,12 @@
     <Compile Include="Controllers\PhoneController.cs" />
     <Compile Include="Controllers\IPhoneController.cs" />
     <Compile Include="PhoneModule.cs" />
-    <Compile Include="Phone\Interfaces\IPhoneViewModel.cs" />
+    <Compile Include="Interfaces\IPhoneViewModel.cs" />
     <Compile Include="PhoneView.xaml.cs">
       <DependentUpon>PhoneView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Phone\ViewModels\PhoneViewModel.cs" />
+    <Compile Include="ViewModels\PhoneActionViewModel.cs" />
+    <Compile Include="ViewModels\PhoneViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
