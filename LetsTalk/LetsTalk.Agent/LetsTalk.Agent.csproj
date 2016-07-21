@@ -168,6 +168,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LetsTalk.Agent.Modules.Customers\LetsTalk.Agent.Modules.Customers.csproj">
+      <Project>{0F4711AC-3BD4-4E8D-9E65-D0ECD0FE4121}</Project>
+      <Name>LetsTalk.Agent.Modules.Customers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Agent.Modules.News\LetsTalk.Agent.Modules.News.csproj">
       <Project>{ED08C8B1-6574-45AF-BABA-F111413EE5C9}</Project>
       <Name>LetsTalk.Agent.Modules.News</Name>

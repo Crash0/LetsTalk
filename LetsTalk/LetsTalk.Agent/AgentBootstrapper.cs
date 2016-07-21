@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using LetsTalk.Agent.Modules;
+using LetsTalk.Agent.Modules.Customers;
 using LetsTalk.Agent.Modules.News;
 using LetsTalk.Agent.Modules.Phone;
 using LetsTalk.Core.Common.UI;
@@ -23,6 +24,7 @@ namespace LetsTalk.Agent
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(AutoPopulateExportedViewsBehavior).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(PhoneModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(DashboardModule).Assembly));
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(CustomerModule).Assembly));
         }
 
         protected override void ConfigureContainer()

@@ -39,28 +39,28 @@
             </Canvas>
             <!--MainToolbar-->
 
-            <!--<ItemsControl x:Name="MainToolBar" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,10,0" RenderTransformOrigin="0.5,0.5"
+            <ItemsControl x:Name="MainToolBar" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,10,0" RenderTransformOrigin="0.5,0.5"
                           Grid.Column="1" Grid.Row="1" regions:RegionManager.RegionName="{x:Static coreui:RegionNames.MainToolBarRegion}" >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
-            </ItemsControl>-->
+            </ItemsControl>
             <!--content-->
-            <ContentControl VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Name="ContentGrid"
+            <TabControl VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Name="ContentGrid"
                             Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"
                             Margin="10,29,10,10"
                             regions:RegionManager.RegionName="{x:Static coreui:RegionNames.MainRegion}">
-                <ContentControl.Template>
+                <!--<TabControl.Template>
                     <ControlTemplate>
                         <Grid>
                         <controls:RoundedBox/>
-                        <ContentPresenter/>
+                        <TabItem Background="Transparent"/>
                         </Grid>
                     </ControlTemplate>
-                </ContentControl.Template>
-            </ContentControl>
+                </TabControl.Template>-->
+            </TabControl>
 
             <!-- Phone-->
             <Grid x:Name="PhoneGrid" VerticalAlignment="Bottom" Margin="10,29,10,10" Grid.RowSpan="2" Grid.Column="0"
