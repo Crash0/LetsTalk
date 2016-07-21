@@ -2,7 +2,14 @@
 
 namespace LetsTalk.Client.Contracts
 {
-    public class CallerInfo
+    public interface ICallerInfo
+    {
+        Guid CallerId { get; set; }
+        string CallerName { get; set; }
+        int CallerNumber { get; set; }
+    }
+
+    public class CallerInfo : ICallerInfo
     {
         public Guid CallerId { get; set; }
         public string CallerName { get; set; }

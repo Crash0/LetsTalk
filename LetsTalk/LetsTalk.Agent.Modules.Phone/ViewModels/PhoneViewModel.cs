@@ -13,6 +13,7 @@ namespace LetsTalk.Agent.Modules.Phone
         [ImportingConstructor]
         public PhoneViewModel()
         {
+
             AvailableCommands = new ObservableCollection<PhoneActionViewModel>
             {
                 new PhoneActionViewModel {DisplayName = "Testing name1"},
@@ -24,7 +25,7 @@ namespace LetsTalk.Agent.Modules.Phone
 
             Caller = new CallerInfo {CallerName = "Jonas Viktor Fjeld", CallerNumber = 98608900};
         }
-
+        //
         public CallerInfo Caller { get; set; }
         public ICommand CallCommand { get; }
 
