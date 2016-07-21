@@ -6,18 +6,25 @@ using Prism.Mvvm;
 
 namespace LetsTalk.Agent.Modules.Phone
 {
-    [Export(typeof(PhoneViewModel))]
+    [Export(typeof(IPhoneViewModel))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
     class PhoneViewModel : BindableBase, IPhoneViewModel
     {
+        [ImportingConstructor]
         public PhoneViewModel()
         {
-            
+            AvailableCommands.Add(new PhoneActionViewModel { DisplayName = "Testing name1" });
+            AvailableCommands.Add(new PhoneActionViewModel { DisplayName = "Testing name2" });
+            AvailableCommands.Add(new PhoneActionViewModel { DisplayName = "Testing name3" });
+            AvailableCommands.Add(new PhoneActionViewModel { DisplayName = "Testing name4" });
+            AvailableCommands.Add(new PhoneActionViewModel { DisplayName = "Testing name5" });
+
+            Caller = new CallerInfo {CallerName = "Jonas Viktor Fjeld", CallerNumber = 98608900};
         }
 
         public CallerInfo Caller { get; set; }
         public ICommand CallCommand { get; }
 
-        public ObservableCollection<ICommand> AvailableCommands { get; set; }
+        public ObservableCollection<PhoneActionViewModel> AvailableCommands { get; set; }
     }
 }

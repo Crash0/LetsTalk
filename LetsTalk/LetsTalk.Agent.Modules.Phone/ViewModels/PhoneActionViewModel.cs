@@ -6,7 +6,7 @@ namespace LetsTalk.Agent.Modules.Phone
     public class PhoneActionViewModel : BindableBase
     {
         public ICommand Command { get; set; }
-        public string DisplayName;
+        public string DisplayName { get; set; }
 
     }
 }

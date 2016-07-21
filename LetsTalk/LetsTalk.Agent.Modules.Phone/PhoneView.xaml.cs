@@ -13,6 +13,7 @@ namespace LetsTalk.Agent.Modules.Phone
     /// <summary>
     /// Interaction logic for PhoneView.xaml
     /// </summary>
+    
     [ViewExport(RegionName = RegionNames.PhoneRegion)]
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public partial class PhoneView : UserControl
@@ -22,5 +23,13 @@ namespace LetsTalk.Agent.Modules.Phone
         {
             InitializeComponent();
         }
+
+        [Import]
+        IPhoneViewModel Model
+        {
+            get { return DataContext as IPhoneViewModel;}
+            set { DataContext = value; }
+        }
+
     }
 }
