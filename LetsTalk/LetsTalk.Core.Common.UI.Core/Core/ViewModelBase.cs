@@ -4,10 +4,11 @@ using System.Linq;
 using FluentValidation.Results;
 using LetsTalk.Core.Common.Core;
 using Prism.Commands;
+using Prism.Regions;
 
 namespace LetsTalk.Core.Common.UI.Core
 {
-    public class ViewModelBase : ObjectBase
+    public class ViewModelBase : ObjectBase, INavigationAware
     {
         public ViewModelBase()
         {
@@ -111,6 +112,19 @@ namespace LetsTalk.Core.Common.UI.Core
         protected virtual bool OnToggleErrorsCommandCanExecute(object arg)
         {
             return !IsValid;
+        }
+
+        public void OnNavigatedTo(NavigationContext navigationContext)
+        {
+        }
+
+        public virtual bool IsNavigationTarget(NavigationContext navigationContext)
+        {
+            return true;
+        }
+
+        public void OnNavigatedFrom(NavigationContext navigationContext)
+        {
         }
     }
 }
