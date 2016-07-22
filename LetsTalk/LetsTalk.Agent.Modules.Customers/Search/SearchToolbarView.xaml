@@ -5,8 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LetsTalk.Agent.Modules.Customers.Search"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
-    </Grid>
+             >
+    <UserControl.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"></Setter>
+        </Style>
+        <Style TargetType="Border">
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="CornerRadius" Value="20"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Border>
+        <TextBox Text="Hello"/>
+    </Border>
 </UserControl>
