@@ -6,7 +6,7 @@ using LetsTalk.Authentication;
 namespace LetsTalk.Authentication.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class AuthenticationTests
     {
         [TestInitialize]
         public void Initialize()

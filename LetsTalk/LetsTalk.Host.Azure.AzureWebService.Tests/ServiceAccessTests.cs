@@ -9,7 +9,7 @@ using LetTalk.Test.Attributes;
 namespace LetsTalk.Host.Azure.AzureWebService.Tests
 {
     [TestClass]
-    public class ServiceAccessTest
+    public class ServiceAccessTests
     {
         [TestMethod]
         [TestOfType(TestType.Integration)]

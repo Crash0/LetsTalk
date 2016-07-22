@@ -10,7 +10,7 @@ namespace LetsTalk.Client.AgentClient.ViewModels
     {
         private IServiceFactory _serviceFactory;
 
-        protected override string ViewTitle => "Surveys";
+        public override string ViewTitle => "Surveys";
 
         [ImportingConstructor]
         public SurveyViewModel(IServiceFactory serviceFactory)

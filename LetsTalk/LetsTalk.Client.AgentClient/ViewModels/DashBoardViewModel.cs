@@ -21,6 +21,6 @@ namespace LetsTalk.Client.AgentClient.ViewModels
             _serviceFactory = serviceFactory;
         }
 
-        protected override string ViewTitle => "Dashboard";
+        public override string ViewTitle => "Dashboard";
     }
 }

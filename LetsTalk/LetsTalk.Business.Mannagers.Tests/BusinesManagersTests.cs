@@ -1,13 +1,14 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LetsTalk.Surveys.Business.Engine.Tests
+namespace LetsTalk.Business.Managers.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class BusinesManagersTests
     {
         [TestMethod]
         public void TestMethod1()
         {
+            
         }
     }
 }

@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LetsTalk.Client.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class ClientTests
     {
         [TestMethod]
         public void TestMethod1()

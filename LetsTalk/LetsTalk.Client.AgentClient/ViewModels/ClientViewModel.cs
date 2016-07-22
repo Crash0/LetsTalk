@@ -11,7 +11,7 @@ namespace LetsTalk.Client.AgentClient.ViewModels
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class ClientViewModel : ViewModelBase
     {
-        private IServiceFactory _serviceFactory;
+        private readonly IServiceFactory _serviceFactory;
 
         private ObservableCollection<CE.Client> _clients;
 
@@ -36,7 +36,7 @@ namespace LetsTalk.Client.AgentClient.ViewModels
         {
             _clients = new ObservableCollection<CE.Client>();
 
-            WithClient<IClientService>(_serviceFactory.CreateClient<IClientService>(), service =>
+            WithClient(_serviceFactory.CreateClient<IClientService>(), service =>
             {
                 var clients = service.GetClients();
                 if (clients == null)
@@ -50,7 +50,7 @@ namespace LetsTalk.Client.AgentClient.ViewModels
 
         }
 
-        protected override string ViewTitle => "Clients";
+        public override string ViewTitle => "Clients";
 
     }
 }

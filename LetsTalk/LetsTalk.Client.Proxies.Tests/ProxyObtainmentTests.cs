@@ -9,7 +9,7 @@ using LetsTalk.Client.Contracts;
 namespace LetsTalk.Client.Proxies.Tests
 {
     [TestClass]
-    public class ProxyObtainmentTest
+    public class ProxyObtainmentTests
     {
         [TestInitialize]
         public void Initialize()
