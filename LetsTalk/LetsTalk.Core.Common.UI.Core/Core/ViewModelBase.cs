@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 using LetsTalk.Core.Common.Core;
+using Prism;
 using Prism.Commands;
+using Prism.Mvvm;
 using Prism.Regions;
 
 namespace LetsTalk.Core.Common.UI.Core
 {
-    public class ViewModelBase : ObjectBase, INavigationAware
+    public class ViewModelBase : ObjectBase, INavigationAware, IActiveAware
     {
         public ViewModelBase()
         {
@@ -36,7 +38,7 @@ namespace LetsTalk.Core.Common.UI.Core
             disposableClient?.Dispose();
         }
 
-        public virtual string ViewTitle => string.Empty;
+        public virtual string ViewTitle { get; set; }
 
         List<ObjectBase> _Models;
 
@@ -126,5 +128,26 @@ namespace LetsTalk.Core.Common.UI.Core
         public void OnNavigatedFrom(NavigationContext navigationContext)
         {
         }
+
+        private bool _isActive;
+
+        public bool IsActive
+        {
+            get
+            {
+                return _isActive;
+            }
+            set
+            {
+                if (value != _isActive)
+                {
+                    _isActive = value;
+                    OnPropertyChanged(()=>IsActive);
+                }
+                
+            }
+        }
+
+        public event EventHandler IsActiveChanged;
     }
 }

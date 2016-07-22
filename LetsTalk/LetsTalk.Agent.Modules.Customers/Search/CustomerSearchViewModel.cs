@@ -9,7 +9,7 @@ namespace LetsTalk.Agent.Modules.Customers
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class CustomerSearchViewModel : ViewModelBase, ICustomerSearchViewModel
     {
-        public override string ViewTitle { get; } = "Customer Search";
+        public override string ViewTitle { get; set; } = "Customer Search";
         public override bool IsNavigationTarget(NavigationContext navigationContext)
         {
             return true;

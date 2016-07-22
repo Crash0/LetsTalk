@@ -6,6 +6,7 @@ using System.ComponentModel.Composition.Hosting;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Text;
@@ -172,6 +173,7 @@ namespace LetsTalk.Core.Common.Core
             OnPropertyChanged(propertyName, makeDirty);
         }
 
+        
         protected void OnPropertyChanged(string propertyName, bool makeDirty)
         {
             base.OnPropertyChanged(propertyName);
@@ -212,7 +214,7 @@ namespace LetsTalk.Core.Common.Core
         {
             get
             {
-                if (_ValidationErrors != null && _ValidationErrors.Count() > 0)
+                if (_ValidationErrors != null && _ValidationErrors.Any())
                     return false;
                 else
                     return true;
