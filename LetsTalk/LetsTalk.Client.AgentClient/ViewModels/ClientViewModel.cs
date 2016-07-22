@@ -50,7 +50,7 @@ namespace LetsTalk.Client.AgentClient.ViewModels
 
         }
 
-        public override string ViewTitle => "Clients";
+        protected override string ViewTitle => "Clients";
 
     }
 }

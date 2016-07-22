@@ -39,6 +39,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -57,7 +58,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Search\SearchView.xaml">
+    <Page Include="Search\CustomerSearchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\SearchToolbarView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -84,8 +89,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Search\SearchView.xaml.cs">
-      <DependentUpon>SearchView.xaml</DependentUpon>
+    <Compile Include="Search\CustomerSearchView.xaml.cs">
+      <DependentUpon>CustomerSearchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\CustomerSearchViewModel.cs" />
+    <Compile Include="Search\ICustomerSearchViewModel.cs" />
+    <Compile Include="Search\SearchToolbarView.xaml.cs">
+      <DependentUpon>SearchToolbarView.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,9 +108,17 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
+      <Project>{2D8D79F4-8974-4830-8F87-EC6D4247C9CD}</Project>
+      <Name>LetsTalk.Core.Common.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common.UI.Core\LetsTalk.Core.Common.UI.csproj">
       <Project>{156D9B41-CB9C-4E3A-8B2F-296163492F49}</Project>
       <Name>LetsTalk.Core.Common.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common\LetsTalk.Core.Common.csproj">
+      <Project>{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}</Project>
+      <Name>LetsTalk.Core.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
