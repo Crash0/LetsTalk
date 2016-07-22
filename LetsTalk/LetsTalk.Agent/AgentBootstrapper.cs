@@ -27,9 +27,10 @@ namespace LetsTalk.Agent
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(CustomerModule).Assembly));
         }
 
-        protected override void ConfigureContainer()
+        protected override void ConfigureModuleCatalog()
         {
-            base.ConfigureContainer();
+            base.ConfigureModuleCatalog();
+            base.ConfigureModuleCatalog();
         }
 
         protected override void InitializeShell()

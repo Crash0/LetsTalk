@@ -22,7 +22,7 @@ namespace LetsTalk.Agent.Modules.Customers
     /// <summary>
     /// Interaction logic for CustomerSearchView.xaml
     /// </summary>
-    [ViewExport(RegionName = RegionNames.MainRegion)]
+    [ViewExport("Search",RegionName = RegionNames.MainRegion)]
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public partial class CustomerSearchView : UserControl
     {

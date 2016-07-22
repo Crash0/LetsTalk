@@ -10,7 +10,9 @@
         xmlns:regions="http://prismlibrary.com/"
         xmlns:coreui="clr-namespace:LetsTalk.Core.Common.UI;assembly=LetsTalk.Core.Common.UI"
         xmlns:controls="clr-namespace:LetsTalk.Agent.Controls"
+        xmlns:viewModels="clr-namespace:LetsTalk.Agent.ViewModels"
         mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=viewModels:ShellViewModel}"
         Title="Let`s Talk Agent Desktop" Height="768" Width="1024" WindowState="Maximized">
     <Window.Background>
         <!--Get youre own background image ! -->
@@ -45,7 +47,9 @@
                            TextAlignment="Left" Opacity="0.8" Canvas.Left="280" Canvas.Top="80" />
             </Canvas>
             <!--MainToolbar-->
-
+<Grid>
+    <Button Height="30" Width="70" Command="{Binding NavigateCommand}" CommandParameter="Search"></Button>
+</Grid>
             <ItemsControl x:Name="MainToolBar"
                           HorizontalAlignment="Right" 
                           VerticalAlignment="Top"
