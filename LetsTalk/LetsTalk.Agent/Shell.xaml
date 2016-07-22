@@ -36,7 +36,11 @@
                                             Margin="0,0,7,0"
                                             Content="{Binding}"/>
                             <Button Content="X" Grid.Column="1">
-                                
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click">
+                                        <local:CloseTabAction/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
                             </Button>
                                                     
                         </Grid>

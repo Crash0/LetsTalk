@@ -117,7 +117,7 @@ namespace LetsTalk.Core.Common.UI.Core
             return !IsValid;
         }
 
-        public void OnNavigatedTo(NavigationContext navigationContext)
+        public virtual void OnNavigatedTo(NavigationContext navigationContext)
         {
         }
 
@@ -126,7 +126,7 @@ namespace LetsTalk.Core.Common.UI.Core
             return true;
         }
 
-        public void OnNavigatedFrom(NavigationContext navigationContext)
+        public virtual void OnNavigatedFrom(NavigationContext navigationContext)
         {
         }
 
