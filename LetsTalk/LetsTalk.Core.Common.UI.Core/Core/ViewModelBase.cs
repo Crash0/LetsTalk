@@ -10,6 +10,7 @@ using Prism.Regions;
 
 namespace LetsTalk.Core.Common.UI.Core
 {
+    //TODO: Shold Probably use bindable base :game_die:
     public class ViewModelBase : ObjectBase, INavigationAware, IActiveAware
     {
         public ViewModelBase()
