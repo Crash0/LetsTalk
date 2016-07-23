@@ -1,43 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LetsTalk.Business.Entities.Targeting;
 using LetsTalk.Core.Common.Contracts;
+using LetsTalk.Core.Common.Data;
 
 namespace LetsTalk.Services.TargetingService.Data
 {
-    public sealed class TargetRepository : IDataRepository<Target>
+    [Export(typeof(ITargetRepository))]
+    [PartCreationPolicy(CreationPolicy.NonShared)]
+    public sealed class TargetRepository : DataRepositoryBase<Target, TargetServiceDbContext> ITargetRepository
     {
-        public Target Add(Target entity)
+        protected override Target AddEntity(TargetServiceDbContext entityContext, Target entity)
         {
-            throw new NotImplementedException();
+            return entityContext.TargetSet.Add(entity);
         }
 
-        public IEnumerable<Target> Get()
+        [Obsolete]
+        protected override IEnumerable<Target> GetEntities(TargetServiceDbContext entityContext)
         {
-            throw new NotImplementedException();
+            return from t in entityContext.TargetSet select t;
         }
 
-        public Target Get(Guid id)
+        protected override Target GetEntity(TargetServiceDbContext entityContext, Guid id)
         {
-            throw new NotImplementedException();
+            var query =  (from e in entityContext.TargetSet
+                where e.TargetId == id
+                select e);
+            return query.FirstOrDefault();
         }
 
-        public void Remove(Guid id)
+        protected override Target UpdateEntity(TargetServiceDbContext entityContext, Target entity)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(Target entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Target Update(Target entity)
-        {
-            throw new NotImplementedException();
+            var query = (from e in entityContext.TargetSet
+                         where e.TargetId == entity.TargetId
+                         select e);
+            return query.FirstOrDefault();
         }
     }
 }
