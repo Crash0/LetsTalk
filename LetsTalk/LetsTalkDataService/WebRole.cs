@@ -25,7 +25,6 @@ namespace LetsTalkDataService
                 Console.WriteLine("Starting Services");
                 StartService(typeof(AuthenticationManager));
                 StartService(typeof(SurveyManager));
-                StartService(typeof(ClientManager));
                 StartSingletonService(new TelephonyManager());
                 Console.WriteLine("Services OK");
 

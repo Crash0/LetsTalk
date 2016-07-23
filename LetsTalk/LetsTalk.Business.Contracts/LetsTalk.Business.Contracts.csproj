@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="DataContracts\CallerInfo.cs" />
     <Compile Include="Service Contracts\ITelephonyServiceCallbacks.cs" />
-    <Compile Include="Service Contracts\IClientService.cs" />
     <Compile Include="Service Contracts\IAuthenticationService.cs" />
     <Compile Include="Service Contracts\ISurveyService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

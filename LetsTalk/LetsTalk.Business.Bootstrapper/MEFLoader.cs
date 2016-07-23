@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Composition.Hosting;
 using LetsTalk.Authentication.Data;
-using LetsTalk.ClientService.Data;
 using LetsTalk.Core.Common.Data;
 using LetsTalk.Surveys.Data;
 
@@ -17,7 +16,6 @@ namespace LetsTalk.Business.Bootstrapper
             catalog.Catalogs.Add(new AssemblyCatalog(typeof(UserAccountRepository).Assembly));
             catalog.Catalogs.Add(new AssemblyCatalog(typeof(SurveyRepository).Assembly));
             catalog.Catalogs.Add(new AssemblyCatalog(typeof(DataRepositoryFactory).Assembly));
-            catalog.Catalogs.Add(new AssemblyCatalog(typeof(ClientRepository).Assembly));
             var container = new CompositionContainer(catalog);
             return container;
         }

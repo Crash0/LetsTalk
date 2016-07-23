@@ -53,14 +53,6 @@
       <Project>{66C9D553-1DCC-478D-A066-E64FBDAD00F4}</Project>
       <Name>LetsTalk.Authentication.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LetsTalk.ClientService.Contracts\LetsTalk.ClientService.Contracts.csproj">
-      <Project>{e01ea8e7-0a5d-4929-9d58-072ad59c3b1d}</Project>
-      <Name>LetsTalk.ClientService.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LetsTalk.ClientService.Data\LetsTalk.ClientService.Data.csproj">
-      <Project>{401DF4E5-3333-443E-A61D-56CD7721A705}</Project>
-      <Name>LetsTalk.ClientService.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
       <Project>{2d8d79f4-8974-4830-8f87-ec6d4247c9cd}</Project>
       <Name>LetsTalk.Core.Common.Contracts</Name>

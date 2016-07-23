@@ -70,6 +70,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LetsTalk.Core.Common.Cryptography\LetsTalk.Core.Common.Cryptography.csproj">
+      <Project>{bb0c2faf-b18e-46f9-85ec-a4e9cfac538b}</Project>
+      <Name>LetsTalk.Core.Common.Cryptography</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
