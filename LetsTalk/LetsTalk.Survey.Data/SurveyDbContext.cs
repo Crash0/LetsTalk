@@ -1,21 +1,15 @@
-﻿using LetsTalk.Business.Entities.Surveys;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
+using LetsTalk.Business.Entities.Surveys;
 using LetsTalk.Core.Common.Contracts;
 
-namespace LetsTalk.Surveys.Data
+namespace LetsTalk.Services.SurveyService.Data
 {
     public class SurveyDbContext : DbContext
     {
-        public SurveyDbContext() : base("name=LetsTalk_Survey")
+        public SurveyDbContext() : base("name=LetsTalk_SurveyServiceDb")
         {
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SurveyDbContext>());
         }

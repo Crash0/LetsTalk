@@ -11,7 +11,7 @@ namespace LetsTalk.Services.TargetingService.Data
     {
         public TargetServiceDbContext() : base("name=LetsTalk_TargetServiceDb")
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<TargetServiceDbContext>());
+            Database.SetInitializer(new DropCreateDatabaseAlways<TargetServiceDbContext>());
         }
 
         public DbSet<Target> TargetSet { get; set; }
@@ -30,5 +30,5 @@ namespace LetsTalk.Services.TargetingService.Data
         }
 
     }
-    }
+    
 }

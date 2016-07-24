@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LetsTalk.Surveys.Data.Contracts;
-using LetsTalk.Core.Common.Contracts;
 using LetsTalk.Business.Entities.Surveys;
 using LetsTalk.Core.Common.Data;
-using System.ComponentModel.Composition;
+using LetsTalk.Surveys.Data.Contracts;
 
-namespace LetsTalk.Surveys.Data
+namespace LetsTalk.Services.SurveyService.Data
 {
     [Export(typeof(ISurveyRepository))]
     [PartCreationPolicy(CreationPolicy.NonShared)]

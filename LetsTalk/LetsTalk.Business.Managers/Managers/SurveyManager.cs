@@ -1,8 +1,12 @@
 ﻿using System;
+using System.ComponentModel.Composition;
 using System.ServiceModel;
+using System.Threading.Tasks;
 using LetsTalk.Business.Contracts;
 using LetsTalk.Business.Entities.Surveys;
 using LetsTalk.Core.Common.Exceptions;
+using LetsTalk.Services.SurveyService.Contracts.Messages.Commands;
+using NServiceBus;
 
 namespace LetsTalk.Business.Managers
 {
@@ -11,12 +15,35 @@ namespace LetsTalk.Business.Managers
         ReleaseServiceInstanceOnTransactionComplete = false)]
     public class SurveyManager : ManagerBase, ISurveyService
     {
+        [Import] private IBus bus;
         public Survey GetSurvey(string id)
         {
             return
                 ExecuteFaultHandeledOperation(
                     () => new Survey {Id = Guid.NewGuid(), Description = "NotImplemented", Title = "NotImplemented"});
         }
+
+        public Survey AddSurvey(Survey survey)
+        {
+            var message = new AddSurveyCommand
+            {
+                surveyToAdd = survey
+            };
+
+            Survey resultSurvey = new Survey();
+            var task = bus.Send(message).Register((result =>
+            {
+                var reply = result.Messages;
+                
+                return;
+
+            }));
+
+            var a =  task.GetAwaiter();
+            a.GetResult();
+            return resultSurvey;
+        }
+
 
         public Survey[] GetApplicableSurveys(string userId)
         {

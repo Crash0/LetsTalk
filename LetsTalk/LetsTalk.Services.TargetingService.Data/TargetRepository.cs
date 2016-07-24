@@ -12,7 +12,7 @@ namespace LetsTalk.Services.TargetingService.Data
 {
     [Export(typeof(ITargetRepository))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    public sealed class TargetRepository : DataRepositoryBase<Target, TargetServiceDbContext> ITargetRepository
+    public sealed class TargetRepository : DataRepositoryBase<Target, TargetServiceDbContext>, ITargetRepository
     {
         protected override Target AddEntity(TargetServiceDbContext entityContext, Target entity)
         {

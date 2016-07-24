@@ -6,6 +6,7 @@
         WebService,
         Backend,
         Logger,
-        Notification
+        Notification,
+        SurveyService
     }
 }

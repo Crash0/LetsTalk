@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<license id="11d94efb-5f6d-4dc3-9a75-6136cdbc5c6f" expiration="2017-07-12T00:00:00.0000000" type="Standard" LicenseVersion="5.0" WorkerThreads="Max" AllowedNumberOfWorkerNodes="Max" MaxMessageThroughputPerSecond="Max" Quantity="3" Edition="Enterprise" Applications="All">
+  <name>Jonas Fjeld</name>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>3MTOaR4L7QtwE6sjhzWP026luGo=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>eO3POc3uNlItCZHc5p4/4lHkR2sbVmfKaaVwTzXOHt4UM9MOUtxhLswEspdA949ZQUzuYzzx5oEPmxXSXfkD2I18repq6/gdoGn9uoXFenfb44NzXTn3dxx3sGatTP4f29kUh/Ii1ChTuuT9Hcx5ctiLU9WeeAUyzt3+r/BfUck=</SignatureValue>
+  </Signature>
+</license>

@@ -89,13 +89,13 @@
       <Project>{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}</Project>
       <Name>LetsTalk.Core.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LetsTalk.Survey.Data.Contracts\LetsTalk.Surveys.Data.Contracts.csproj">
+    <ProjectReference Include="..\LetsTalk.Survey.Data.Contracts\LetsTalk.Services.SurveyService.Contracts.csproj">
       <Project>{9bdc4111-c7e6-4e12-9174-a114e4695a5f}</Project>
-      <Name>LetsTalk.Surveys.Data.Contracts</Name>
+      <Name>LetsTalk.Services.SurveyService.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LetsTalk.Survey.Data\LetsTalk.Surveys.Data.csproj">
+    <ProjectReference Include="..\LetsTalk.Survey.Data\LetsTalk.Services.SurveyService.Data.csproj">
       <Project>{ffea92ad-88d0-4656-86d3-f2f587e812e2}</Project>
-      <Name>LetsTalk.Surveys.Data</Name>
+      <Name>LetsTalk.Services.SurveyService.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

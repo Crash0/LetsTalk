@@ -1,5 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
+using LetsTalk.Business.Entities.Miscellaneous;
+using LetsTalk.Business.Entities.Survey;
 using LetsTalk.Core.Common.Contracts;
 using LetsTalk.Core.Common.Core;
 
@@ -23,5 +26,7 @@ namespace LetsTalk.Business.Entities.Surveys
             set { Id = value; }
         }
 
+        public DateRange ApplicableAgeGroup { get; set; }
+        public List<SurveyQuestion> Questions { get; set; }
     }
 }

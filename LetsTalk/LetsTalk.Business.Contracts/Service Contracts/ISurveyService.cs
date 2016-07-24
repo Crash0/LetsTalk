@@ -13,6 +13,9 @@ namespace LetsTalk.Business.Contracts
         Survey GetSurvey(string id);
 
         [OperationContract]
+        Survey AddSurvey(Survey survey);
+
+        [OperationContract]
         Survey[] GetApplicableSurveys(string userId);
 
         [OperationContract]

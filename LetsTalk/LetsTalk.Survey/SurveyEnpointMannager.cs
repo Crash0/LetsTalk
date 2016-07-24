@@ -1,23 +1,18 @@
-﻿using LetsTalk.Core.Common.Contracts;
-using LetsTalk.Core.Common.Core;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel.Composition;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+using LetsTalk.Core.Common.Contracts;
+using LetsTalk.Core.Common.Core;
+using LetsTalk.Core.Kernel;
 using NServiceBus;
-using NServiceBus.Config.ConfigurationSource;
 
-namespace LetsTalk.Surveys
+namespace LetsTalk.Services.SurveyService
 {
     public class SurveyEnpointMannager : IDisposable
     {
         [Import]
         private IDataRepositoryFactory _dataRepositoryFactory;
 
-        private IBus _serviceBus;
+        private IStartableBus _serviceBus;
 
         private void Init()
         {
@@ -29,15 +24,14 @@ namespace LetsTalk.Surveys
 
         private void InitializeNServiceBus()
         {
-            var busconfig = new BusConfiguration();
-            busconfig.EnableInstallers();
-            busconfig.UsePersistence<InMemoryPersistence>();
-
+            var busconfig = BusConfigurator.CreateConfig(EndPoint.SurveyService);
             _serviceBus = Bus.Create(busconfig);
+            _serviceBus.Start();
         }
 
         private void InitializeDependencyProperties()
         {
+            ObjectBase.Container = Bootstrapper.Init();
             ObjectBase.Container.SatisfyImportsOnce(this);
         }
 
@@ -48,6 +42,8 @@ namespace LetsTalk.Surveys
             var program = new SurveyEnpointMannager();
             
             program.Init();
+
+            Console.ReadKey();
 
         }
 

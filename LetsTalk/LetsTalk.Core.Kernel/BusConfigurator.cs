@@ -16,7 +16,9 @@ namespace LetsTalk.Core.Kernel
             bussconfig.UseTransport<RabbitMQTransport>();
             bussconfig.UsePersistence<InMemoryPersistence>();
             bussconfig.EndpointName(endpoint.ToString());
-            
+            bussconfig.RijndaelEncryptionService();
+            bussconfig.ApplyCustomConventions();
+
 
             var conventionsBuilder = bussconfig.Conventions();
 

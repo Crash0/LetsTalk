@@ -18,6 +18,12 @@ namespace LetsTalk.Client.Contracts
         [OperationContract]
         Task<Survey> GetSurveyAsync(string id);
 
+        [OperationContract]
+        Survey AddSurvey(Survey survey);
+
+        [OperationContract]
+        Task<Survey> AddSurveyAsync(Survey survey);
+
         // Task<T> methodNameAsync(params) 
         //is implemented to Serverside contract automagically 
         [OperationContract]

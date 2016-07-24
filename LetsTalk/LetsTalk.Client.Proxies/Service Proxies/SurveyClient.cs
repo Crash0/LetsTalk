@@ -25,6 +25,16 @@ namespace LetsTalk.Client.Proxies
             return Channel.GetSurveyAsync(id);
         }
 
+        public Survey AddSurvey(Survey survey)
+        {
+            return Channel.AddSurvey(survey);
+        }
+
+        public Task<Survey> AddSurveyAsync(Survey survey)
+        {
+            return Channel.AddSurveyAsync(survey);
+        }
+
         public Survey[] GetApplicableSurveys(string userId)
         {
             return Channel.GetApplicableSurveys(userId);
