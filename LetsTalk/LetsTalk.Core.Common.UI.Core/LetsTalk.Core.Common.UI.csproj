@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgentCommands.cs" />
+    <Compile Include="AtachedProperties\Class1.cs" />
     <Compile Include="Behaviors\AutoPopulateExportedViewsBehavior.cs" />
     <Compile Include="Behaviors\ReturnCommandBehavior.cs" />
     <Compile Include="Behaviors\RegionPopupBehaviors.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Behaviors\ViewExportAttribute.cs" />
     <Compile Include="Behaviors\IViewRegionRegistration.cs" />
     <Compile Include="AgentCommandProxy.cs" />
+    <Compile Include="msc\WatermarkAdorner.cs" />
     <Compile Include="RegionNames.cs" />
     <Compile Include="Controls\Class1.cs" />
     <Compile Include="Core\UserControlViewBase.cs" />
@@ -93,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Converters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

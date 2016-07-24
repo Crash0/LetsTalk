@@ -8,7 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LetsTalk.Agent.Modules.Survey.Properties {
+namespace LetsTalk.Agent.Modules.SurveyModule.Properties {
+    using System;
     
     
     /// <summary>
@@ -37,8 +38,8 @@ namespace LetsTalk.Agent.Modules.Survey.Properties {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
-                if ((resourceMan == null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LetsTalk.Agent.Modules.Survey.Properties.Resources", typeof(Resources).Assembly);
+                if (object.ReferenceEquals(resourceMan, null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LetsTalk.Agent.Modules.SurveyModule.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

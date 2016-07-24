@@ -122,7 +122,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E1D5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Agent.Modules.Phone", "LetsTalk.Agent.Modules.Phone\LetsTalk.Agent.Modules.Phone.csproj", "{382A4AB9-81DF-496C-9462-0BCCF4C53DCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Agent.Modules.Survey", "LetsTalk.Agent.Modules.Survey\LetsTalk.Agent.Modules.Survey.csproj", "{4ABFF1B5-942D-4785-B458-7908996F3F25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Agent.Modules.SurveyModule", "LetsTalk.Agent.Modules.Survey\LetsTalk.Agent.Modules.SurveyModule.csproj", "{4ABFF1B5-942D-4785-B458-7908996F3F25}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Agent.Modules.News", "LetsTalk.Agent.Modules.News\LetsTalk.Agent.Modules.News.csproj", "{ED08C8B1-6574-45AF-BABA-F111413EE5C9}"
 EndProject

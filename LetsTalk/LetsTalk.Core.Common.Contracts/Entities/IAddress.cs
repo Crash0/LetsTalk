@@ -10,7 +10,7 @@
 
 #endregion
 
-namespace LetsTalk.Business.Contracts.Entities
+namespace LetsTalk.Core.Common.Contracts.Entities
 {
     public interface IAddress
     {

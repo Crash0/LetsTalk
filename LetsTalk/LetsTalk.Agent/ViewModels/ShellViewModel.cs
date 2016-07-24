@@ -23,6 +23,8 @@ namespace LetsTalk.Agent.ViewModels
         {
             this._regionManager = regionManager;
             NavigateCommand = new DelegateCommand<string>(OnNavigate);
+
+            _regionManager.RequestNavigate(RegionNames.MainRegion.ToString(),"AddSurvey");
         }
 
         public DelegateCommand<string> NavigateCommand { get; set; }

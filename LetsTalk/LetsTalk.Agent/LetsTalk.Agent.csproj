@@ -209,6 +209,10 @@
       <Project>{382a4ab9-81df-496c-9462-0bccf4c53dcf}</Project>
       <Name>LetsTalk.Agent.Modules.Phone</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Agent.Modules.Survey\LetsTalk.Agent.Modules.SurveyModule.csproj">
+      <Project>{4ABFF1B5-942D-4785-B458-7908996F3F25}</Project>
+      <Name>LetsTalk.Agent.Modules.SurveyModule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common.UI.Core\LetsTalk.Core.Common.UI.csproj">
       <Project>{156d9b41-cb9c-4e3a-8b2f-296163492f49}</Project>
       <Name>LetsTalk.Core.Common.UI</Name>

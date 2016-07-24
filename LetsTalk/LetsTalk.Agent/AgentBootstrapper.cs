@@ -10,6 +10,7 @@ using LetsTalk.Agent.Modules;
 using LetsTalk.Agent.Modules.Customers;
 using LetsTalk.Agent.Modules.News;
 using LetsTalk.Agent.Modules.Phone;
+using LetsTalk.Agent.Modules.SurveyModule;
 using LetsTalk.Core.Common.UI;
 using Prism.Mef;
 
@@ -25,6 +26,7 @@ namespace LetsTalk.Agent
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(PhoneModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(DashboardModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(CustomerModule).Assembly));
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(SurveyModule).Assembly));
         }
 
         protected override void ConfigureModuleCatalog()
@@ -39,6 +41,7 @@ namespace LetsTalk.Agent
 
             Application.Current.MainWindow = (Shell) this.Shell;
             Application.Current.MainWindow.Show();
+            
         }
 
         protected override Prism.Regions.IRegionBehaviorFactory ConfigureDefaultRegionBehaviors()

@@ -43,8 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContracts\CallerInfo.cs" />
-    <Compile Include="Entities\IAddress.cs" />
-    <Compile Include="Entities\IPhoneNumber.cs" />
     <Compile Include="Service Contracts\ITelephonyServiceCallbacks.cs" />
     <Compile Include="Service Contracts\IAuthenticationService.cs" />
     <Compile Include="Service Contracts\ISurveyService.cs" />

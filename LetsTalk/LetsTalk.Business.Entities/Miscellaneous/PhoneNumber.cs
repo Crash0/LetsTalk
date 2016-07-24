@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LetsTalk.Business.Contracts.Entities;
+using LetsTalk.Core.Common.Contracts.Entities;
 
 namespace LetsTalk.Business.Entities.Miscellaneous
 {

@@ -23,6 +23,16 @@
         <Style TargetType="TabItem">
             <Setter Property="Header" Value="{Binding DataContext.ViewTitle}"/>
             <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="ContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Grid>
+                            <controls:RoundedBox/>
+                            <ContentControl Content="{Binding}"/>
+                        </Grid>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
             <Setter Property="HeaderTemplate">
                 <Setter.Value>
                     <DataTemplate>
@@ -73,7 +83,7 @@
             </Canvas>
             <!--MainToolbar-->
 <Grid>
-    <Button Height="30" Width="70" Command="{Binding NavigateCommand}" CommandParameter="Search"></Button>
+    <Button Height="30" Width="70" Command="{Binding NavigateCommand}" CommandParameter="AddSurvey"></Button>
 </Grid>
             <ItemsControl x:Name="MainToolBar"
                           HorizontalAlignment="Right" 
@@ -98,15 +108,7 @@
                             Margin="10,29,10,10"
                         Background="Transparent"
                             regions:RegionManager.RegionName="{x:Static coreui:RegionNames.MainRegion}">
-                 
-                <!--<TabControl.Template>
-                    <ControlTemplate>
-                        <Grid>
-                        <controls:RoundedBox/>
-                        <TabItem Background="Transparent"/>
-                        </Grid>
-                    </ControlTemplate>
-                </TabControl.Template>-->
+             
             </TabControl>
 
             <!-- Phone-->

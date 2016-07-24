@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\IAddress.cs" />
+    <Compile Include="Entities\IPhoneNumber.cs" />
     <Compile Include="Service\IServiceFactory.cs" />
     <Compile Include="IIdentityContainer.cs" />
     <Compile Include="Service\IServiceContract.cs" />

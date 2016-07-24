@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="LetsTalk.Agent.Modules.SurveyModule.AddSurveyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:LetsTalk.Agent.Modules.SurveyModule"
+             xmlns:entities="clr-namespace:Letstalk.Client.Entities;assembly=Letstalk.Client.Entities"
+             xmlns:atachedProperties="clr-namespace:LetsTalk.Core.Common.UI.AtachedProperties;assembly=LetsTalk.Core.Common.UI"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="700"
+             d:DataContext="{d:DesignInstance Type=local:AddSurveyViewModel}">
+    <UserControl.Resources>
+        <Style TargetType="TextBox" x:Key="SurveyTitle">
+            <Setter Property="Margin" Value="10,10,0,0" />
+            <Setter Property="FontSize" Value="30" />
+        </Style>
+        <Style x:Key="QuestionTitleStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="25" />
+        </Style>
+        <Style x:Key="AnswerBoxStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="QuestionItemsControlStyle" TargetType="ItemsControl">
+                <Setter Property="ItemTemplate">
+                    <Setter.Value>
+                        <DataTemplate DataType="entities:SurveyQuestion">
+                            <Grid Margin="5">
+                                <Grid.Resources>
+                                    <Style x:Key="AnswerItemsControlStyle" TargetType="ItemsControl">
+                                        <Setter Property="ItemTemplate">
+                                            <Setter.Value>
+                                                <DataTemplate>
+                                                    <TextBox Text="{Binding Path=.}" Style="{StaticResource AnswerBoxStyle}">
+                                                        <atachedProperties:WatermarkService.Watermark>
+                                                            <Label FontSize="20">Enter a Answer</Label>
+                                                        </atachedProperties:WatermarkService.Watermark>
+                                                    </TextBox>
+                                                </DataTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox Grid.ColumnSpan="2" Text="{Binding Question}" Style="{StaticResource QuestionTitleStyle}">
+                                    <atachedProperties:WatermarkService.Watermark>
+                                        <Label FontSize="20">Enter Question</Label>
+                                    </atachedProperties:WatermarkService.Watermark>
+                                </TextBox>
+                                <ItemsControl Grid.Row="1" Grid.Column="1" ItemsSource="{Binding AnswerPossibilities}" Style="{StaticResource AnswerItemsControlStyle}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="71*" />
+            <ColumnDefinition Width="229*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="101*" />
+            <RowDefinition Height="29*" />
+        </Grid.RowDefinitions>
+        
+        <TextBox Text="{Binding CurrentSurvey.Title}" Grid.Column="1" 
+                 Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource SurveyTitle}">
+            <atachedProperties:WatermarkService.Watermark>
+                <Label FontSize="20">Enter Survey Title</Label>
+            </atachedProperties:WatermarkService.Watermark>
+        </TextBox>
+        <ItemsControl ItemsSource="{Binding Questions}" Grid.Column="1" Margin="10,50,10,10" Grid.Row="1" Style="{StaticResource QuestionItemsControlStyle}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+        </ItemsControl>
+        <Button Grid.Row="2" Grid.Column="1" Height="25" Width="70" Content="Add question" HorizontalAlignment="Right"
+                VerticalAlignment="Top" Margin="0,0,10,0" />
+    </Grid>
+</UserControl>

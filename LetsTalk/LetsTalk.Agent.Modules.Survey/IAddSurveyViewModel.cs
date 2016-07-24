@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LetsTalk.Business.Contracts.Entities
+namespace LetsTalk.Agent.Modules.SurveyModule
 {
-    public interface IPhoneNumber
+    public interface IAddSurveyViewModel
     {
-        //TODO: add members
-        string Number { get; set; }
         
     }
 }

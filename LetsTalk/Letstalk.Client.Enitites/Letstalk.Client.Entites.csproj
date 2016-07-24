@@ -48,8 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client\Client.cs" />
+    <Compile Include="Miscellaneous\Address.cs" />
+    <Compile Include="Miscellaneous\DateRange.cs" />
+    <Compile Include="Miscellaneous\Gender.cs" />
+    <Compile Include="Miscellaneous\PhoneNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Survey\Survey.cs" />
+    <Compile Include="Survey\SurveyQuestion.cs" />
+    <Compile Include="Targeting\Target.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">

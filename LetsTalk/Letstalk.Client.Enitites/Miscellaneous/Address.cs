@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LetsTalk.Core.Common.Contracts.Entities;
 
-namespace LetsTalk.Business.Entities.Miscellaneous
+namespace LetsTalk.Client.Entities.Miscellaneous
 {
     public class Address : IAddress
     {
