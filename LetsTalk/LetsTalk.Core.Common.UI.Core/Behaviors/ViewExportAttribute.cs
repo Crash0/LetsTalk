@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace LetsTalk.Core.Common.UI.Core
 {
+    
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     [MetadataAttribute]
     public sealed class ViewExportAttribute : ExportAttribute, IViewRegionRegistration

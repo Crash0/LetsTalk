@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="LetsTalk.Agent.Modules.SurveyModule.AddSurveyView"
+﻿<UserControl x:Class="LetsTalk.Agent.Modules.SurveyModule.EdtSurveyView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -9,7 +9,7 @@
              xmlns:system="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
              d:DesignHeight="600" d:DesignWidth="700"
-             d:DataContext="{d:DesignInstance Type=local:AddSurveyViewModel}">
+             d:DataContext="{d:DesignInstance Type=local:EditSurveyViewModel}">
     <UserControl.Resources>
         <Style TargetType="TextBox" x:Key="SurveyTitle">
             <Setter Property="Margin" Value="10,10,0,0" />

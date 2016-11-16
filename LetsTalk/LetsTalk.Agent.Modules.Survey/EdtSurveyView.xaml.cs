@@ -1,6 +1,6 @@
 ﻿#region Header
 
-// <copyright file="AddSurveyView.xaml.cs" company="GoDialog AS">
+// <copyright file="EdtSurveyView.xaml.cs" company="GoDialog AS">
 // File Created:  2016 07 24
 // Last Modified: 2016 201607 24 
 // All rights reserved. 2016
@@ -22,21 +22,21 @@ using LetsTalk.Core.Common.UI.Core;
 namespace LetsTalk.Agent.Modules.SurveyModule
 {
     /// <summary>
-    ///     Interaction logic for AddSurveyView.xaml
+    ///     Interaction logic for EdtSurveyView.xaml
     /// </summary>
     [ViewExport("AddSurvey", RegionName = RegionNames.MainRegion)]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    public partial class AddSurveyView : UserControl
+    public partial class EdtSurveyView : UserControl
     {
-        public AddSurveyView()
+        public EdtSurveyView()
         {
             InitializeComponent();
         }
 
         [Import]
-        private IAddSurveyViewModel SurveyViewModel
+        private IEditSurveyViewModel SurveyViewModel
         {
-            get { return DataContext as IAddSurveyViewModel; }
+            get { return DataContext as IEditSurveyViewModel; }
             set { DataContext = value; }
         }
     }

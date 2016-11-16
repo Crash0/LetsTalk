@@ -23,15 +23,17 @@ namespace LetsTalk.Agent.ViewModels
         {
             this._regionManager = regionManager;
             NavigateCommand = new DelegateCommand<string>(OnNavigate);
-
-            _regionManager.RequestNavigate(RegionNames.MainRegion.ToString(),"AddSurvey");
+            
         }
 
         public DelegateCommand<string> NavigateCommand { get; set; }
 
         private void OnNavigate(string Path)
         {
-            _regionManager.RequestNavigate(RegionNames.MainRegion,Path);
+            var param = new NavigationParameters();
+            param.Add(NavigationKeys.TargetKey, "UIDKeyToCustomer");
+            param.Add(NavigationKeys.SurveyKey,"surveyKey");
+            _regionManager.RequestNavigate(RegionNames.MainRegion,Path + param);
         }
     }
 }

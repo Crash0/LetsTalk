@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LetsTalk.Agent.Modules.SurveyModule
 {
-    public interface IAddSurveyViewModel
+    public interface IEditSurveyViewModel
     {
         
     }

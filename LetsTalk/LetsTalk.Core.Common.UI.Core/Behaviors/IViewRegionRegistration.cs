@@ -3,5 +3,6 @@
     public interface IViewRegionRegistration
     {
         string RegionName { get; }
+        
     }
 }

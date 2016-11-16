@@ -10,8 +10,8 @@
         coreuiBehaviors:RegionPopupBehaviors.ContainerWindowStyle="{StaticResource WindowRegionStyle}"
         xmlns:regions="http://prismlibrary.com/"
         xmlns:coreui="clr-namespace:LetsTalk.Core.Common.UI;assembly=LetsTalk.Core.Common.UI"
-        xmlns:controls="clr-namespace:LetsTalk.Agent.Controls"
         xmlns:viewModels="clr-namespace:LetsTalk.Agent.ViewModels"
+        xmlns:controls="http://www.Crash0.com/Core"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type=viewModels:ShellViewModel}"
         Title="Let`s Talk Agent Desktop" Height="768" Width="1024" WindowState="Maximized">
@@ -83,7 +83,7 @@
             </Canvas>
             <!--MainToolbar-->
 <Grid>
-    <Button Height="30" Width="70" Command="{Binding NavigateCommand}" CommandParameter="AddSurvey"></Button>
+                <Button Height="30" Width="70" Command="{Binding NavigateCommand}" CommandParameter="{x:Static  coreui:ViewNames.DisplaySurveyView}"></Button>
 </Grid>
             <ItemsControl x:Name="MainToolBar"
                           HorizontalAlignment="Right" 

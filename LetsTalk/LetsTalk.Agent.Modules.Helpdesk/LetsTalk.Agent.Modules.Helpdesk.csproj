@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{156D9B41-CB9C-4E3A-8B2F-296163492F49}</ProjectGuid>
+    <ProjectGuid>{51E9384D-F0C9-4AEE-BCB9-61661886604D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LetsTalk.Core.Common.UI</RootNamespace>
-    <AssemblyName>LetsTalk.Core.Common.UI</AssemblyName>
+    <RootNamespace>LetsTalk.Agent.Modules.Helpdesk</RootNamespace>
+    <AssemblyName>LetsTalk.Agent.Modules.Helpdesk</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,14 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FluentValidation, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
@@ -50,9 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,35 +53,27 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgentCommands.cs" />
-    <Compile Include="AtachedProperties\Class1.cs" />
-    <Compile Include="Behaviors\AutoPopulateExportedViewsBehavior.cs" />
-    <Compile Include="Behaviors\ReturnCommandBehavior.cs" />
-    <Compile Include="Behaviors\RegionPopupBehaviors.cs" />
-    <Compile Include="Behaviors\WindowWrapper.cs" />
-    <Compile Include="Behaviors\IWindow.cs" />
-    <Compile Include="Behaviors\DialogActivationBehavior.cs" />
-    <Compile Include="Behaviors\WindowDialogActivationBehavior.cs" />
-    <Compile Include="Behaviors\ViewExportAttribute.cs" />
-    <Compile Include="Behaviors\IViewRegionRegistration.cs" />
-    <Compile Include="AgentCommandProxy.cs" />
-    <Compile Include="Controls\RoundedBox.xaml.cs">
-      <DependentUpon>RoundedBox.xaml</DependentUpon>
+    <Compile Include="HelpdeskModule.cs" />
+    <Compile Include="HelpdeskOverview\HelpdeskOverview.xaml.cs">
+      <DependentUpon>HelpdeskOverview.xaml</DependentUpon>
     </Compile>
-    <Compile Include="msc\WatermarkAdorner.cs" />
-    <Compile Include="NavigationKeys.cs" />
-    <Compile Include="RegionNames.cs" />
-    <Compile Include="Controls\Class1.cs" />
-    <Compile Include="Core\UserControlViewBase.cs" />
-    <Compile Include="Core\ViewModelBase.cs" />
-    <Compile Include="Events\OpenCallerViewEvent.cs" />
+    <Compile Include="HelpdeskOverview\HelpdeskOverviewViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewNames.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="HelpdeskOverview\HelpdeskOverview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
       <Project>{2D8D79F4-8974-4830-8F87-EC6D4247C9CD}</Project>
       <Name>LetsTalk.Core.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common.UI.Core\LetsTalk.Core.Common.UI.csproj">
+      <Project>{156D9B41-CB9C-4E3A-8B2F-296163492F49}</Project>
+      <Name>LetsTalk.Core.Common.UI</Name>
     </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common\LetsTalk.Core.Common.csproj">
       <Project>{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}</Project>
@@ -100,54 +82,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converters\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Controls\RoundedBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\Styles.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\TabItemResource.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\WindowRegionResource.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\shadow_b.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\shadow_bl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\shadow_br.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\shadow_l.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\shadow_r.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\shadow_t.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\shadow_tl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\shadow_tr.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

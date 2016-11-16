@@ -127,9 +127,6 @@
     </Compile>
     <Compile Include="AgentBootstrapper.cs" />
     <Compile Include="CloseTabAction.cs" />
-    <Compile Include="Controls\RoundedBox.xaml.cs">
-      <DependentUpon>RoundedBox.xaml</DependentUpon>
-    </Compile>
     <Compile Include="EnterpriseLibraryLoggerAdapter.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -175,10 +172,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Controls\RoundedBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Resources\Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -201,6 +194,10 @@
       <Project>{0F4711AC-3BD4-4E8D-9E65-D0ECD0FE4121}</Project>
       <Name>LetsTalk.Agent.Modules.Customers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Agent.Modules.Helpdesk\LetsTalk.Agent.Modules.Helpdesk.csproj">
+      <Project>{51e9384d-f0c9-4aee-bcb9-61661886604d}</Project>
+      <Name>LetsTalk.Agent.Modules.Helpdesk</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Agent.Modules.News\LetsTalk.Agent.Modules.News.csproj">
       <Project>{ED08C8B1-6574-45AF-BABA-F111413EE5C9}</Project>
       <Name>LetsTalk.Agent.Modules.News</Name>
@@ -212,6 +209,14 @@
     <ProjectReference Include="..\LetsTalk.Agent.Modules.Survey\LetsTalk.Agent.Modules.SurveyModule.csproj">
       <Project>{4ABFF1B5-942D-4785-B458-7908996F3F25}</Project>
       <Name>LetsTalk.Agent.Modules.SurveyModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Client.Proxies\LetsTalk.Client.Proxies.csproj">
+      <Project>{21C9342E-9EA1-42FF-9C0D-64B55460AE21}</Project>
+      <Name>LetsTalk.Client.Proxies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
+      <Project>{2D8D79F4-8974-4830-8F87-EC6D4247C9CD}</Project>
+      <Name>LetsTalk.Core.Common.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common.UI.Core\LetsTalk.Core.Common.UI.csproj">
       <Project>{156d9b41-cb9c-4e3a-8b2f-296163492f49}</Project>
@@ -232,6 +237,7 @@
     <Resource Include="Resources\background.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controls\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

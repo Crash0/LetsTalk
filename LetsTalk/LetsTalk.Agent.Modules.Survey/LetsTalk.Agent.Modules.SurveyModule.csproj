@@ -60,7 +60,11 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="AddSurveyView.xaml">
+    <Page Include="Display\DisplaySurveyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EdtSurveyView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -70,11 +74,16 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddSurveyView.xaml.cs">
-      <DependentUpon>AddSurveyView.xaml</DependentUpon>
+    <Compile Include="Display\DisplaySurveyView.xaml.cs">
+      <DependentUpon>DisplaySurveyView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddSurveyViewModel.cs" />
-    <Compile Include="IAddSurveyViewModel.cs" />
+    <Compile Include="Display\DisplaySurveyViewModel.cs" />
+    <Compile Include="Display\IDisplaySurveyViewModel.cs" />
+    <Compile Include="EdtSurveyView.xaml.cs">
+      <DependentUpon>EdtSurveyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditSurveyViewModel.cs" />
+    <Compile Include="IEditSurveyViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -89,6 +98,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="SurveyModule.cs" />
+    <Compile Include="SurveyConstants.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -117,6 +127,9 @@
       <Project>{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}</Project>
       <Name>LetsTalk.Core.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="te\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
