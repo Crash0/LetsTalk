@@ -13,6 +13,9 @@ namespace LetsTalk.Business.Contracts
         [OperationContract]
         bool Connect(Guid agentId);
 
+        [OperationContract]
+        bool Ping();
+        
         bool SendCallTo(Guid agentId, CallerInfo callInfo);
     }
 }

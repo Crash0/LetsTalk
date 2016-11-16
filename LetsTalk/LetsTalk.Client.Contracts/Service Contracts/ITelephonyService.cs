@@ -20,15 +20,23 @@ namespace LetsTalk.Client.Contracts
 
         ITelephonyServiceCallbacks GetCallbacks();
 
+        [OperationContract]
+        bool Ping();
     }
     public delegate void CallerConnectEvent(object sender, CallerInfo args);
+
+    public delegate void ConnectSucceededEvent(object seder);
 
     [ServiceContract]
     public interface ITelephonyServiceCallbacks
     {
-        event CallerConnectEvent OnCallerConnect; 
+        event CallerConnectEvent OnCallerConnect;
+        event ConnectSucceededEvent OnConnectionSucceeded;
 
         [OperationContract]
         void CallerConnect(CallerInfo caller);
+
+        [OperationContract]
+        void ConnectionSucceeded();
     }
 }

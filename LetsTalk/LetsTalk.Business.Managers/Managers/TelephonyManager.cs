@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ServiceModel;
 using LetsTalk.Business.Contracts;
+using NServiceBus.Logging.Loggers;
 
 namespace LetsTalk.Business.Managers
 {
@@ -25,8 +26,16 @@ namespace LetsTalk.Business.Managers
         {
             var s = OperationContext.Current.GetCallbackChannel<ITelephonyServiceCallbacks>();
             CurrentChannels.Add(agentId,s);
-            
+            s.ConnectionSucceeded();
             return false;
+        }
+
+        public bool Ping()
+        {
+            //TODo:  remove manualy plased guid
+            CurrentChannels[Guid.Parse("D56F4395-3972-4CA9-9BDE-A4173B1EB051")].CallerConnect(new CallerInfo { CallerName = "Jonas", CallerNumber = 98608900, CallerId = Guid.NewGuid() });
+            Console.WriteLine($"Got ping from {OperationContext.Current.Channel.RemoteAddress} at {DateTime.Now}");
+            return true;
         }
 
         bool ITelephonyService.SendCallTo(Guid agentId, CallerInfo callInfo)

@@ -8,5 +8,8 @@ namespace LetsTalk.Business.Contracts
     {
         [OperationContract]
         void CallerConnect(CallerInfo caller);
+        
+        [OperationContract]
+        void ConnectionSucceeded();
     }
 }
