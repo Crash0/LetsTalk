@@ -4,5 +4,6 @@ namespace LetsTalk.Core.Common.UI
     {
         public const string HelpdeskOverview = "HelpdeskOverview";
         public const string DisplaySurveyView = "DisplaySurveyView";
+        public const string ToolBar = "ToolbarView";
     }
 }

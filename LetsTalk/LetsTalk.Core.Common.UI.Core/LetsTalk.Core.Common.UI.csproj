@@ -75,6 +75,7 @@
     <Compile Include="Behaviors\ViewExportAttribute.cs" />
     <Compile Include="Behaviors\IViewRegionRegistration.cs" />
     <Compile Include="AgentCommandProxy.cs" />
+    <Compile Include="Commands\ToolbarActionDelegate.cs" />
     <Compile Include="Controls\RoundedBox.xaml.cs">
       <DependentUpon>RoundedBox.xaml</DependentUpon>
     </Compile>

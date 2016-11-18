@@ -12,6 +12,7 @@ using LetsTalk.Agent.Modules.News;
 using LetsTalk.Agent.Modules.Phone;
 using LetsTalk.Agent.Modules.SurveyModule;
 using LetsTalk.Agent.Modules.Helpdesk;
+using LetsTalk.Agent.Modules.ToolBar;
 using LetsTalk.Client.Proxies;
 using LetsTalk.Core.Common.UI;
 using Prism.Mef;
@@ -35,6 +36,7 @@ namespace LetsTalk.Agent
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(CustomerModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(SurveyModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(HelpdeskModule).Assembly));
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ToolbarModule).Assembly));
         }
 
         protected override void ConfigureModuleCatalog()

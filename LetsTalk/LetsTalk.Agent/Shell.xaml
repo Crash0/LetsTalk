@@ -52,18 +52,19 @@
                                     </i:EventTrigger>
                                 </i:Interaction.Triggers>
                             </Button>
-                                                    
+
                         </Grid>
                     </DataTemplate>
                 </Setter.Value>
             </Setter>
-                
+
         </Style>
     </Window.Resources>
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
         <Grid RenderTransformOrigin="0.5,0.5" Margin="20,0,20,20">
             <Grid.RowDefinitions>
-                <RowDefinition Height="124" />
+                <RowDefinition Height="83" />
+                <RowDefinition Height="41"/>
                 <RowDefinition Height="4*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -72,7 +73,7 @@
                 <ColumnDefinition Width="*" MinWidth="650" />
             </Grid.ColumnDefinitions>
             <!-- Logo -->
-            <Canvas x:Name="Logo" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Canvas x:Name="Logo" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
                 <TextBlock Text="Let's Talk" TextWrapping="NoWrap" Foreground="#ffc4cfd6" FontSize="72"
                            FontWeight="Bold"
                            TextAlignment="Left" Opacity="0.85" Canvas.Left="0" Canvas.Top="5"
@@ -82,44 +83,42 @@
                            TextAlignment="Left" Opacity="0.8" Canvas.Left="280" Canvas.Top="80" />
             </Canvas>
             <!--MainToolbar-->
-<Grid>
+            <Grid Grid.RowSpan="2">
                 <Button Height="30" Width="70" Command="{Binding NavigateCommand}" CommandParameter="{x:Static  coreui:ViewNames.DisplaySurveyView}"></Button>
-</Grid>
-            <ItemsControl x:Name="MainToolBar"
-                          HorizontalAlignment="Right" 
+            </Grid>
+            <ItemsControl x:Name="MainToolBar" 
                           VerticalAlignment="Top"
-                          Margin="10"
-                          Width="500"
-                          Height="100"
+                          Margin="10,10,10,0"
+                          Height="68"
                           Grid.Column="1" Grid.Row="0"
                           Background="Aqua"
-                          regions:RegionManager.RegionName="{x:Static coreui:RegionNames.MainToolBarRegion}" >
-                <!--<ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            
-                        </StackPanel>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>-->
-            </ItemsControl>
+                          regions:RegionManager.RegionName="{x:Static coreui:RegionNames.MainToolBarRegion}" />
+            <!--SearchBar-->
+            <ItemsControl x:Name="SearchToolbar"
+                          VerticalAlignment="Top"
+                          Margin ="260,10,10,0"
+                          Height="30"
+                          Grid.Row="1" Grid.Column="1"
+                          Background="Red"
+                          regions:RegionManager.RegionName="{x:Static coreui:RegionNames.SearchBarRegion}"/>
             <!--content-->
             <TabControl VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Name="ContentGrid"
-                            Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"
+                            Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"
                             Margin="10,29,10,10"
                         Background="Transparent"
                             regions:RegionManager.RegionName="{x:Static coreui:RegionNames.MainRegion}">
-             
+
             </TabControl>
 
             <!-- Phone-->
-            <Grid x:Name="PhoneGrid" VerticalAlignment="Bottom" Margin="10,29,10,10" Grid.RowSpan="2" Grid.Column="0"
-                  Grid.Row="1">
+            <Grid x:Name="PhoneGrid" VerticalAlignment="Bottom" Margin="10,0,10,10" Grid.RowSpan="2" Grid.Column="0"
+                  Grid.Row="2">
                 <ContentControl regions:RegionManager.RegionName="{x:Static coreui:RegionNames.PhoneRegion}">
 
                     <ContentControl.Template>
                         <ControlTemplate TargetType="ContentControl">
                             <Grid>
-                               <Grid.RowDefinitions>
+                                <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <controls:RoundedBox />

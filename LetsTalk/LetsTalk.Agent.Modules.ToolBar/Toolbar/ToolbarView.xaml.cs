@@ -16,18 +16,25 @@ using System.Windows.Shapes;
 using LetsTalk.Core.Common.UI;
 using LetsTalk.Core.Common.UI.Core;
 
-namespace LetsTalk.Agent.Modules.Customers.Search
+namespace LetsTalk.Agent.Modules.ToolBar.Toolbar
 {
     /// <summary>
-    /// Interaction logic for SearchToolbarView.xaml
+    /// Interaction logic for ToolbarView.xaml
     /// </summary>
-    [ViewExport(RegionName = RegionNames.SearchBarRegion)]
+    [ViewExport(RegionName = RegionNames.MainToolBarRegion)]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    public partial class SearchToolbarView : UserControl
+    public partial class ToolbarView : UserControl
     {
-        public SearchToolbarView()
+        public ToolbarView()
         {
             InitializeComponent();
+        }
+
+        [Import]
+        IToolbarViewModel ViewModel
+        {
+            get { return DataContext as IToolbarViewModel; }
+            set { DataContext = value; }
         }
     }
 }
