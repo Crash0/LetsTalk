@@ -1,0 +1,7 @@
+<StyleCopSettings Version="105">
+  <GlobalSettings>
+    <CollectionProperty Name="DeprecatedWords">
+      <Value>bootstrapper, Bootstrapper</Value>
+    </CollectionProperty>
+  </GlobalSettings>
+</StyleCopSettings>

@@ -160,6 +160,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "News Service", "News Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Agent.Modules.ToolBar", "LetsTalk.Agent.Modules.ToolBar\LetsTalk.Agent.Modules.ToolBar.csproj", "{2F86EA0D-F8C2-4E32-93BF-2EA807635F5D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B9B5C3B-A87C-4C3D-A1D1-E508D4419A2E}"
+	ProjectSection(SolutionItems) = preProject
+		Settings.StyleCop = Settings.StyleCop
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
