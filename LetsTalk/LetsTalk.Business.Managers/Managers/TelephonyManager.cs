@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ServiceModel;
-using LetsTalk.Business.Contracts;
-using NServiceBus.Logging.Loggers;
-
-namespace LetsTalk.Business.Managers
+﻿namespace LetsTalk.Business.Managers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ServiceModel;
+
+    using LetsTalk.Business.Contracts;
+
+    using NServiceBus.Logging.Loggers;
+
     [ServiceBehavior(
         InstanceContextMode = InstanceContextMode.Single, 
         ConcurrencyMode = ConcurrencyMode.Multiple)]
