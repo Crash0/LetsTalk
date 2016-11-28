@@ -7,11 +7,9 @@ using NServiceBus.Logging.Loggers;
 namespace LetsTalk.Business.Managers
 {
     [ServiceBehavior(
-        
-        InstanceContextMode = InstanceContextMode.Single,
-        ConcurrencyMode = ConcurrencyMode.Multiple
-        )]
-    public class TelephonyManager: ManagerBase, ITelephonyService
+        InstanceContextMode = InstanceContextMode.Single, 
+        ConcurrencyMode = ConcurrencyMode.Multiple)]
+    public class TelephonyManager : ManagerBase, ITelephonyService
     {
         public TelephonyManager()
         {
@@ -27,13 +25,13 @@ namespace LetsTalk.Business.Managers
             var s = OperationContext.Current.GetCallbackChannel<ITelephonyServiceCallbacks>();
             CurrentChannels.Add(agentId,s);
             s.ConnectionSucceeded();
-            return false;
+            return true;
         }
 
         public bool Ping()
         {
             //TODo:  remove manualy plased guid
-            CurrentChannels[Guid.Parse("D56F4395-3972-4CA9-9BDE-A4173B1EB051")].CallerConnect(new CallerInfo { CallerName = "Jonas", CallerNumber = 98608900, CallerId = Guid.NewGuid() });
+            CurrentChannels[Guid.Parse("D56F4395-3972-4CA9-9BDE-A4173B1EB051")].CallerConnect(new CallerInfo { CallerName = "Jonas deb grå", CallerNumber = 98608900, CallerId = Guid.NewGuid() });
             Console.WriteLine($"Got ping from {OperationContext.Current.Channel.RemoteAddress} at {DateTime.Now}");
             return true;
         }

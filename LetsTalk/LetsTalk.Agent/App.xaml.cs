@@ -28,6 +28,7 @@ namespace LetsTalk.Agent
             {
                 var bootstrapper = new AgentBootstrapper();
                 bootstrapper.Run();
+
             }
             catch (Exception ex)
             {

@@ -86,12 +86,12 @@
             <Grid Grid.RowSpan="2">
                 <Button Height="30" Width="70" Command="{Binding NavigateCommand}" CommandParameter="{x:Static  coreui:ViewNames.DisplaySurveyView}"></Button>
             </Grid>
-            <ItemsControl x:Name="MainToolBar" 
-                          VerticalAlignment="Top"
-                          Margin="10,10,10,0"
+            <ItemsControl x:Name="MainToolBar"
+                          Margin="10"
                           Height="68"
+                          VerticalAlignment="Stretch"
+                          HorizontalAlignment="Stretch"
                           Grid.Column="1" Grid.Row="0"
-                          Background="Aqua"
                           regions:RegionManager.RegionName="{x:Static coreui:RegionNames.MainToolBarRegion}" />
             <!--SearchBar-->
             <ItemsControl x:Name="SearchToolbar"
@@ -99,7 +99,6 @@
                           Margin ="260,10,10,0"
                           Height="30"
                           Grid.Row="1" Grid.Column="1"
-                          Background="Red"
                           regions:RegionManager.RegionName="{x:Static coreui:RegionNames.SearchBarRegion}"/>
             <!--content-->
             <TabControl VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Name="ContentGrid"

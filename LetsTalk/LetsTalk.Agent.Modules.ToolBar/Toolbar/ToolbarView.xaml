@@ -1,12 +1,29 @@
 ﻿<UserControl x:Class="LetsTalk.Agent.Modules.ToolBar.Toolbar.ToolbarView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LetsTalk.Agent.Modules.ToolBar.Toolbar"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             xmlns:commands="clr-namespace:LetsTalk.Core.Common.UI.Commands;assembly=LetsTalk.Core.Common.UI"
+             xmlns:controls="http://www.Crash0.com/Core"
+             mc:Ignorable="d"
+             d:DesignHeight="68" d:DesignWidth="700"
+             d:DataContext="{d:DesignInstance local:ToolbarViewModel}"
+             HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="50" Margin="5">
     <Grid>
-        <Label Content="I Am Toolbar !!"/>
+        <controls:RoundedBox/>
+        <ItemsControl ItemsSource="{Binding ToolbarActions }">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" CanHorizontallyScroll="True" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate DataType="commands:ToolbarActionDelegate">
+                    <Button Margin="10,5,2,5" Content="{Binding DisplayName}" Command="{Binding Command}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
     </Grid>
 </UserControl>

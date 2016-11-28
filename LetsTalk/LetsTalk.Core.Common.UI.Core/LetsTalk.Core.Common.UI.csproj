@@ -79,6 +79,8 @@
     <Compile Include="Controls\RoundedBox.xaml.cs">
       <DependentUpon>RoundedBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Events\AddToolBarButtonEvent.cs" />
+    <Compile Include="Events\FinishedInitializingEvent.cs" />
     <Compile Include="msc\WatermarkAdorner.cs" />
     <Compile Include="NavigationKeys.cs" />
     <Compile Include="RegionNames.cs" />

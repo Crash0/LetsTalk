@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using LetsTalk.Agent.ViewModels;
+using Prism.Events;
+using Prism.Mef;
 
 namespace LetsTalk.Agent
 {
@@ -25,6 +27,7 @@ namespace LetsTalk.Agent
         public Shell()
         {
             InitializeComponent();
+            
         }
 
         [Import]

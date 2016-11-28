@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.Linq;
 using System.Reflection;
@@ -15,6 +16,9 @@ using LetsTalk.Agent.Modules.Helpdesk;
 using LetsTalk.Agent.Modules.ToolBar;
 using LetsTalk.Client.Proxies;
 using LetsTalk.Core.Common.UI;
+using LetsTalk.Core.Common.UI.Commands;
+using LetsTalk.Core.Common.UI.Events;
+using Prism.Events;
 using Prism.Mef;
 
 namespace LetsTalk.Agent
@@ -42,16 +46,19 @@ namespace LetsTalk.Agent
         protected override void ConfigureModuleCatalog()
         {
             base.ConfigureModuleCatalog();
-            base.ConfigureModuleCatalog();
+
         }
 
+        
         protected override void InitializeShell()
         {
             base.InitializeShell();
-
             Application.Current.MainWindow = (Shell) this.Shell;
             Application.Current.MainWindow.Show();
-            
+            //TODO: Initialize stuff here after all modules has loaded
+            var e = this.Container.GetExportedValue<IEventAggregator>();
+            e.GetEvent<FinishedInitializingEvent>().Publish(1);
+
         }
 
         protected override Prism.Regions.IRegionBehaviorFactory ConfigureDefaultRegionBehaviors()
@@ -66,6 +73,7 @@ namespace LetsTalk.Agent
         protected override DependencyObject CreateShell()
         {
             return this.Container.GetExportedValue<Shell>();
+            
         }
     }
 }

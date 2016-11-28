@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LetsTalk.Agent.Modules.Customers.Search"
-             mc:Ignorable="d" 
+             xmlns:controls="http://www.Crash0.com/Core"
+             mc:Ignorable="d" d:DesignHeight="30" d:DesignWidth="200"
              >
     <UserControl.Resources>
         <Style TargetType="TextBox">
@@ -16,7 +17,14 @@
             <Setter Property="CornerRadius" Value="20"></Setter>
         </Style>
     </UserControl.Resources>
-    <Border>
-        <TextBox Text="Hello"/>
-    </Border>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="149*"/>
+        </Grid.ColumnDefinitions>
+        <controls:RoundedBox Grid.ColumnSpan="2"/>
+        <Label VerticalAlignment="Center" Height="26" Margin="0,2">Search</Label>
+        <TextBox  VerticalAlignment="Center" Grid.Column="1"  Margin="0,6" Height="18" TextDecorations="Underline"/>
+    </Grid>
 </UserControl>
+
