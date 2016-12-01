@@ -79,6 +79,8 @@
     <Compile Include="Controls\RoundedBox.xaml.cs">
       <DependentUpon>RoundedBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\BoolToRedGreenConverter.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Events\AddToolBarButtonEvent.cs" />
     <Compile Include="Events\FinishedInitializingEvent.cs" />
     <Compile Include="msc\WatermarkAdorner.cs" />
@@ -104,9 +106,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Controls\RoundedBox.xaml">
       <Generator>MSBuild:Compile</Generator>

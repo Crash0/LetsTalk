@@ -7,7 +7,6 @@
              xmlns:core="http://www.Crash0.com/Core"
              xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              xmlns:viewModels="clr-namespace:LetsTalk.Client.AgentClient.ViewModels"
-             xmlns:conv="clr-namespace:LetsTalk.Client.AgentClient.Support"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" d:DataContext="{viewModels:MainViewModel}">
     <UserControl.Resources>

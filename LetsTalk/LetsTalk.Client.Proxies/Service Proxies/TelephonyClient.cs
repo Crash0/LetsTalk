@@ -25,6 +25,11 @@ namespace LetsTalk.Client.Proxies
             return Channel.Connect(agentId);
         }
 
+        public bool Disconnect(Guid agentId)
+        {
+            return Channel.Disconnect(agentId);
+        }
+
         public bool CloseCall(Guid callId)
         {
             return Channel.CloseCall(callId);

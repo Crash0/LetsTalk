@@ -103,7 +103,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Event\MainEventAggregator.cs" />
-    <Compile Include="Support\BoolToVisibilityConverter.cs" />
     <Compile Include="UserControles\CircularProgressBar.xaml.cs">
       <DependentUpon>CircularProgressBar.xaml</DependentUpon>
     </Compile>

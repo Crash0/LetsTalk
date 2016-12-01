@@ -11,5 +11,11 @@ namespace LetsTalk.Business.Contracts
         
         [OperationContract]
         void ConnectionSucceeded();
+
+        [OperationContract]
+        void ConnectionFailed(ConnectionFailedInfo failInfo);
+
+        [OperationContract]
+        void ServerDisconnect();
     }
 }

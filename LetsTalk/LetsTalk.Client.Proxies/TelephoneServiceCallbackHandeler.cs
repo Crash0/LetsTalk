@@ -8,12 +8,19 @@ using LetsTalk.Client.Contracts;
 
 namespace LetsTalk.Client.Proxies
 {
+    using LetsTalk.Client.Contracts.DataContracts;
+
     [Export(typeof(ITelephonyServiceCallbacks))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    class TelephoneServiceCallbackHandeler : ITelephonyServiceCallbacks
+    public class TelephoneServiceCallbackHandeler : ITelephonyServiceCallbacks
     {
         public event CallerConnectEvent OnCallerConnect;
+
         public event ConnectSucceededEvent OnConnectionSucceeded;
+
+        public event ServerDisconnectEvent OnServerDisconnect;
+
+        public event ConnectionFailedEvent OnConnectionFailed;
 
         public void CallerConnect(CallerInfo caller)
         {
@@ -23,6 +30,16 @@ namespace LetsTalk.Client.Proxies
         public void ConnectionSucceeded()
         {
             OnConnectionSucceeded?.Invoke(this);
+        }
+
+        public void ConnectionFailed(ConnectionFailedInfo failInfo)
+        {
+            OnConnectionFailed?.Invoke(this, failInfo);
+        }
+
+        public void ServerDisconnect()
+        {
+            OnServerDisconnect?.Invoke(this);
         }
     }
 }

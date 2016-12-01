@@ -15,29 +15,36 @@ namespace LetsTalk.Agent.Modules.Phone
     {
         private readonly ITelephonyService telephonyService;
 
+        private CallerInfo caller;
+
+        private bool isConnected = false;
+
         [ImportingConstructor]
         public PhoneViewModel(ITelephonyService telephonyService)
         {
             this.telephonyService = telephonyService;
             telephonyService.GetCallbacks().OnCallerConnect += PhoneViewModel_OnCallerConnect;
             telephonyService.GetCallbacks().OnConnectionSucceeded += PhoneViewModel_OnConnectionSucceeded;
+            telephonyService.GetCallbacks().OnServerDisconnect += PhoneViewModel_OnServerDisconnect;
 
             this.GetDefaultCommands();
         }
 
-        private CallerInfo caller;
+        private void PhoneViewModel_OnServerDisconnect(object sender)
+        {
+            // Display Modal box notify
+
+            IsConnected = false;
+
+        }
 
         public ObservableCollection<PhoneActionViewModel> AvailableCommands { get; set; }
 
-
-
         public ICommand CallCommand { get; }
-
-
+        
         /// <summary>
         /// Gets the Current caller
         /// </summary>
-        
         public CallerInfo Caller
         {
             get
@@ -53,6 +60,20 @@ namespace LetsTalk.Agent.Modules.Phone
             }
         }
 
+        public bool IsConnected
+        {
+            get
+            {
+                return this.isConnected;
+            }
+
+            set
+            {
+                this.isConnected = value;
+                this.OnPropertyChanged(() => this.IsConnected);
+            }
+        }
+
         private void GetDefaultCommands()
         {
             AvailableCommands = new ObservableCollection<PhoneActionViewModel>
@@ -61,7 +82,7 @@ namespace LetsTalk.Agent.Modules.Phone
                 {
                     DisplayName = "send Ping",
                     Command = new ActionCommand(
-                    i => Task.Run(() => this.telephonyService.Ping()))
+                        i => Task.Run(() => this.telephonyService.Ping()))
                 },
                 new PhoneActionViewModel
                 {
@@ -84,7 +105,8 @@ namespace LetsTalk.Agent.Modules.Phone
 
         private void PhoneViewModel_OnConnectionSucceeded (object seder)
         {
-            
+            IsConnected = true;
         }
+        
     }
 }

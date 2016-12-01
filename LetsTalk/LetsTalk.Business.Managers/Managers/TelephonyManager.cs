@@ -1,8 +1,13 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="TelephonyManager.cs" company="GoDialog">
-//   All Rights Reserved
+//   Copyright (C) 2016 Jonas Fjeld.
+//             This file is part of LetsTalk Software pack.
+//             License: Attribution-NonCommercial-ShareAlike 4.0 International.
+//             See https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
+
+
 namespace LetsTalk.Business.Managers
 {
     #region Usings
@@ -67,16 +72,41 @@ namespace LetsTalk.Business.Managers
                 // TODO: report to service bus that agent is no longer available
 
                 // TODO: Implement connection failed and its ConnectionFailed args
-                // s.ConnectionFailed(); 
+                s.ConnectionFailed(new ConnectionFailedInfo());
+                s.ServerDisconnect();
                 return false;
             }
+
             currentChannels.Add(agentId, s);
             s.ConnectionSucceeded();
             return true;
         }
 
         /// <summary>
-        ///     TODO The ping.
+        /// Disconnects a Agent from the Phone System
+        /// </summary>
+        /// <param name="agentId">
+        /// The Agent to disconnect
+        /// </param>
+        /// <returns>
+        /// Returns false if the agent is not in the list of current users
+        /// </returns>
+        public bool Disconnect(Guid agentId)
+        {
+            if (currentChannels.ContainsKey(agentId))
+            {
+                currentChannels[agentId].ServerDisconnect();
+                currentChannels.Remove(agentId);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        ///     TODO Remove Test Function
         /// </summary>
         /// <returns>
         ///     The <see cref="bool" />.
@@ -86,7 +116,12 @@ namespace LetsTalk.Business.Managers
             // Callback Works !!
             // TODo:  remove manually placed guid
             currentChannels[Guid.Parse("D56F4395-3972-4CA9-9BDE-A4173B1EB051")].CallerConnect(
-                new CallerInfo { CallerName = "Jonas deb grå " + new Random().Next(390), CallerNumber = new Random().Next(90000000, 99999999), CallerId = Guid.NewGuid() });
+                new CallerInfo
+                    {
+                        CallerName = "Jonas deb grå " + new Random().Next(390),
+                        CallerNumber = new Random().Next(90000000, 99999999),
+                        CallerId = Guid.NewGuid()
+                    });
             Console.WriteLine($"Got ping from {OperationContext.Current.Channel.RemoteAddress} at {DateTime.Now}");
             return true;
         }
