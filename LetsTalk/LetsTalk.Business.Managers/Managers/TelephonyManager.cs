@@ -60,6 +60,16 @@ namespace LetsTalk.Business.Managers
         public bool Connect(Guid agentId)
         {
             var s = OperationContext.Current.GetCallbackChannel<ITelephonyServiceCallbacks>();
+            if (currentChannels.ContainsKey(agentId))
+            {
+                currentChannels.Remove(agentId);
+
+                // TODO: report to service bus that agent is no longer available
+
+                // TODO: Implement connection failed and its ConnectionFailed args
+                // s.ConnectionFailed(); 
+                return false;
+            }
             currentChannels.Add(agentId, s);
             s.ConnectionSucceeded();
             return true;
@@ -73,9 +83,10 @@ namespace LetsTalk.Business.Managers
         /// </returns>
         public bool Ping()
         {
+            // Callback Works !!
             // TODo:  remove manually placed guid
             currentChannels[Guid.Parse("D56F4395-3972-4CA9-9BDE-A4173B1EB051")].CallerConnect(
-                new CallerInfo { CallerName = "Jonas deb grå", CallerNumber = 98608900, CallerId = Guid.NewGuid() });
+                new CallerInfo { CallerName = "Jonas deb grå " + new Random().Next(390), CallerNumber = new Random().Next(90000000, 99999999), CallerId = Guid.NewGuid() });
             Console.WriteLine($"Got ping from {OperationContext.Current.Channel.RemoteAddress} at {DateTime.Now}");
             return true;
         }

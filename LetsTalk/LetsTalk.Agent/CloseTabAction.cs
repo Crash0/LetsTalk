@@ -1,4 +1,13 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="CloseTabAction.cs" company="GoDialog">
+//   Copyright (C) 2016 Jonas Fjeld.
+//   This file is part of LetsTalk Software pack.
+//   License: Attribution-NonCommercial-ShareAlike 4.0 International.
+//   See https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,40 +16,67 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interactivity;
 using System.Windows.Media;
+
 using Prism.Regions;
 
 namespace LetsTalk.Agent
 {
+    /// <summary>
+    /// TODO The close tab action.
+    /// </summary>
     public class CloseTabAction : TriggerAction<Button>
     {
+        /// <summary>
+        /// TODO The invoke.
+        /// </summary>
+        /// <param name="parameter">
+        /// TODO The parameter.
+        /// </param>
         protected override void Invoke(object parameter)
         {
             var args = parameter as RoutedEventArgs;
-            if(args == null) return;
+            if (args == null) return;
 
             var tabItem = FindParrent<TabItem>(args.OriginalSource as DependencyObject);
-            if(tabItem == null) return;
+            if (tabItem == null) return;
 
             var tabControl = FindParrent<TabControl>(tabItem);
             if (tabControl == null) return;
 
             var region = RegionManager.GetObservableRegion(tabControl).Value;
             if (region == null) return;
-            RemoveItemFromRegion(tabItem.Content,region);
-               
+            RemoveItemFromRegion(tabItem.Content, region);
         }
 
-        void RemoveItemFromRegion(object item, IRegion region)
+        /// <summary>
+        /// TODO The remove item from region.
+        /// </summary>
+        /// <param name="item">
+        /// TODO The item.
+        /// </param>
+        /// <param name="region">
+        /// TODO The region.
+        /// </param>
+        private void RemoveItemFromRegion(object item, IRegion region)
         {
-            var navigationContext = new NavigationContext(region.NavigationService,null);
+            var navigationContext = new NavigationContext(region.NavigationService, null);
             if (CanRemove(item, navigationContext))
             {
-                InvokeOnNavigatedFrom(item,navigationContext);
+                InvokeOnNavigatedFrom(item, navigationContext);
                 region.Remove(item);
             }
         }
 
-        void InvokeOnNavigatedFrom(object item, NavigationContext navigationContext)
+        /// <summary>
+        /// TODO The invoke on navigated from.
+        /// </summary>
+        /// <param name="item">
+        /// TODO The item.
+        /// </param>
+        /// <param name="navigationContext">
+        /// TODO The navigation context.
+        /// </param>
+        private void InvokeOnNavigatedFrom(object item, NavigationContext navigationContext)
         {
             var navigationAware = item as INavigationAware;
             navigationAware?.OnNavigatedFrom(navigationContext);
@@ -51,40 +87,55 @@ namespace LetsTalk.Agent
                 var navigationAwareDataContext = frameworkElement.DataContext as INavigationAware;
                 navigationAwareDataContext?.OnNavigatedFrom(navigationContext);
             }
-
         }
 
-        bool CanRemove(object item, NavigationContext navigationContext)
+        /// <summary>
+        /// TODO The can remove.
+        /// </summary>
+        /// <param name="item">
+        /// TODO The item.
+        /// </param>
+        /// <param name="navigationContext">
+        /// TODO The navigation context.
+        /// </param>
+        /// <returns>
+        /// The <see cref="bool"/>.
+        /// </returns>
+        private bool CanRemove(object item, NavigationContext navigationContext)
         {
             var canRemove = true;
 
             var confirmRequestItem = item as IConfirmNavigationRequest;
-            confirmRequestItem?.ConfirmNavigationRequest(navigationContext, result =>
-            {
-                canRemove = result;
-            });
+            confirmRequestItem?.ConfirmNavigationRequest(navigationContext, result => { canRemove = result; });
 
             var frameworkElement = item as FrameworkElement;
             if (frameworkElement != null && canRemove)
             {
                 var confirmNavigation = frameworkElement.DataContext as IConfirmNavigationRequest;
-                confirmNavigation?.ConfirmNavigationRequest(navigationContext, result =>
-                {
-                    canRemove = result;
-                });
-            } 
+                confirmNavigation?.ConfirmNavigationRequest(navigationContext, result => { canRemove = result; });
+            }
 
             return canRemove;
         }
 
-        static T FindParrent<T>(DependencyObject child) where T : DependencyObject
+        /// <summary>
+        /// Find the parrrent of a DependencyObject
+        /// </summary>
+        /// <param name="child">
+        /// The child DependencyObject.
+        /// </param>
+        /// <typeparam name="T">
+        /// </typeparam>
+        /// <returns>
+        /// The <see cref="T"/>.
+        /// </returns>
+        private static T FindParrent<T>(DependencyObject child) where T : DependencyObject
         {
             var parentObject = VisualTreeHelper.GetParent(child);
             if (parentObject == null) return null;
 
             var parrent = parentObject as T;
-            if (parrent !=null)
-                return parrent;
+            if (parrent != null) return parrent;
 
             return FindParrent<T>(parentObject);
         }

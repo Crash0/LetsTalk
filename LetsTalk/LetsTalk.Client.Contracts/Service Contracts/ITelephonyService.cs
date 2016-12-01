@@ -1,11 +1,16 @@
-﻿using System;
-using System.ServiceModel;
-using System.Threading.Tasks;
-using LetsTalk.Client.Contracts;
-using LetsTalk.Core.Common.Contracts;
-
-namespace LetsTalk.Client.Contracts
+﻿namespace LetsTalk.Client.Contracts
 {
+    using System;
+    using System.ServiceModel;
+    using System.Threading.Tasks;
+
+    using LetsTalk.Core.Common.Contracts;
+
+    public delegate void CallerConnectEvent(object sender, CallerInfo args);
+
+    public delegate void ConnectSucceededEvent(object seder);
+
+
     [ServiceContract(CallbackContract = typeof(ITelephonyServiceCallbacks))]
     public interface ITelephonyService : IServiceContract
     {
@@ -23,14 +28,13 @@ namespace LetsTalk.Client.Contracts
         [OperationContract]
         bool Ping();
     }
-    public delegate void CallerConnectEvent(object sender, CallerInfo args);
-
-    public delegate void ConnectSucceededEvent(object seder);
+    
 
     [ServiceContract]
     public interface ITelephonyServiceCallbacks
     {
         event CallerConnectEvent OnCallerConnect;
+
         event ConnectSucceededEvent OnConnectionSucceeded;
 
         [OperationContract]
