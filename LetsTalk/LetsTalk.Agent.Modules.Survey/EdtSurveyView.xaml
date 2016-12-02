@@ -34,7 +34,8 @@
                                         <Setter Property="ItemTemplate">
                                             <Setter.Value>
                                                 <DataTemplate>
-                                                    <TextBox Text="{Binding Path=.}" Style="{StaticResource AnswerBoxStyle}">
+                                                    <TextBox Text="{Binding Path=.}"
+                                                             Style="{StaticResource AnswerBoxStyle}">
                                                         <atachedProperties:WatermarkService.Watermark>
                                                             <Label FontSize="20">Enter a Answer</Label>
                                                         </atachedProperties:WatermarkService.Watermark>
@@ -45,19 +46,21 @@
                                     </Style>
                                 </Grid.Resources>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="30"/>
-                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30" />
+                                    <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox Grid.ColumnSpan="2" Text="{Binding Question}" Style="{StaticResource QuestionTitleStyle}">
+                                <TextBox Grid.ColumnSpan="2" Text="{Binding Question}"
+                                         Style="{StaticResource QuestionTitleStyle}">
                                     <atachedProperties:WatermarkService.Watermark>
                                         <Label FontSize="20">Enter Question</Label>
                                     </atachedProperties:WatermarkService.Watermark>
                                 </TextBox>
-                                <ItemsControl Grid.Row="1" Grid.Column="1" ItemsSource="{Binding AnswerPossibilities}" Style="{StaticResource AnswerItemsControlStyle}"/>
+                                <ItemsControl Grid.Row="1" Grid.Column="1" ItemsSource="{Binding AnswerPossibilities}"
+                                              Style="{StaticResource AnswerItemsControlStyle}" />
                             </Grid>
                         </DataTemplate>
                     </Setter.Value>
@@ -73,14 +76,15 @@
             <RowDefinition Height="101*" />
             <RowDefinition Height="29*" />
         </Grid.RowDefinitions>
-        
-        <TextBox Text="{Binding CurrentSurvey.Title}" Grid.Column="1" 
+
+        <TextBox Text="{Binding CurrentSurvey.Title}" Grid.Column="1"
                  Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource SurveyTitle}">
             <atachedProperties:WatermarkService.Watermark>
                 <Label FontSize="20">Enter Survey Title</Label>
             </atachedProperties:WatermarkService.Watermark>
         </TextBox>
-        <ItemsControl ItemsSource="{Binding Questions}" Grid.Column="1" Margin="10,50,10,10" Grid.Row="1" Style="{StaticResource QuestionItemsControlStyle}">
+        <ItemsControl ItemsSource="{Binding Questions}" Grid.Column="1" Margin="10,50,10,10" Grid.Row="1"
+                      Style="{StaticResource QuestionItemsControlStyle}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel />

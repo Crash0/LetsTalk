@@ -49,7 +49,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Dashboard.xaml">
+    <Page Include="AgentDashboard\Dashboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -59,7 +59,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.xaml.cs">
+    <Compile Include="AgentDashboard\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
     <Compile Include="DashboardModule.cs" />
