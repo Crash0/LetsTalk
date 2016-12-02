@@ -106,7 +106,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ss\ref.txt" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\RoundedBox.xaml">
       <Generator>MSBuild:Compile</Generator>

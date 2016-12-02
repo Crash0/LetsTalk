@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="ManagerBase.cs" />
     <Compile Include="Managers\AuthenticationManager.cs" />
+    <Compile Include="Managers\TargetingManager.cs" />
     <Compile Include="Managers\TelephonyManager.cs" />
     <Compile Include="Managers\SurveyManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

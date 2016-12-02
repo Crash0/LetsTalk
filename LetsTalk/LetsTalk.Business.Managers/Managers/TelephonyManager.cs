@@ -127,7 +127,7 @@ namespace LetsTalk.Business.Managers
         }
 
         /// <summary>
-        /// TODO The send call to.
+        /// The send call to.
         /// </summary>
         /// <param name="agentId">
         /// TODO The agent id.

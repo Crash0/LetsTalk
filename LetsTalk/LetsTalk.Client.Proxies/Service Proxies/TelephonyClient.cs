@@ -41,6 +41,7 @@ namespace LetsTalk.Client.Proxies
         }
 
         public ITelephonyServiceCallbacks GetCallbacks() => CallbackInstance;
+
         public bool Ping()
         {
             return Channel.Ping();

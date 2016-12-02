@@ -26,6 +26,7 @@ namespace LetsTalkDataService
                 StartService(typeof(AuthenticationManager));
                 StartService(typeof(SurveyManager));
                 StartSingletonService(new TelephonyManager());
+                StartService(typeof(TargetingManager));
                 Console.WriteLine("Services OK");
 
                 Console.WriteLine("__________________________________________");
@@ -46,7 +47,8 @@ namespace LetsTalkDataService
             }
             catch (Exception exception)
             {
-
+                // Have you remembered : netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
+                // netsh http add urlacl url=http://+:8029/TargetingService.svc user=DESKTOP-0926VF9\JonasFjeld
                 throw;
                 return false;
             }
@@ -64,9 +66,10 @@ namespace LetsTalkDataService
             host.Open();
             _hosts.Add(host);
         }
+
         private void StartSingletonService(ManagerBase serviceMannager)
         {
-            Console.WriteLine($"Started service of type {serviceMannager}");
+            Console.WriteLine($"Started singleton service of type {serviceMannager}");
             if (_hosts == null)
                 _hosts = new List<SM.ServiceHost>();
 

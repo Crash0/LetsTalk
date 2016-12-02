@@ -42,9 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataContracts\ActionOnCustomerCommand.cs" />
     <Compile Include="DataContracts\CallerInfo.cs" />
+    <Compile Include="DataContracts\CommandType.cs" />
     <Compile Include="DataContracts\ConnectionFailedInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service Contracts\ITargetService.cs" />
     <Compile Include="Service Contracts\ITelephonyService.cs" />
     <Compile Include="Service Contracts\IClientService.cs" />
     <Compile Include="Service Contracts\IAuthenticationService.cs" />
@@ -58,6 +61,10 @@
     <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
       <Project>{2d8d79f4-8974-4830-8f87-ec6d4247c9cd}</Project>
       <Name>LetsTalk.Core.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common.ServiceModel\LetsTalk.Core.Common.ServiceModel.csproj">
+      <Project>{6E29A410-8B2A-4BCE-813D-3AE79A7D52D3}</Project>
+      <Name>LetsTalk.Core.Common.ServiceModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common\LetsTalk.Core.Common.csproj">
       <Project>{e19d81a5-bbf6-413e-a62d-a31307bbdbbc}</Project>

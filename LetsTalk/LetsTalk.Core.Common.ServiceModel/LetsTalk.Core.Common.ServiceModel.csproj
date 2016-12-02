@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\DatacontractNames.cs" />
     <Compile Include="DuplexUserClientBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserClientBase.cs" />

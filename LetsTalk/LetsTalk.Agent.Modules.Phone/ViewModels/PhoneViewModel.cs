@@ -15,13 +15,16 @@ namespace LetsTalk.Agent.Modules.Phone
     {
         private readonly ITelephonyService telephonyService;
 
+        private readonly ITargetingService targetingService;
+
         private CallerInfo caller;
 
         private bool isConnected = false;
-
+        
         [ImportingConstructor]
-        public PhoneViewModel(ITelephonyService telephonyService)
+        public PhoneViewModel(ITelephonyService telephonyService, ITargetingService targetingService)
         {
+            this.targetingService = targetingService;
             this.telephonyService = telephonyService;
             telephonyService.GetCallbacks().OnCallerConnect += PhoneViewModel_OnCallerConnect;
             telephonyService.GetCallbacks().OnConnectionSucceeded += PhoneViewModel_OnConnectionSucceeded;
@@ -101,6 +104,9 @@ namespace LetsTalk.Agent.Modules.Phone
             Caller = args;
 
             // AvailableCommands = this.telephonyService.GetAvailableCommands(args);
+
+            var availableCommads = this.targetingService.GetAvailableCommands(args.CallerId);
+            throw new Exception();
         }
 
         private void PhoneViewModel_OnConnectionSucceeded (object seder)

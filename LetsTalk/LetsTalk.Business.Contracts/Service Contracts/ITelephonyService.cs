@@ -1,9 +1,8 @@
-﻿using System;
-using System.ServiceModel;
-using LetsTalk.Business.Contracts;
-
-namespace LetsTalk.Business.Contracts
+﻿namespace LetsTalk.Business.Contracts
 {
+    using System;
+    using System.ServiceModel;
+
     [ServiceContract(CallbackContract = typeof(ITelephonyServiceCallbacks))]
     public interface ITelephonyService
     {

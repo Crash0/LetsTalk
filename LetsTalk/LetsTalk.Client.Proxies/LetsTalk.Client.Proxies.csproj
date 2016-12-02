@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Service Proxies\TargetClient.cs" />
     <Compile Include="TelephoneServiceCallbackHandeler.cs" />
     <Compile Include="Service Proxies\ClientClient.cs" />
     <Compile Include="Service Proxies\TelephonyClient.cs" />

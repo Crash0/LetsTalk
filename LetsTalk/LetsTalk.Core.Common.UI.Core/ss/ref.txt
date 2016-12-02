@@ -1,0 +1,1 @@
+﻿https://www.codeproject.com/tips/563144/wpf-dialog-messagebox-manager
