@@ -102,11 +102,12 @@ namespace LetsTalk.Agent.Modules.Phone
         private void PhoneViewModel_OnCallerConnect(object sender, CallerInfo args)
         {
             Caller = args;
-
+        
+            // TODO: Implement this
             // AvailableCommands = this.telephonyService.GetAvailableCommands(args);
 
             var availableCommads = this.targetingService.GetAvailableCommands(args.CallerId);
-            throw new Exception();
+            // throw new Exception();
         }
 
         private void PhoneViewModel_OnConnectionSucceeded (object seder)

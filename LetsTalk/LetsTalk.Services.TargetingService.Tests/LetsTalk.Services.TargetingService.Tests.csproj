@@ -92,6 +92,10 @@
       <Project>{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}</Project>
       <Name>LetsTalk.Core.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Services.TargetingService.Contracts\LetsTalk.Services.TargetingService.Contracts.csproj">
+      <Project>{f079b871-16c1-4949-87c0-38e4dabc5cb3}</Project>
+      <Name>LetsTalk.Services.TargetingService.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Services.TargetingService.Data\LetsTalk.Services.TargetingService.Data.csproj">
       <Project>{6109589A-6360-4E3F-979B-654D995A3D9A}</Project>
       <Name>LetsTalk.Services.TargetingService.Data</Name>
