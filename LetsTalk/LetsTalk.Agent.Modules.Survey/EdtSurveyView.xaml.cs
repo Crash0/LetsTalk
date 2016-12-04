@@ -21,9 +21,12 @@ using LetsTalk.Core.Common.UI.Core;
 
 namespace LetsTalk.Agent.Modules.SurveyModule
 {
+    using System.Diagnostics.CodeAnalysis;
+
     /// <summary>
     ///     Interaction logic for EdtSurveyView.xaml
     /// </summary>
+    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     [ViewExport("AddSurvey", RegionName = RegionNames.MainRegion)]
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public partial class EdtSurveyView : UserControl

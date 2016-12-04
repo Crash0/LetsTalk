@@ -210,6 +210,10 @@
       <Project>{4ABFF1B5-942D-4785-B458-7908996F3F25}</Project>
       <Name>LetsTalk.Agent.Modules.SurveyModule</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Agent.Modules.Targets\LetsTalk.Agent.Modules.Targets.csproj">
+      <Project>{67113D25-FD87-40F7-94FF-698F9A50F784}</Project>
+      <Name>LetsTalk.Agent.Modules.Targets</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Agent.Modules.ToolBar\LetsTalk.Agent.Modules.ToolBar.csproj">
       <Project>{2F86EA0D-F8C2-4E32-93BF-2EA807635F5D}</Project>
       <Name>LetsTalk.Agent.Modules.ToolBar</Name>

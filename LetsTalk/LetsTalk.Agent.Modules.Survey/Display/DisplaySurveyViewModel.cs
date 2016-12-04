@@ -15,9 +15,9 @@ namespace LetsTalk.Agent.Modules.SurveyModule.Display
 {
     [Export(typeof(IDisplaySurveyViewModel))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    class DisplaySurveyViewModel : ViewModelBase, IDisplaySurveyViewModel
+    public class DisplaySurveyViewModel : ViewModelBase, IDisplaySurveyViewModel
     {
-        [Import] private IServiceFactory _serviceFactory;
+        [Import] private IServiceFactory serviceFactory;
 
         public DisplaySurveyViewModel()
         {
@@ -28,26 +28,25 @@ namespace LetsTalk.Agent.Modules.SurveyModule.Display
             };
         }
 
-        public string Title { get { return _title; } set { _title = value; } }
-        private string _title = "Survey Title Gies here";
-        private string _viewTitle = "Customer Name : Survey ";
-        private SurveyQuestion _currentQuestion;
+        public string Title { get { return this.title; } set { this.title = value; } }
+        private string title = "Survey Title Gies here";
+        private string viewTitle = "Customer Name : Survey ";
+        private SurveyQuestion currentQuestion;
 
         public override string ViewTitle
         {
-            get { return _viewTitle; }
-            set { _viewTitle = value; }
+            get { return this.viewTitle; }
         }
 
         public Survey Survey { get; set; }
 
         public SurveyQuestion CurrentQuestion
         {
-            get { return _currentQuestion; }
+            get { return this.currentQuestion; }
             set
             {
-                if (_currentQuestion == value) return;
-                _currentQuestion = value;
+                if (this.currentQuestion == value) return;
+                this.currentQuestion = value;
                 OnPropertyChanged(()=> CurrentQuestion);
                 
             }

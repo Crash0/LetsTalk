@@ -16,6 +16,7 @@ namespace LetsTalk.Agent
     using LetsTalk.Agent.Modules.News;
     using LetsTalk.Agent.Modules.Phone;
     using LetsTalk.Agent.Modules.SurveyModule;
+    using LetsTalk.Agent.Modules.Targets;
     using LetsTalk.Agent.Modules.ToolBar;
     using LetsTalk.Client.Proxies;
     using LetsTalk.Core.Common.UI;
@@ -45,6 +46,7 @@ namespace LetsTalk.Agent
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(AutoPopulateExportedViewsBehavior).Assembly));
 
             // Modules
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(TargetModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(PhoneModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(DashboardModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(CustomerModule).Assembly));

@@ -32,8 +32,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LetsTalk.Core.Common">
+      <HintPath>..\LetsTalk.Client.AgentClient\bin\Debug\LetsTalk.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="LetsTalk.Core.Common.Contracts">
+      <HintPath>..\LetsTalk.Client.AgentClient\bin\Debug\LetsTalk.Core.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Prism.Wpf">
+      <HintPath>..\packages\Prism.Wpf.6.1.1-pre2\lib\net45\Prism.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -62,15 +77,38 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="TargetModule.cs" />
+    <Compile Include="TargetViewer\Display\TargetDisplayViewModel.cs" />
+    <Compile Include="TargetViewer\Edit\TargetEditView.xaml.cs">
+      <DependentUpon>TargetEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TargetViewer\Edit\TargetEditViewModel.cs" />
+    <Compile Include="TargetViewer\Search\TargetSearchViewModel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Letstalk.Client.Enitites\Letstalk.Client.Entites.csproj">
+      <Project>{5578418C-82E6-45E4-8083-07AEC8B672D1}</Project>
+      <Name>Letstalk.Client.Entites</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common.UI.Core\LetsTalk.Core.Common.UI.csproj">
+      <Project>{156D9B41-CB9C-4E3A-8B2F-296163492F49}</Project>
+      <Name>LetsTalk.Core.Common.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="TargetViewer\Edit\TargetEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

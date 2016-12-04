@@ -39,7 +39,7 @@ namespace LetsTalk.Core.Common.UI.Core
             disposableClient?.Dispose();
         }
 
-        public virtual string ViewTitle { get; set; }
+        public virtual string ViewTitle { get; private set; }
 
         List<ObjectBase> _Models;
 
