@@ -5,8 +5,64 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LetsTalk.Agent.Modules.Targets.TargetViewer.Edit"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="500">
-    <Grid Background="Green">
-            
+             d:DataContext="{d:DesignInstance Type=local:TargetEditViewModel}"
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <Grid Background="Gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="72*"/>
+            <ColumnDefinition Width="155*"/>
+            <ColumnDefinition Width="565*"/>
+            <ColumnDefinition Width="208*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="324*"/>
+            <RowDefinition Height="39*"/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary  Source="pack://application:,,,/LetsTalk.Core.Common.UI;component/Resources/Styles.xaml"/>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <StackPanel Grid.Column="1"
+                   Grid.Row="1"
+                   Orientation="Vertical" Margin="0,0.5,0,58" Grid.RowSpan="2">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Margin" Value="0,20,0,0"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="Last Name"/>
+            <TextBlock Text="First Name"/>
+            <TextBlock Text="Contact Number"/>
+            <TextBlock Text="Birth Date"/>
+            <TextBlock Text="GivenName"/>
+        </StackPanel>
+        <StackPanel 
+            Grid.Column="2"
+            Grid.Row="1" 
+            Orientation="Vertical" Margin="0,0.5,0,58" Grid.RowSpan="2"
+             >
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="0,20,0,0"/>
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBox Text="{Binding Target.Surname}"/>
+            <TextBox Text="{Binding Target.GivenName}"/>
+            <TextBox Text="{Binding Target.Telephone}"/>
+            <DatePicker Text="{Binding Target.Birthdate}"
+                        Height="30" FontSize="20"
+                        Margin="0,20,0,0"/>
+            <TextBox/>
+            <TextBox/>
+        </StackPanel>
     </Grid>
 </UserControl>
