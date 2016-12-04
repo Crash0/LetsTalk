@@ -20,6 +20,7 @@ namespace LetsTalk.Agent
     using LetsTalk.Agent.Modules.ToolBar;
     using LetsTalk.Client.Proxies;
     using LetsTalk.Core.Common.UI;
+    using LetsTalk.Core.Common.UI.Controls;
     using LetsTalk.Core.Common.UI.Events;
 
     using Prism.Events;
@@ -36,6 +37,7 @@ namespace LetsTalk.Agent
         /// </summary>
         protected override void ConfigureAggregateCatalog()
         {
+            
             // Service Assembly
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ServiceFactory).Assembly));
 

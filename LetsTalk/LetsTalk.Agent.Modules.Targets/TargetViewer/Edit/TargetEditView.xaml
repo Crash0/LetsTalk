@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LetsTalk.Agent.Modules.Targets.TargetViewer.Edit"
+             xmlns:controls="http://www.Crash0.com/Core"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance Type=local:TargetEditViewModel}"
              d:DesignHeight="600" d:DesignWidth="1000">
@@ -40,7 +41,7 @@
             <TextBlock Text="First Name"/>
             <TextBlock Text="Contact Number"/>
             <TextBlock Text="Birth Date"/>
-            <TextBlock Text="GivenName"/>
+            <TextBlock Text="Address"/>
         </StackPanel>
         <StackPanel 
             Grid.Column="2"
@@ -61,8 +62,7 @@
             <DatePicker Text="{Binding Target.Birthdate}"
                         Height="30" FontSize="20"
                         Margin="0,20,0,0"/>
-            <TextBox/>
-            <TextBox/>
+            <controls:AddressPicker Height="30" Margin="0,20,0,0"/>
         </StackPanel>
     </Grid>
 </UserControl>

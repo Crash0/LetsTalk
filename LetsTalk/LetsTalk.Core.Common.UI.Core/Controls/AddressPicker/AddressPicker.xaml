@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="LetsTalk.Core.Common.UI.Controls.AddressPicker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LetsTalk.Core.Common.UI.Controls"
+             mc:Ignorable="d"
+             d:DesignHeight="30" d:DesignWidth="200"
+             d:DataContext="{ d:DesignInstance Type=local:AddressPickerViewModel}"
+             >
+    <UserControl.DataContext>
+        <local:AddressPickerViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="55"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Style="{x:Null}"
+            Height="30"
+            FontSize="20"
+            Text="{Binding Text, Mode=OneWay}" 
+            IsEnabled="True" 
+            Grid.Column="0"
+            />
+        <Button 
+            Grid.Column="1" 
+            Height="30"
+            Content="Select"
+            Command="{Binding PickAddress}"/>
+    </Grid>
+
+</UserControl>
