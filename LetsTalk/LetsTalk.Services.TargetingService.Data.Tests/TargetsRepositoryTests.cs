@@ -27,9 +27,9 @@ namespace LetsTalk.Services.TargetingService.Data.Tests
                 Gender = Gender.Female,
                 Address = new Address
                 {
-                    PostalAddress1 = "Geværveien 14",
-                    PostalNumber = "1710",
-                    PostalPlace = "Sarpsborg"
+                    AddressLine1 = "Geværveien 14",
+                    PostalCode = "1710",
+                    StateProvince  = "Sarpsborg"
                 }
             },
             new Target
@@ -43,9 +43,9 @@ namespace LetsTalk.Services.TargetingService.Data.Tests
                 Gender = Gender.Female,
                 Address = new Address
                 {
-                    PostalAddress1 = "Dolvenveien 170",
-                    PostalNumber = "3267",
-                    PostalPlace = "Larvik"
+                    AddressLine1 = "Dolvenveien 170",
+                    PostalCode = "3267",
+                    StateProvince = "Larvik"
                 }
             },
             new Target
@@ -59,9 +59,9 @@ namespace LetsTalk.Services.TargetingService.Data.Tests
                 Gender = Gender.Female,
                 Address = new Address
                 {
-                    PostalAddress1 = "Thomas Snekkers gate 223",
-                    PostalNumber = "4024",
-                    PostalPlace = "Stavanger"
+                    AddressLine1 = "Thomas Snekkers gate 223",
+                    PostalCode = "4024",
+                    StateProvince = "Stavanger"
                 }
             },
             new Target
@@ -75,9 +75,9 @@ namespace LetsTalk.Services.TargetingService.Data.Tests
                 Gender = Gender.Female,
                 Address = new Address
                 {
-                    PostalAddress1 = "Nedre Korskirkeallmenningen 96",
-                    PostalNumber = "5017",
-                    PostalPlace = "Bergen"
+                    AddressLine1 = "Nedre Korskirkeallmenningen 96",
+                    PostalCode = "5017",
+                    StateProvince = "Bergen"
                 }
             },
             new Target
@@ -91,9 +91,9 @@ namespace LetsTalk.Services.TargetingService.Data.Tests
                 Gender = Gender.Female,
                 Address = new Address
                 {
-                    PostalAddress1 = "Myrfaret 29",
-                    PostalNumber = "1697",
-                    PostalPlace = "Moss"
+                    AddressLine1 = "Myrfaret 29",
+                    PostalCode = "1697",
+                    StateProvince = "Moss"
                 }
             },
             new Target
@@ -107,9 +107,9 @@ namespace LetsTalk.Services.TargetingService.Data.Tests
                 Gender = Gender.Female,
                 Address = new Address
                 {
-                    PostalAddress1 = "Kongsvingergata 203",
-                    PostalNumber = "0464",
-                    PostalPlace = "Oslo"
+                    AddressLine1 = "Kongsvingergata 203",
+                    PostalCode = "0464",
+                    StateProvince = "Oslo"
                 }
             }
         };

@@ -89,12 +89,5 @@ namespace LetsTalk.Core.Common.Contracts.Entities
         ///     <see cref="F:System.String.Empty" />.
         /// </returns>
         string StateProvince { get; set; }
-
-        /// <summary>
-        ///     Represents a <see cref="LetsTalk.Core.Common.Contracts.Entities.IAddress" /> That contains no data.
-        /// </summary>
-        [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1623:PropertySummaryDocumentationMustMatchAccessors",
-            Justification = "Reviewed. Suppression is OK here.")]
-        IAddress Unknown { get; }
     }
 }

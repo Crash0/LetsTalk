@@ -33,7 +33,7 @@ namespace LetsTalk.Services.TargetingService.Tests
                         GivenName = data[18],
                         Surname = data[0], 
                         Gender = (data[17] == "Male")? Gender.Male : Gender.Female,
-                        Address = new Address { PostalAddress1 = data[1], PostalPlace = data[2], PostalNumber = data[3]},
+                        Address = new Address { AddressLine1 = data[1], StateProvince = data[2], PostalCode = data[3]},
                         Birthdate = DateTime.ParseExact(data[9], "M/d/yyyy", CultureInfo.InvariantCulture),
                     EmailAddress = data[4],
                         Telephone = new PhoneNumber { Number = data[7]}
