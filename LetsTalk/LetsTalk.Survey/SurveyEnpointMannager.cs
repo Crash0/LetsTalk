@@ -10,32 +10,10 @@ namespace LetsTalk.Services.SurveyService
     public class SurveyEnpointMannager : IDisposable
     {
         [Import]
-        private IDataRepositoryFactory _dataRepositoryFactory;
+        private IDataRepositoryFactory dataRepositoryFactory;
 
-        private IStartableBus _serviceBus;
-
-        private void Init()
-        {
-            InitializeNServiceBus();
-            InitializeDependencyProperties();
-            
-
-        }
-
-        private void InitializeNServiceBus()
-        {
-            var busconfig = BusConfigurator.CreateConfig(EndPoint.SurveyService);
-            _serviceBus = Bus.Create(busconfig);
-            _serviceBus.Start();
-        }
-
-        private void InitializeDependencyProperties()
-        {
-            ObjectBase.Container = Bootstrapper.Init();
-            ObjectBase.Container.SatisfyImportsOnce(this);
-        }
-
-
+        private IStartableBus serviceBus;
+        
         public static void Main(string[] args)
         {
             
@@ -49,7 +27,28 @@ namespace LetsTalk.Services.SurveyService
 
         public void Dispose()
         {
-            _serviceBus?.Dispose();
+            this.serviceBus?.Dispose();
         }
+        
+        private void Init()
+        {
+            this.InitializeNServiceBus();
+            this.InitializeDependencyProperties();
+
+        }
+
+        private void InitializeNServiceBus()
+        {
+            var busconfig = BusConfigurator.CreateConfig(EndPoint.SurveyService);
+            this.serviceBus = Bus.Create(busconfig);
+            this.serviceBus.Start();
+        }
+
+        private void InitializeDependencyProperties()
+        {
+            ObjectBase.Container = Bootstrapper.Init();
+            ObjectBase.Container.SatisfyImportsOnce(this);
+        }
+
     }
 }
