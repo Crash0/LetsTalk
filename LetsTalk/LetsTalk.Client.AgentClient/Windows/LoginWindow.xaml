@@ -3,9 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EmployeeClient"
-        xmlns:userControles="clr-namespace:LetsTalk.Client.AgentClient.UserControles"
-        mc:Ignorable="d"
+       mc:Ignorable="d"
         Title="Welcome To LetsTalk"
         WindowStyle="None"
         Height="500" Width="700"
@@ -151,9 +149,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" TextWrapping="Wrap" Text="WaSAP"
                    VerticalAlignment="Top" FontSize="22" />
         <Viewbox Height="100" Width="100" Margin="300,174,300,226">
-            <userControles:CircularProgressBar x:Name="LoadingWheel" />
-
-
+<!-- INSERT CIRCULAR PROGRESSBAR HERE -->
         </Viewbox>
 
 

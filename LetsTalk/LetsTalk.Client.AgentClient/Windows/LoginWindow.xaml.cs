@@ -21,8 +21,8 @@ namespace LetsTalk.Client.AgentClient
             InitializeComponent();
             Loaded += LoginWindow_Loaded;
 
-            LoginControllerGrid.Visibility = Visibility.Hidden;
-            LoadingWheel.Visibility = Visibility.Hidden;
+            //LoginControllerGrid.Visibility = Visibility.Hidden;
+            //LoadingWheel.Visibility = Visibility.Hidden;
 
             //Bind Loging field to xaml source
             _loginDownStoryboard = FindResource("LoginPoppDown") as Storyboard;
@@ -32,7 +32,7 @@ namespace LetsTalk.Client.AgentClient
 
         private void LoginWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            LoginControllerGrid.Visibility = Visibility.Visible;
+            //LoginControllerGrid.Visibility = Visibility.Visible;
             _loginUpStoryboard.Begin();
         }
 

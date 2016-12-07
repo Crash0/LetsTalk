@@ -65,8 +65,6 @@
                         Height="30" FontSize="20"
                         Margin="0,20,0,0"/>
 
-            <!-- TODO:this breaks at runtime xml parsing.. WARN: Fix -->
-            <controls1:AddressPicker Height="30" Margin="0,20,0,0" />
         </StackPanel>
     </Grid>
 </UserControl>
