@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
-using LetsTalk.Business.Entities.Surveys;
+
 using LetsTalk.Core.Common.Data;
 using LetsTalk.Surveys.Data.Contracts;
 
 namespace LetsTalk.Services.SurveyService.Data
 {
+    using LetsTalk.Business.Entities.Survey;
+
     [Export(typeof(ISurveyRepository))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class SurveyRepository : DataRepositoryBase<Survey, SurveyDbContext>, ISurveyRepository

@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using FluentValidation.Results;
-using LetsTalk.Core.Common.Core;
-using Prism;
-using Prism.Commands;
-using Prism.Mvvm;
-using Prism.Regions;
-
-namespace LetsTalk.Core.Common.UI.Core
+﻿namespace LetsTalk.Core.Common.UI.Core
 {
-    //TODO: Shold Probably use bindable base :game_die:
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using FluentValidation.Results;
+
+    using LetsTalk.Core.Common.Core;
+
+    using Prism;
+    using Prism.Commands;
+    using Prism.Regions;
+
+    // TODO: Shold Probably use bindable base :game_die:
     public class ViewModelBase : ObjectBase, INavigationAware, IActiveAware
     {
         public ViewModelBase()
@@ -41,9 +43,11 @@ namespace LetsTalk.Core.Common.UI.Core
 
         public virtual string ViewTitle { get; private set; }
 
-        List<ObjectBase> _Models;
+        private List<ObjectBase> _Models;
 
-        protected virtual void AddModels(List<ObjectBase> models) { }
+        protected virtual void AddModels(List<ObjectBase> models)
+        {
+        }
 
         protected void ValidateModel()
         {

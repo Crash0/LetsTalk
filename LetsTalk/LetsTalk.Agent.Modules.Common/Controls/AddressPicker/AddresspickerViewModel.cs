@@ -7,17 +7,21 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace LetsTalk.Core.Common.UI.Controls
+namespace LetsTalk.Agent.Modules.Common.Controls
 {
     #region Usings
 
-    using System;
     using System.ComponentModel.Composition;
+    using System.Windows;
     using System.Windows.Input;
-
+    
     using LetsTalk.Core.Common.Contracts.Entities;
+    using LetsTalk.Core.Common.UI.Core;
 
     using Prism.Commands;
+
+    using Technewlogic.WpfDialogManagement;
+    
 
     #endregion
 
@@ -26,20 +30,47 @@ namespace LetsTalk.Core.Common.UI.Controls
     /// </summary>
     [Export(typeof(IAddressPickerViewModel))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    public class AddressPickerViewModel : IAddressPickerViewModel
+    public class AddressPickerViewModel : ViewModelBase, IAddressPickerViewModel
     {
-
+        private DialogManager dialogManager;
         public AddressPickerViewModel()
         {
-            PickAddress = new DelegateCommand(ExecuteMethod);
+            this.PickAddress = new DelegateCommand(this.ExecuteMethod);
+            this.dialogManager = new DialogManager(Application.Current.MainWindow, Application.Current.Dispatcher);
         }
 
         private void ExecuteMethod()
         {
-            throw new NotImplementedException();
+            var tt = new AddressView();
+            var dialog = this.dialogManager.CreateCustomContentDialog(tt,"Address",DialogMode.OkCancel);
+            var avvm = (AddressViewViewModel)tt.DataContext;
+            dialog.Ok = () => 
+            {
+                SelectedAddress = avvm.Address;
+            };
+            
+            dialog.Show();
+            
+
+
         }
 
-        public IAddress SelectedAddress { get; set; }
+        private IAddress selectedAddress;
+
+        public IAddress SelectedAddress
+        {
+            get
+            {
+                return this.selectedAddress;
+            }
+            set
+            {
+                this.selectedAddress = value;
+                OnPropertyChanged(() => this.SelectedAddress);
+            }
+        }
+
+
 
         /// <summary>
         /// Gets the text.
@@ -48,7 +79,7 @@ namespace LetsTalk.Core.Common.UI.Controls
         {
             get
             {
-                if (SelectedAddress == null)
+                if (this.SelectedAddress == null)
                 {
                     return string.Empty;
                 }

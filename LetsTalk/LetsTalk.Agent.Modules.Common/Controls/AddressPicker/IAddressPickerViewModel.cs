@@ -1,4 +1,4 @@
-namespace LetsTalk.Core.Common.UI.Controls
+namespace LetsTalk.Agent.Modules.Common.Controls
 {
     using LetsTalk.Core.Common.Contracts.Entities;
 

@@ -60,6 +60,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Technewlogic.WpfDialogManagement">
+      <HintPath>Z:\Downloads\WpfDialogManagement\WpfDialogManagement\bin\Release\Technewlogic.WpfDialogManagement.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -76,11 +79,6 @@
     <Compile Include="Behaviors\IViewRegionRegistration.cs" />
     <Compile Include="AgentCommandProxy.cs" />
     <Compile Include="Commands\ToolbarActionDelegate.cs" />
-    <Compile Include="Controls\AddressPicker\AddressPicker.xaml.cs">
-      <DependentUpon>AddressPicker.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\AddressPicker\AddresspickerViewModel.cs" />
-    <Compile Include="Controls\AddressPicker\IAddressPickerViewModel.cs" />
     <Compile Include="Controls\RoundedBox.xaml.cs">
       <DependentUpon>RoundedBox.xaml</DependentUpon>
     </Compile>
@@ -115,10 +113,6 @@
     <Content Include="ss\ref.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Controls\AddressPicker\AddressPicker.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controls\RoundedBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

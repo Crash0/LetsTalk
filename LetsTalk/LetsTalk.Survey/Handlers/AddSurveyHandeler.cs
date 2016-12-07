@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Composition;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LetsTalk.Business.Entities.Surveys;
-using LetsTalk.Core.Kernel.Messages;
-using LetsTalk.Services.SurveyService.Contracts.Messages.Commands;
-using LetsTalk.Surveys.Data.Contracts;
-using NServiceBus;
-
-namespace LetsTalk.Services.SurveyService.Handlers
+﻿namespace LetsTalk.Services.SurveyService.Handlers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.Composition;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    using LetsTalk.Business.Entities.Survey;
+    using LetsTalk.Core.Kernel.Messages;
+    using LetsTalk.Services.SurveyService.Contracts.Messages.Commands;
+    using LetsTalk.Surveys.Data.Contracts;
+
+    using NServiceBus;
+
     public class AddSurveyHandeler : IHandleMessages<AddSurveyCommand>
     {
         private IBus bus;

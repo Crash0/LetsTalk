@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using LetsTalk.Business.Bootstrapper;
-using LetsTalk.Business.Entities.Surveys;
 using LetsTalk.Core.Common.Contracts;
 using LetsTalk.Core.Common.Core;
 using LetsTalk.Surveys.Data.Contracts;
@@ -11,6 +10,8 @@ using Moq;
 
 namespace LetsTalk.Surveys.Data.Tests
 {
+    using LetsTalk.Business.Entities.Survey;
+
     [TestClass]
     public class DataLayerTests
     {

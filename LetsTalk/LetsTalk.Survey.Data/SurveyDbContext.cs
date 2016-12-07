@@ -2,11 +2,13 @@
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Runtime.Serialization;
-using LetsTalk.Business.Entities.Surveys;
+
 using LetsTalk.Core.Common.Contracts;
 
 namespace LetsTalk.Services.SurveyService.Data
 {
+    using LetsTalk.Business.Entities.Survey;
+
     public class SurveyDbContext : DbContext
     {
         public SurveyDbContext() : base("name=LetsTalk_SurveyServiceDb")

@@ -13,7 +13,6 @@ namespace LetsTalk.Services.SurveyService.Tests.Handlers
 
     using LetsTalk.Business.Entities.Miscellaneous;
     using LetsTalk.Business.Entities.Survey;
-    using LetsTalk.Business.Entities.Surveys;
     using LetsTalk.Services.SurveyService.Handlers;
     using LetsTalk.Surveys.Data.Contracts;
 

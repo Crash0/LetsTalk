@@ -33,10 +33,6 @@
     <StartupObject>LetsTalk.Services.SurveyService.SurveyEnpointMannager</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LetsTalk.Business.Entities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LetsTalkDataService\Bin\LetsTalk.Business.Entities.dll</HintPath>
-    </Reference>
     <Reference Include="NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
       <HintPath>..\packages\NServiceBus.5.2.14\lib\net45\NServiceBus.Core.dll</HintPath>
       <Private>True</Private>
@@ -68,6 +64,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LetsTalk.Business.Entities\LetsTalk.Business.Entities.csproj">
+      <Project>{112062bf-f431-49c4-80f9-193342afd42e}</Project>
+      <Name>LetsTalk.Business.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
       <Project>{2D8D79F4-8974-4830-8F87-EC6D4247C9CD}</Project>
       <Name>LetsTalk.Core.Common.Contracts</Name>

@@ -3,13 +3,14 @@ using System.ComponentModel.Composition;
 using System.ServiceModel;
 using System.Threading.Tasks;
 using LetsTalk.Business.Contracts;
-using LetsTalk.Business.Entities.Surveys;
 using LetsTalk.Core.Common.Exceptions;
 using LetsTalk.Services.SurveyService.Contracts.Messages.Commands;
 using NServiceBus;
 
 namespace LetsTalk.Business.Managers
 {
+    using LetsTalk.Business.Entities.Survey;
+
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall,
         ConcurrencyMode = ConcurrencyMode.Multiple,
         ReleaseServiceInstanceOnTransactionComplete = false)]
