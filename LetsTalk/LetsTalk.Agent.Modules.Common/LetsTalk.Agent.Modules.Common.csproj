@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LetsTalk.Core.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LetsTalk.Client.AgentClient\bin\Debug\LetsTalk.Core.Common.dll</HintPath>
-    </Reference>
     <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
       <Private>True</Private>
@@ -117,6 +113,10 @@
     <ProjectReference Include="..\LetsTalk.Core.Common.UI.Core\LetsTalk.Core.Common.UI.csproj">
       <Project>{156D9B41-CB9C-4E3A-8B2F-296163492F49}</Project>
       <Name>LetsTalk.Core.Common.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Core.Common\LetsTalk.Core.Common.csproj">
+      <Project>{e19d81a5-bbf6-413e-a62d-a31307bbdbbc}</Project>
+      <Name>LetsTalk.Core.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
