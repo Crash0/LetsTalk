@@ -47,9 +47,6 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Technewlogic.WpfDialogManagement">
-      <HintPath>Z:\Downloads\WpfDialogManagement\WpfDialogManagement\bin\Release\Technewlogic.WpfDialogManagement.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />

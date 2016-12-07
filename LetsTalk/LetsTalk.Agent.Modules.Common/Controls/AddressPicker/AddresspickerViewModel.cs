@@ -20,9 +20,6 @@ namespace LetsTalk.Agent.Modules.Common.Controls
 
     using Prism.Commands;
 
-    using Technewlogic.WpfDialogManagement;
-    
-
     #endregion
 
     /// <summary>
@@ -32,24 +29,24 @@ namespace LetsTalk.Agent.Modules.Common.Controls
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class AddressPickerViewModel : ViewModelBase, IAddressPickerViewModel
     {
-        private DialogManager dialogManager;
+        //private DialogManager dialogManager;
         public AddressPickerViewModel()
         {
             this.PickAddress = new DelegateCommand(this.ExecuteMethod);
-            this.dialogManager = new DialogManager(Application.Current.MainWindow, Application.Current.Dispatcher);
+            //this.dialogManager = new DialogManager(Application.Current.MainWindow, Application.Current.Dispatcher);
         }
 
         private void ExecuteMethod()
         {
             var tt = new AddressView();
-            var dialog = this.dialogManager.CreateCustomContentDialog(tt,"Address",DialogMode.OkCancel);
+            //var dialog = this.dialogManager.CreateCustomContentDialog(tt,"Address",DialogMode.OkCancel);
             var avvm = (AddressViewViewModel)tt.DataContext;
-            dialog.Ok = () => 
-            {
-                SelectedAddress = avvm.Address;
-            };
+            //dialog.Ok = () => 
+            //{
+            //    SelectedAddress = avvm.Address;
+            //};
             
-            dialog.Show();
+            //dialog.Show();
             
 
 
