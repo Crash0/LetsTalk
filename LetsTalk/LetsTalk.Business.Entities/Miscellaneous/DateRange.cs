@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace LetsTalk.Business.Entities.Miscellaneous
 {
-    public class DateRange
+    using LetsTalk.Core.Common.Contracts.Entities;
+
+    public class DateRange : IDateRange
     {
         public DateTime StartDate { get; set; }
+
         public DateTime StopDate { get; set; }
     }
 }

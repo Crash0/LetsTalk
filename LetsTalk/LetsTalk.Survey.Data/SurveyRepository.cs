@@ -4,11 +4,11 @@ using System.ComponentModel.Composition;
 using System.Linq;
 
 using LetsTalk.Core.Common.Data;
-using LetsTalk.Surveys.Data.Contracts;
 
 namespace LetsTalk.Services.SurveyService.Data
 {
     using LetsTalk.Business.Entities.Survey;
+    using LetsTalk.Core.Common.Contracts.Entities;
 
     [Export(typeof(ISurveyRepository))]
     [PartCreationPolicy(CreationPolicy.NonShared)]

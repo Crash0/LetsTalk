@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LetsTalk.Business.Contracts">
-      <HintPath>..\LetsTalkDataService\Bin\LetsTalk.Business.Contracts.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -55,6 +52,10 @@
     <Compile Include="Targeting\Target.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LetsTalk.Business.Contracts\LetsTalk.Business.Contracts.csproj">
+      <Project>{eb6cfb0a-a4b1-4890-90c7-0abb21e940b0}</Project>
+      <Name>LetsTalk.Business.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
       <Project>{2d8d79f4-8974-4830-8f87-ec6d4247c9cd}</Project>
       <Name>LetsTalk.Core.Common.Contracts</Name>
@@ -62,6 +63,10 @@
     <ProjectReference Include="..\LetsTalk.Core.Common\LetsTalk.Core.Common.csproj">
       <Project>{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}</Project>
       <Name>LetsTalk.Core.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Survey.Data.Contracts\LetsTalk.Services.SurveyService.Contracts.csproj">
+      <Project>{9bdc4111-c7e6-4e12-9174-a114e4695a5f}</Project>
+      <Name>LetsTalk.Services.SurveyService.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

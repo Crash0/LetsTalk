@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace LetsTalk.Business.Entities.Survey
 {
-    public class SurveyQuestion
+    using LetsTalk.Core.Common.Contracts.Entities;
+
+    public class SurveyQuestion : ISurveyQuestion
     {
         public string Question { get; set; }
+
         public List<string> AnswerPossibilities { get; set; }
     }
 }

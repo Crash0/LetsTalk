@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ISurveyRepository.cs" />
     <Compile Include="SurveyDbContext.cs" />
     <Compile Include="SurveyRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

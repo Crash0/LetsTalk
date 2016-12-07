@@ -84,6 +84,10 @@
       <Project>{9BDC4111-C7E6-4E12-9174-A114E4695A5F}</Project>
       <Name>LetsTalk.Services.SurveyService.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LetsTalk.Survey.Data\LetsTalk.Services.SurveyService.Data.csproj">
+      <Project>{FFEA92AD-88D0-4656-86D3-F2F587E812E2}</Project>
+      <Name>LetsTalk.Services.SurveyService.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

@@ -6,23 +6,23 @@ using LetsTalk.Core.Common.Exceptions;
 
 namespace LetsTalk.Business.Contracts
 {
-    using LetsTalk.Business.Entities.Survey;
+    using LetsTalk.Core.Common.Contracts.Entities;
 
     [ServiceContract]
     public interface ISurveyService
     {
         [OperationContract]
-        Survey GetSurvey(string id);
+        ISurvey GetSurvey(string id);
 
         [OperationContract]
-        Survey AddSurvey(Survey survey);
+        ISurvey AddSurvey(ISurvey survey);
 
         [OperationContract]
-        Survey[] GetApplicableSurveys(string userId);
+        ISurvey[] GetApplicableSurveys(string userId);
 
         [OperationContract]
         [TransactionFlow(TransactionFlowOption.Allowed)]
-        Survey UpdateSurvey(Survey survey);
+        ISurvey UpdateSurvey(ISurvey survey);
 
         [OperationContract]
         [TransactionFlow(TransactionFlowOption.Allowed)]

@@ -8,9 +8,9 @@ using LetsTalk.Core.Common.Contracts;
 
 namespace LetsTalk.Surveys.Data.Contracts
 {
-    using LetsTalk.Business.Entities.Survey;
+    using LetsTalk.Core.Common.Contracts.Entities;
 
-    public interface ISurveyRepository : IDataRepository<Survey>
+    public interface ISurveyRepository : IDataRepository<ISurvey>
     {
     }
 }

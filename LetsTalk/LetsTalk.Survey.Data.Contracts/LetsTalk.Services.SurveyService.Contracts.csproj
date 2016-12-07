@@ -41,13 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISurveyRepository.cs" />
+    <None Include="ISurveyRepository.cs.old" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LetsTalk.Business.Entities\LetsTalk.Business.Entities.csproj">
-      <Project>{112062BF-F431-49C4-80F9-193342AFD42E}</Project>
-      <Name>LetsTalk.Business.Entities</Name>
+    <ProjectReference Include="..\LetsTalk.Business.Contracts\LetsTalk.Business.Contracts.csproj">
+      <Project>{eb6cfb0a-a4b1-4890-90c7-0abb21e940b0}</Project>
+      <Name>LetsTalk.Business.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
       <Project>{2D8D79F4-8974-4830-8F87-EC6D4247C9CD}</Project>

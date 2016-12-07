@@ -4,12 +4,14 @@ namespace LetsTalk.Business.Entities.Survey
     using System.Collections.Generic;
     using System.Runtime.Serialization;
 
+    using LetsTalk.Business.Contracts;
     using LetsTalk.Business.Entities.Miscellaneous;
     using LetsTalk.Core.Common.Contracts;
+    using LetsTalk.Core.Common.Contracts.Entities;
     using LetsTalk.Core.Common.Core;
 
     [DataContract]
-    public class Survey :EntityBase, IIdentifiableEntity
+    public class Survey :EntityBase, IIdentifiableEntity, ISurvey
     {
         [DataMember]
         public Guid Id { get; set; }
@@ -26,7 +28,7 @@ namespace LetsTalk.Business.Entities.Survey
             set { this.Id = value; }
         }
 
-        public DateRange ApplicableAgeGroup { get; set; }
-        public List<SurveyQuestion> Questions { get; set; }
+        public IDateRange ApplicableAgeGroup { get; set; }
+        public List<ISurveyQuestion> Questions { get; set; }
     }
 }

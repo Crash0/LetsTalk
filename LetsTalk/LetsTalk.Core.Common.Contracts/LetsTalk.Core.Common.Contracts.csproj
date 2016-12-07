@@ -46,7 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\IAddress.cs" />
+    <Compile Include="Entities\IDateRange.cs" />
     <Compile Include="Entities\IPhoneNumber.cs" />
+    <Compile Include="Entities\Survey\ISurvey.cs" />
+    <Compile Include="Entities\Survey\ISurveyQuestion.cs" />
     <Compile Include="Service\IServiceFactory.cs" />
     <Compile Include="IIdentityContainer.cs" />
     <Compile Include="Service\IServiceContract.cs" />

@@ -4,13 +4,15 @@ using System.ComponentModel.Composition;
 using LetsTalk.Business.Bootstrapper;
 using LetsTalk.Core.Common.Contracts;
 using LetsTalk.Core.Common.Core;
-using LetsTalk.Surveys.Data.Contracts;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
 namespace LetsTalk.Surveys.Data.Tests
 {
     using LetsTalk.Business.Entities.Survey;
+    using LetsTalk.Core.Common.Contracts.Entities;
+    using LetsTalk.Services.SurveyService.Data;
 
     [TestClass]
     public class DataLayerTests

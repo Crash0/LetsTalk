@@ -3,7 +3,6 @@ using System.ComponentModel.Composition.Hosting;
 using LetsTalk.Authentication.Data;
 using LetsTalk.Core.Common.Data;
 using LetsTalk.Services.SurveyService.Data;
-using LetsTalk.Surveys.Data;
 
 namespace LetsTalk.Business.Bootstrapper
 {

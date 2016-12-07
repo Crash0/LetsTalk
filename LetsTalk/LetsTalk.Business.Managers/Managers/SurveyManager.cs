@@ -10,6 +10,7 @@ using NServiceBus;
 namespace LetsTalk.Business.Managers
 {
     using LetsTalk.Business.Entities.Survey;
+    using LetsTalk.Core.Common.Contracts.Entities;
 
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall,
         ConcurrencyMode = ConcurrencyMode.Multiple,
@@ -17,18 +18,18 @@ namespace LetsTalk.Business.Managers
     public class SurveyManager : ManagerBase, ISurveyService
     {
         [Import] private IBus bus;
-        public Survey GetSurvey(string id)
+        public ISurvey GetSurvey(string id)
         {
             return
                 ExecuteFaultHandeledOperation(
                     () => new Survey {Id = Guid.NewGuid(), Description = "NotImplemented", Title = "NotImplemented"});
         }
 
-        public Survey AddSurvey(Survey survey)
+        public ISurvey AddSurvey(ISurvey survey)
         {
             var message = new AddSurveyCommand
             {
-                surveyToAdd = survey
+                surveyToAdd = (Survey)survey
             };
 
             Survey resultSurvey = new Survey();
@@ -46,7 +47,7 @@ namespace LetsTalk.Business.Managers
         }
 
 
-        public Survey[] GetApplicableSurveys(string userId)
+        public ISurvey[] GetApplicableSurveys(string userId)
         {
             return ExecuteFaultHandeledOperation(() =>
             {
@@ -67,7 +68,7 @@ namespace LetsTalk.Business.Managers
 
 
         [OperationBehavior(TransactionScopeRequired = true)]
-        public Survey UpdateSurvey(Survey survey)
+        public ISurvey UpdateSurvey(ISurvey survey)
         {
             Survey updatedSurvey = null;
             return ExecuteFaultHandeledOperation(() =>
@@ -75,10 +76,10 @@ namespace LetsTalk.Business.Managers
                 if (survey.Id == Guid.Empty)
                 {
                     //add new survey
-                    updatedSurvey = survey;
+                    updatedSurvey = (Survey)survey;
                 }
                 //update existing
-                updatedSurvey = survey;
+                updatedSurvey = (Survey)survey;
                 if (updatedSurvey == null)
                 {
                     throw new FaultException("Something happend -_-");

@@ -10,7 +10,7 @@
     using LetsTalk.Business.Entities.Survey;
     using LetsTalk.Core.Kernel.Messages;
     using LetsTalk.Services.SurveyService.Contracts.Messages.Commands;
-    using LetsTalk.Surveys.Data.Contracts;
+    using LetsTalk.Services.SurveyService.Data;
 
     using NServiceBus;
 
