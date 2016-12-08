@@ -7,7 +7,7 @@
 // <summary>  
 // <summary>
 #endregion
-namespace LetsTalk.Business.Entities.Miscellaneous
+namespace LetsTalk.Core.Common.Contracts.Entities
 {
     public enum Gender
     {

@@ -10,6 +10,8 @@ using LetsTalk.Services.TargetingService.Data;
 
 namespace LetsTalk.Services.TargetingService.Data.Tests
 {
+    using LetsTalk.Core.Common.Contracts.Entities;
+
     public class TargetsRepositoryTests
     {
         List<Target> testTargets = new List<Target>

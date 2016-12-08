@@ -9,11 +9,18 @@
 #endregion
 namespace LetsTalk.Core.Common.Contracts.Entities
 {
+    using System;
     using System.Collections.Generic;
 
     public interface ISurveyQuestion
     {
+        Guid QuestionId { get; }
+
         string Question { get; set; }
+
+        string Description { get; set; }
+
+        // TODO: should this be in a separate Entity?
         List<string> AnswerPossibilities { get; set; }
     }
 }

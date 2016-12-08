@@ -15,13 +15,17 @@ namespace LetsTalk.Core.Common.Contracts.Entities
     public interface ISurvey
     {
 
+        //TODO: rename this to SurveyID
         Guid Id { get; set; }
        
+        Guid CreatedBy { get; }
+        DateTime CreatedDateTime { get; }
+        DateTime LastModifyed { get; set; }
+
         string Title { get; set; }
     
         string Description { get; set; }
-        Guid EntityId { get; set; }
-        IDateRange ApplicableAgeGroup { get; set; }
+
         List<ISurveyQuestion> Questions { get; set; }
     }
 }

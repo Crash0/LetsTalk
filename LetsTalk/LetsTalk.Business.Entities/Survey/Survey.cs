@@ -11,10 +11,19 @@ namespace LetsTalk.Business.Entities.Survey
     using LetsTalk.Core.Common.Core;
 
     [DataContract]
-    public class Survey :EntityBase, IIdentifiableEntity, ISurvey
+    public class Survey : EntityBase, IIdentifiableEntity, ISurvey
     {
         [DataMember]
         public Guid Id { get; set; }
+
+        [DataMember]
+        public Guid CreatedBy { get; }
+
+        [DataMember]
+        public DateTime CreatedDateTime { get; }
+
+        [DataMember]
+        public DateTime LastModifyed { get; set; }
 
         [DataMember]
         public string Title { get; set; } 
@@ -27,8 +36,10 @@ namespace LetsTalk.Business.Entities.Survey
             get { return this.Id; }
             set { this.Id = value; }
         }
-
+        [DataMember]
         public IDateRange ApplicableAgeGroup { get; set; }
+
+        [DataMember]
         public List<ISurveyQuestion> Questions { get; set; }
     }
 }

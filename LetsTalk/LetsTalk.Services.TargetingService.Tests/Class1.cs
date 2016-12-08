@@ -12,6 +12,8 @@ using Xunit;
 
 namespace LetsTalk.Services.TargetingService.Tests
 {
+    using LetsTalk.Core.Common.Contracts.Entities;
+
     public class Class1
     {
         

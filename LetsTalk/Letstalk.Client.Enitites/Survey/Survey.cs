@@ -4,11 +4,18 @@ using LetsTalk.Core.Common.Core;
 
 namespace Letstalk.Client.Entities
 {
-    public class Survey : ObjectBase
+    using LetsTalk.Core.Common.Contracts.Entities;
+    public class Survey : ObjectBase, ISurvey
     {
         public Guid Id { get; set; }
-       
-        public List<SurveyQuestion> Questions { get; set; }
+
+        public Guid CreatedBy { get; }
+
+        public DateTime CreatedDateTime { get; }
+
+        public DateTime LastModifyed { get; set; }
+
+        public List<ISurveyQuestion> Questions { get; set; }
 
         public string Title { get; set; } 
         

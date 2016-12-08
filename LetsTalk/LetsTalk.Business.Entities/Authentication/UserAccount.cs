@@ -5,8 +5,9 @@ using LetsTalk.Core.Common.Core;
 
 namespace LetsTalk.Business.Entities.Authentication
 {
+    using LetsTalk.Core.Common.Contracts.Entities.Authentication;
     [DataContract]
-    public class UserAccount : EntityBase, IIdentifiableEntity
+    public class UserAccount : EntityBase, IIdentifiableEntity, IUserAccount
     {
         [DataMember]
         public Guid AccountId { get; set; }
