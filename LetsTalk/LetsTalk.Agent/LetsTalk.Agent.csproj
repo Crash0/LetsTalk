@@ -194,6 +194,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LetsTalk.Agent.Modules.Common\LetsTalk.Agent.Modules.Common.csproj">
+      <Project>{ee453990-cc55-4734-a0d5-6fd271c208cd}</Project>
+      <Name>LetsTalk.Agent.Modules.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Agent.Modules.Customers\LetsTalk.Agent.Modules.Customers.csproj">
       <Project>{0F4711AC-3BD4-4E8D-9E65-D0ECD0FE4121}</Project>
       <Name>LetsTalk.Agent.Modules.Customers</Name>

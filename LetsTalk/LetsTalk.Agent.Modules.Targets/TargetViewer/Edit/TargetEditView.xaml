@@ -64,7 +64,7 @@
             <DatePicker Text="{Binding Target.Birthdate}"
                         Height="30" FontSize="20"
                         Margin="0,20,0,0"/>
-
+            <controls1:AddressPicker/>
         </StackPanel>
     </Grid>
 </UserControl>
