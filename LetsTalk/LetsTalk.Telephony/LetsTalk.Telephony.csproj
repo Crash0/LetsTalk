@@ -51,6 +51,7 @@
     <Compile Include="PhoneConfig\Generator\PhoneProtocolType.cs" />
     <Compile Include="PhoneConfig\Generator\ServiceActivationCodes.cs" />
     <Compile Include="PhoneConfig\Generator\WifiProfile.cs" />
+    <Compile Include="PhoneConfig\Misc\Extension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
