@@ -60,6 +60,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Create\CreateSurveyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Display\DisplaySurveyView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -74,6 +78,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Create\CreateSurveyView.xaml.cs">
+      <DependentUpon>CreateSurveyView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Display\DisplaySurveyView.xaml.cs">
       <DependentUpon>DisplaySurveyView.xaml</DependentUpon>
     </Compile>

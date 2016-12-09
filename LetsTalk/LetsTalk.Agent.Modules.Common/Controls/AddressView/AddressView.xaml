@@ -7,35 +7,14 @@
              xmlns:controls="clr-namespace:LetsTalk.Agent.Modules.Common.Controls"
              mc:Ignorable="d" 
              DataContext="local:AddressViewViewModel"
-             d:DataContext="{d:DesignInstance Type=controls:AddressViewViewModel}"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DataContext="{d:DesignInstance Type=controls:AddressViewViewModel}" Height="119.143" Width="351.724">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="79*"/>
-            <ColumnDefinition Width="76*"/>
-            <ColumnDefinition Width="145*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="39*"/>
-            <RowDefinition Height="43*"/>
-            <RowDefinition Height="41*"/>
-            <RowDefinition Height="46*"/>
-            <RowDefinition Height="93*"/>
-        </Grid.RowDefinitions>
-        <TextBlock Text="Addres 1"/>
-        <TextBlock Grid.Row="1" Text="Addres 2"/>
-        <TextBox Grid.Row="2"/>
-        <TextBox Grid.Row="3"/>
-        <TextBox Grid.Row="4"/>
-        
-        <TextBox Text="{Binding Address.AddressLine1}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
-        
-        <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1"/>
-        <TextBox Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="1"/>
+
+        <Label Content="Address" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox Height="24" Margin="10,41,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox Height="24" Margin="68,12,9.5,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="10,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="88"/>
+        <TextBox Height="24" Margin="103,70,10.5,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
 
     </Grid>
 </UserControl>

@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="LetsTalk.Agent.Modules.Targets.TargetViewer.Search.TargetSearchView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LetsTalk.Agent.Modules.Targets.TargetViewer.Search"
+             mc:Ignorable="d" Height="373.127" Width="538.644">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="10,10,10,0" Height="200" VerticalAlignment="Top">
+            <Grid>
+                <Button Content="Search" Margin="0,0,10,10" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" />
+                <Label Content="CID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="customerCIDTxtBox" HorizontalAlignment="Left" Height="23" Margin="108,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="First Name" HorizontalAlignment="Left" Margin="14,62,0,0" VerticalAlignment="Top"/>
+                <Label Content="LastName" HorizontalAlignment="Left" Margin="18,93,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="ClearSearchBtn" Content="Clear" HorizontalAlignment="Left" Margin="688,168,0,0" VerticalAlignment="Top" Width="75"/>
+                <Label Content="Birthdate" HorizontalAlignment="Left" Margin="18,124,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="customerFirstNameTxtBox" HorizontalAlignment="Left" Height="23" Margin="112,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="customerBirthdateTxtBox" HorizontalAlignment="Left" Height="23" Margin="112,128,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="customerLastNameTxtBox" HorizontalAlignment="Left" Height="23" Margin="112,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="auto" Margin="264,67,0,0">
+                    <StackPanel >
+                        <RadioButton IsChecked="True" Margin="5" Content="Private" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <RadioButton Margin="5" Content="Company" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    </StackPanel>
+                </Border>
+                <Label Content="Phone Number" HorizontalAlignment="Left" Margin="233,10,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="CustomerPhonenumbertxtbox" HorizontalAlignment="Left" Height="23" Margin="328,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button ToolTip="Try search for Customer before Creating a new Customer" ToolTipService.ShowOnDisabled="True" x:Name="createCustomerBtn" Content="Create" HorizontalAlignment="Left" Margin="607,168,0,0" VerticalAlignment="Top" Width="76" IsEnabled="False" />
+
+            </Grid>
+        </Border>
+        <DataGrid  x:Name="searchResultDatagrid" MinRowHeight="30" HorizontalAlignment="Stretch" Margin="10,215,0,0" VerticalAlignment="Stretch"  IsSynchronizedWithCurrentItem="False" IsReadOnly="True" GridLinesVisibility="Horizontal" AlternatingRowBackground="#FFEEEAEA" AreRowDetailsFrozen="True" SelectionMode="Single" FontSize="14">
+           
+        </DataGrid>
+
+    </Grid>
+</UserControl>
