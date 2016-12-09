@@ -10,7 +10,7 @@
             <Grid>
                 <Button Content="Search" Margin="0,0,10,10" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" />
                 <Label Content="CID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                <TextBox x:Name="customerCIDTxtBox" HorizontalAlignment="Left" Height="23" Margin="108,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="108,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                 <Label Content="First Name" HorizontalAlignment="Left" Margin="14,62,0,0" VerticalAlignment="Top"/>
                 <Label Content="LastName" HorizontalAlignment="Left" Margin="18,93,0,0" VerticalAlignment="Top"/>
                 <Button x:Name="ClearSearchBtn" Content="Clear" HorizontalAlignment="Left" Margin="688,168,0,0" VerticalAlignment="Top" Width="75"/>
@@ -26,12 +26,12 @@
                     </StackPanel>
                 </Border>
                 <Label Content="Phone Number" HorizontalAlignment="Left" Margin="233,10,0,0" VerticalAlignment="Top"/>
-                <TextBox x:Name="CustomerPhonenumbertxtbox" HorizontalAlignment="Left" Height="23" Margin="328,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="328,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                 <Button ToolTip="Try search for Customer before Creating a new Customer" ToolTipService.ShowOnDisabled="True" x:Name="createCustomerBtn" Content="Create" HorizontalAlignment="Left" Margin="607,168,0,0" VerticalAlignment="Top" Width="76" IsEnabled="False" />
 
             </Grid>
         </Border>
-        <DataGrid  x:Name="searchResultDatagrid" MinRowHeight="30" HorizontalAlignment="Stretch" Margin="10,215,0,0" VerticalAlignment="Stretch"  IsSynchronizedWithCurrentItem="False" IsReadOnly="True" GridLinesVisibility="Horizontal" AlternatingRowBackground="#FFEEEAEA" AreRowDetailsFrozen="True" SelectionMode="Single" FontSize="14">
+        <DataGrid  MinRowHeight="30" HorizontalAlignment="Stretch" Margin="10,215,0,0" VerticalAlignment="Stretch"  IsSynchronizedWithCurrentItem="False" IsReadOnly="True" GridLinesVisibility="Horizontal" AlternatingRowBackground="#FFEEEAEA" AreRowDetailsFrozen="True" SelectionMode="Single" FontSize="14">
            
         </DataGrid>
 
