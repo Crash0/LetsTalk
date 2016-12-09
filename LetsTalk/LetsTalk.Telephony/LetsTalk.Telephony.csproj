@@ -41,11 +41,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="PhoneConfig\Generator\AttConsoleLineKey.cs" />
+    <Compile Include="PhoneConfig\Generator\CameraProfile.cs" />
     <Compile Include="PhoneConfig\Generator\CiscoSPA525GConfigGenerator.cs" />
     <Compile Include="PhoneConfig\Generator\ConnectionType.cs" />
+    <Compile Include="PhoneConfig\Interfaces\ICiscoSPAConfigGenerator.cs" />
+    <Compile Include="PhoneConfig\Generator\LineExt.cs" />
+    <Compile Include="PhoneConfig\Generator\LineKey.cs" />
     <Compile Include="PhoneConfig\Generator\PhoneProtocolType.cs" />
+    <Compile Include="PhoneConfig\Generator\ServiceActivationCodes.cs" />
+    <Compile Include="PhoneConfig\Generator\WifiProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
