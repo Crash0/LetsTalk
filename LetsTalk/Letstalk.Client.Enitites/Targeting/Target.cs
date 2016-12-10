@@ -20,6 +20,8 @@ namespace Letstalk.Client.Entities.Targeting
 
         public string Surname { get; set; }
         public string GivenName { get; set; }
+
+        public string DisplayFullname => this.Surname + ", " + this.GivenName; 
         public IPhoneNumber Telephone { get; set; }
         public DateTime Birthdate { get; set; }
         public string EmailAddress { get; set; }
