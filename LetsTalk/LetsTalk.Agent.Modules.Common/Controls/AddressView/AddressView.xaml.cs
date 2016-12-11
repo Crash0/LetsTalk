@@ -21,14 +21,6 @@
             InitializeComponent();
         }
 
-        private AddressViewViewModel vm
-        {
-            get
-            {
-                return this.DataContext as 
-            }
-        }
-
         /// <summary>Invoked whenever the effective value of any dependency property on this <see cref="T:System.Windows.FrameworkElement" /> has been updated. The specific dependency property that changed is reported in the arguments parameter. Overrides <see cref="M:System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />.</summary>
         /// <param name="e">The event data that describes the property that changed, as well as old and new values.</param>
         protected override void OnPropertyChanged(DependencyPropertyChangedEventArgs e)
@@ -45,6 +37,7 @@
             }
             set
             {
+                
                 SetValue(AddressProperty, value);
             }
         }

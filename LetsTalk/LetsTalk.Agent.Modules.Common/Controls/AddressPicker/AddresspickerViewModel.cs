@@ -40,7 +40,7 @@ namespace LetsTalk.Agent.Modules.Common.Controls
         {
             var tt = new AddressView();
             //var dialog = this.dialogManager.CreateCustomContentDialog(tt,"Address",DialogMode.OkCancel);
-            var avvm = (AddressViewViewModel)tt.DataContext;
+            
             //dialog.Ok = () => 
             //{
             //    SelectedAddress = avvm.Address;

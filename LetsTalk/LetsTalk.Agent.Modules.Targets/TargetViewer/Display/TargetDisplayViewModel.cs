@@ -33,6 +33,7 @@ namespace LetsTalk.Agent.Modules.Targets.TargetViewer.Display
             {
                 this.target = value;
                 OnPropertyChanged(() => this.Target);
+                OnPropertyChanged(()=> this.Target.Address);
             }
         }
 
@@ -56,6 +57,7 @@ namespace LetsTalk.Agent.Modules.Targets.TargetViewer.Display
                              GivenName = "Jonas Viktor",
                              TargetId = Guid.NewGuid()
                          };
+
         }
 
         public override string ViewTitle

@@ -4,17 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LetsTalk.Agent.Modules.Common.Controls"
-             xmlns:controls="clr-namespace:LetsTalk.Agent.Modules.Common.Controls"
              mc:Ignorable="d" 
-             DataContext="local:AddressViewViewModel"
-             d:DataContext="{d:DesignInstance Type=controls:AddressViewViewModel}" Height="119.925" Width="434.184">
+             Height="119.925" Width="434.184">
     <Grid>
 
         <Label Content="Address 1" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
-        <TextBox Height="24" Margin="88,41,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBox  Height="24" Margin="88,12,10,0" TextWrapping="Wrap" Text="{Binding AddressPr}" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="88,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83"/>
-        <TextBox Height="24" Margin="176,70,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox Height="24" Margin="88,41,10,0" TextWrapping="Wrap" Text="{Binding Address.AddressLine2, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource AncestorType=UserControl, AncestorLevel=1}, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBox  Height="24" Margin="88,12,10,0" TextWrapping="Wrap" Text="{Binding Address.AddressLine1, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource AncestorType=UserControl, AncestorLevel=1}, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="88,70,0,0" TextWrapping="Wrap" Text="{Binding Address.PostalCode, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource AncestorType=UserControl, AncestorLevel=1}, Mode=TwoWay}" VerticalAlignment="Top" Width="83"/>
+        <TextBox Height="24" Margin="176,70,10,0" TextWrapping="Wrap" Text="{Binding Address.City, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource AncestorType=UserControl, AncestorLevel=1}, Mode=TwoWay}" VerticalAlignment="Top"/>
         <Label Content="Address 2" HorizontalAlignment="Left" Margin="0,39,0,0" VerticalAlignment="Top"/>
         <Label Content="Postal Code" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top"/>
 
