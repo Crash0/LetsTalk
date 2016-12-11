@@ -36,23 +36,8 @@
                 <TextBox x:Name="customerLastNametxtbox" HorizontalAlignment="Left" Height="23" Margin="88,111,0,0"
                          TextWrapping="Wrap" VerticalAlignment="Top" Width="287" IsEnabled="False" />
                 <Label Content="Billing Address" HorizontalAlignment="Left" Margin="10,359,0,0" VerticalAlignment="Top" />
-                <TextBox x:Name="customerBillingAddress2txtbox" HorizontalAlignment="Left" Height="24"
-                         Margin="105,419,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="298"
-                         IsEnabled="False" />
-                <TextBox x:Name="customerBillingAddress1txtbox" HorizontalAlignment="Left" Height="24"
-                         Margin="105,390,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="298"
-                         IsEnabled="False" />
-                <TextBox x:Name="customerBillingPostalNrtxtbox" HorizontalAlignment="Left" Height="24"
-                         Margin="105,448,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70"
-                         IsEnabled="False" />
-                <TextBox x:Name="customerBillingPostalPlacetxtbox" HorizontalAlignment="Left" Height="24"
-                         Margin="180,448,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223"
-                         IsEnabled="False" />
-                <CheckBox x:Name="IsBillingAddressDiffrentchkbox" Content="Same as above" IsChecked="True"
+                <CheckBox Content="Same as above" IsChecked="{Binding Target.IsBillingAddressSame}"
                           HorizontalAlignment="Left" Margin="105,365,0,0" VerticalAlignment="Top" IsEnabled="False" />
-                <Label Content="Address 1" HorizontalAlignment="Left" Margin="12,390,0,0" VerticalAlignment="Top" />
-                <Label Content="Address 2" HorizontalAlignment="Left" Margin="12,416,0,0" VerticalAlignment="Top" />
-                <Label Content="Postal Code" HorizontalAlignment="Left" Margin="10,446,0,0" VerticalAlignment="Top" />
                 <Label Content="Birthdate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,139,0,0" />
                 <TextBox x:Name="customerBirthdatetxtbox" VerticalAlignment="Top" HorizontalAlignment="Left"
                          Height="24" Margin="88,141,0,0" IsEnabled="False" Width="287" />
@@ -74,6 +59,7 @@
                 <TextBlock HorizontalAlignment="Left" Margin="470,211,0,0" TextWrapping="Wrap" Text="TextBlock"
                            VerticalAlignment="Top" />
                 <Control:AddressView Address="{Binding Target.Address}"  Margin="12,234,0,138" HorizontalAlignment="Left" Width="391"/>
+                <Control:AddressView Address="{Binding Target.BillingAddress}" Margin="10,385,401.5,-13"/>
             </Grid>
         </Border>
 

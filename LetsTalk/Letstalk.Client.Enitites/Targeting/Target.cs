@@ -32,5 +32,7 @@ namespace Letstalk.Client.Entities.Targeting
         public IAddress Address { get; set; }
 
         public IAddress BillingAddress { get; set; }
+
+        public bool IsBillingAddressSame => !this.IsBillingAddressDiffrent;
     }
 }
