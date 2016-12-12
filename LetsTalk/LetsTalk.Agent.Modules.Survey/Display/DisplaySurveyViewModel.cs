@@ -82,7 +82,17 @@ namespace LetsTalk.Agent.Modules.SurveyModule.Display
             CurrentQuestion = Survey.Questions[0] as SurveyQuestion;
             
             NextQuestionCommand = new DelegateCommand(NextQuestionAction);
+            PreviousQuestionCommand = new DelegateCommand(PreviousQuestionAction);
             
+        }
+
+        private void PreviousQuestionAction()
+        {
+            var next = currentQuestion.QuestionNumber - 1;
+            if (Survey.Questions.Exists((question => question.QuestionNumber == next)))
+            {
+                CurrentQuestion = Survey.Questions[next] as SurveyQuestion;
+            }
         }
 
         private void NextQuestionAction()
@@ -123,6 +133,10 @@ namespace LetsTalk.Agent.Modules.SurveyModule.Display
         }
 
         public DelegateCommand NextQuestionCommand { get; set; }
+
+        public string Description => Survey.Description;
+
+        public DelegateCommand PreviousQuestionCommand { get; set; }
 
         public override void OnNavigatedTo(NavigationContext navigationContext)
         {
