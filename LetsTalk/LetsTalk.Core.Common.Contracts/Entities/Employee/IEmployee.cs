@@ -9,18 +9,17 @@
 #endregion
 
 using System;
+using LetsTalk.Core.Common.Contracts.Entities.Timecard;
 
 namespace LetsTalk.Core.Common.Contracts.Entities.Employee
 {
-    public interface IEmployee : ITeamMember, IAgent 
+    public interface IEmployee : ITeamMember, IAgent
     {
         string GivenName { get; }
         string SurName { get; }
 
         DateTime HireDate { get; }
-
-
-
+        
         IPhoneNumber PhoneNumber { get; set; }
 
         IAddress HomeAddress { get; }

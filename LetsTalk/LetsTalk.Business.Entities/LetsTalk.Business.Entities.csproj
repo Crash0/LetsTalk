@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication\UserAccount.cs" />
+    <Compile Include="Employee\Employee.cs" />
     <Compile Include="Miscellaneous\Address.cs" />
     <Compile Include="Miscellaneous\DateRange.cs" />
     <Compile Include="Miscellaneous\PhoneNumber.cs" />
@@ -67,6 +68,9 @@
       <Project>{9bdc4111-c7e6-4e12-9174-a114e4695a5f}</Project>
       <Name>LetsTalk.Services.SurveyService.Contracts</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Timecard\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

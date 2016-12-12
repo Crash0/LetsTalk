@@ -7,10 +7,13 @@
 // <summary>  
 // <summary>
 #endregion
+
+using System.Collections.Generic;
+
 namespace LetsTalk.Core.Common.Contracts.Entities.Employee
 {
     public interface ITeamMember
     {
-        
+        ICollection<ITeam> Team { get; set; }
     }
 }
