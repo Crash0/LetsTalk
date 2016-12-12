@@ -38,7 +38,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" FontSize="20" HorizontalAlignment="Center" Text="{Binding CurrentQuestion.Question}"></TextBlock>
+            <TextBlock Grid.Row="0" FontSize="20" HorizontalAlignment="Center" Text="{Binding CurrentQuestion.Question.}"></TextBlock>
             <ItemsControl Grid.Row="1" ItemsSource="{Binding CurrentQuestion.AnswerPossibilities}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -58,7 +58,7 @@
             </ItemsControl>
         </Grid>
         <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Content="previous" Style="{StaticResource NavigateButtonStyle}" Margin="20,20,0,20" />
-        <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Content="Next" Style="{StaticResource NavigateButtonStyle}" Margin="0,20,20,20"/>
+        <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Content="Next" Style="{StaticResource NavigateButtonStyle}" Command="{Binding NextQuestionCommand}" Margin="0,20,20,20"/>
         <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
             <TextBlock Text="{Binding Survey.Description}"></TextBlock>
         </Grid>

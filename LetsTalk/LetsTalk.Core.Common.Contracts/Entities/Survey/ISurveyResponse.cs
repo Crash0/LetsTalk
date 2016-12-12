@@ -7,15 +7,31 @@
 // <summary>  
 // <summary>
 #endregion
+
+using System.Collections.Generic;
+
 namespace LetsTalk.Core.Common.Contracts.Entities
 {
     using System;
 
     public interface ISurveyResponse
     {
-        Guid SurveyResponseId { get; set; }
+        Guid SurveyResponseId { get; }
 
         // TODO deside if this is going to be a list of string 
         // or a Entity of response tiems.
+        ICollection<ISurveyQuestionResponse> Responses { get; set; }
+    }
+
+    public interface ISurveyQuestionResponse
+    {
+        /// <summary>
+        /// The Owning response
+        /// </summary>
+        ISurveyQuestion Question { get; }
+
+        Guid QuestionId { get; }
+
+
     }
 }

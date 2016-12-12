@@ -14,7 +14,7 @@ namespace LetsTalk.Core.Common.Contracts.Entities.Timecard
 {
     public interface ITimecardUser
     {
-        ICollection<ITimecard> Timecards { get; set; 
+        ICollection<ITimecard> Timecards { get; set; }
 
         /*
          * TODO: Add methods for stamping inn and out times from Time service.

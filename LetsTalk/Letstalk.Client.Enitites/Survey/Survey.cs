@@ -15,7 +15,19 @@ namespace Letstalk.Client.Entities
 
         public DateTime LastModifyed { get; set; }
 
-        public List<ISurveyQuestion> Questions { get; set; }
+        public List<ISurveyQuestion> Questions { get; private set; }
+
+        public void AddQuestion(ISurveyQuestion question)
+        {
+            if (Questions == null)
+            {
+                Questions = new List<ISurveyQuestion>();
+            }
+
+            //TODO: Fix this smelly thingy :warning: 
+            question.QuestionNumber = Questions.Count;
+            Questions.Add(question);
+        }
 
         public string Title { get; set; } 
         

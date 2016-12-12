@@ -12,6 +12,8 @@ namespace LetsTalk.Business.Entities.Survey
     {
         public Guid QuestionId { get; }
 
+        public int QuestionNumber { get; set; }
+
         public string Question { get; set; }
 
         public string Description { get; set; }

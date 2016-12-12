@@ -16,6 +16,8 @@ namespace LetsTalk.Core.Common.Contracts.Entities
     {
         Guid QuestionId { get; }
 
+        int QuestionNumber { get; set; }
+
         string Question { get; set; }
 
         string Description { get; set; }

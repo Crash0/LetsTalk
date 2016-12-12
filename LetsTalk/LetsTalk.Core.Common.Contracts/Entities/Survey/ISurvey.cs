@@ -26,6 +26,6 @@ namespace LetsTalk.Core.Common.Contracts.Entities
     
         string Description { get; set; }
 
-        List<ISurveyQuestion> Questions { get; set; }
+        List<ISurveyQuestion> Questions { get; }
     }
 }

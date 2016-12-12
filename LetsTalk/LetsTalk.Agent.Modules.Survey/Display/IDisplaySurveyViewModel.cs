@@ -16,6 +16,5 @@ namespace LetsTalk.Agent.Modules.SurveyModule.Display
     {
 
         string Title { get; set; }
-        Survey Survey { get; set; }
     }
 }
