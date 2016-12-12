@@ -45,7 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Employee\IAgent.cs" />
+    <Compile Include="Entities\Employee\IEmployee.cs" />
     <Compile Include="Entities\Employee\ITeam.cs" />
+    <Compile Include="Entities\Employee\ITeamMember.cs" />
     <Compile Include="Entities\Gender.cs" />
     <Compile Include="Entities\IAddress.cs" />
     <Compile Include="Entities\IDateRange.cs" />

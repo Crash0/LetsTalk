@@ -4,9 +4,27 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LetsTalk.Agent.Modules.Customers"
+             xmlns:controls="clr-namespace:LetsTalk.Agent.Modules.Common.Controls;assembly=LetsTalk.Agent.Modules.Common"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Background="Red">
-            
+             d:DesignHeight="500" d:DesignWidth="800">
+    <Grid>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="10,0,0,10" Width="74" Height="20" VerticalAlignment="Bottom"/>
+        <Button x:Name="createCustomerBtn" Content="Create" Margin="0,0,9.5,10" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="74"/>
+        <RadioButton Content="Personal" HorizontalAlignment="Left" Margin="676,51,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Business" HorizontalAlignment="Left" Margin="676,66,0,0" VerticalAlignment="Top"/>
+        <Label Content="Customer Type" HorizontalAlignment="Left" Margin="666,18,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Information" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="10,44,0,34.5" Width="498"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="21,55,0,0" VerticalAlignment="Top"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="228,55,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="93,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="299,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Company" HorizontalAlignment="Left" Margin="28,110,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="93,114,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="326"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="299,86,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="236,141,0,0" VerticalAlignment="Top" Width="58"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="299,141,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <controls:AddressView Margin="28,312,0,68" Height="Auto" HorizontalAlignment="Left"/>
+        <controls:AddressView Margin="28,0,0,188" VerticalAlignment="Bottom" Height="120" Width="434" HorizontalAlignment="Left"/>
     </Grid>
 </UserControl>

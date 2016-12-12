@@ -58,6 +58,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Create\CreateCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomerSummaryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -76,6 +80,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Create\CreateCustomer.xaml.cs">
+      <DependentUpon>CreateCustomer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomerModule.cs" />
     <Compile Include="CustomerSummaryView.xaml.cs">
       <DependentUpon>CustomerSummaryView.xaml</DependentUpon>
@@ -113,6 +120,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LetsTalk.Agent.Modules.Common\LetsTalk.Agent.Modules.Common.csproj">
+      <Project>{ee453990-cc55-4734-a0d5-6fd271c208cd}</Project>
+      <Name>LetsTalk.Agent.Modules.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
       <Project>{2D8D79F4-8974-4830-8F87-EC6D4247C9CD}</Project>
       <Name>LetsTalk.Core.Common.Contracts</Name>
