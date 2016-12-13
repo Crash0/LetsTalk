@@ -4,9 +4,13 @@ using LetsTalk.Core.Common.Contracts.Entities;
 
 namespace Letstalk.Client.Entities
 {
-    public class SurveyQuestion : ISurveyQuestion
+    public class SurveyQuestion : ISurveyQuestion, ISurveyQuestionResponse
     {
+        ISurveyQuestion ISurveyQuestionResponse.Question => this;
+
         public Guid QuestionId { get; }
+        public Guid SelectedResponseId { get; set; }
+        public virtual ISurveyAlternative SelectedAlternative { get; }
         public int QuestionNumber { get; set; }
         public string Question { get; set; }
         public string Description { get; set; }

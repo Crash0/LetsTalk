@@ -50,7 +50,7 @@
                     <DataTemplate>
                         <Grid Margin="20,5,20,5">
                             <controls:RoundedBox/>
-                            <RadioButton FontSize="20" GroupName="QuestionAlternatives" Content="{Binding}" VerticalContentAlignment="Center" />
+                            <RadioButton FontSize="20" GroupName="QuestionAlternatives" Content="{Binding}" IsChecked="{Binding Path=IsSelected}" VerticalContentAlignment="Center" />
 
                         </Grid>
                     </DataTemplate>

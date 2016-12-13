@@ -29,8 +29,13 @@ namespace LetsTalk.Core.Common.Contracts.Entities
         /// The Owning response
         /// </summary>
         ISurveyQuestion Question { get; }
+        
 
         Guid QuestionId { get; }
+
+        Guid SelectedResponseId { get; set; }
+
+        ISurveyAlternative SelectedAlternative { get; }
 
 
     }

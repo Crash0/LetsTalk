@@ -14,7 +14,7 @@ using LetsTalk.Core.Common.Contracts.Entities;
 
 namespace Letstalk.Client.Entities
 {
-    public class SurveyResponse : ISurveyResponse
+    public class SurveyResponse : ISurveyResponse 
     {
         public Guid SurveyResponseId { get; set; }
         public ICollection<ISurveyQuestionResponse> Responses { get; set; }

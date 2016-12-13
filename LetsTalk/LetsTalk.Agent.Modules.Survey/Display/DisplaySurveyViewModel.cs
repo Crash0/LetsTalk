@@ -114,7 +114,6 @@ namespace LetsTalk.Agent.Modules.SurveyModule.Display
         private string viewTitle = "Customer Name : Survey ";
         private SurveyQuestion currentQuestion;
         private Survey Survey;
-        private SurveyResponse response;
         public override string ViewTitle
         {
             get { return this.viewTitle; }
