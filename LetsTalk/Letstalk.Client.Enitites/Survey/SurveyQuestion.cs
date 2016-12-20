@@ -16,7 +16,7 @@ namespace Letstalk.Client.Entities
         public Guid QuestionId { get; }
         public Guid SelectedResponseId { get; set; }
 
-        public virtual IEnumerable<ISurveyAlternative> SelectedAlternative { get; }
+        public IEnumerable<ISurveyAlternative> SelectedAlternative { get; }
         public int QuestionNumber { get; set; }
         public string Question { get; set; }
         public string Description { get; set; }

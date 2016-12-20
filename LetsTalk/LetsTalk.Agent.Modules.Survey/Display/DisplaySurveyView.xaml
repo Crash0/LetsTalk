@@ -10,7 +10,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800" 
              d:DataContext="{d:DesignInstance Type=local:DisplaySurveyViewModel}">
-    
+
     <Grid>
         <Grid.Resources>
             <Style x:Key="NavigateButtonStyle" TargetType="Button">
@@ -22,10 +22,11 @@
             <Style x:Key="HeaderLabel" TargetType="Label">
                 <Setter Property="FontSize" Value="30" />
             </Style>
+            
         </Grid.Resources>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto" MinWidth="135"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -39,8 +40,8 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" FontSize="20" HorizontalAlignment="Center" Text="{Binding CurrentQuestion.Question}"></TextBlock>
-            
-                <ItemsControl Grid.Row="1" ItemsSource="{Binding CurrentQuestion.AnswerPossibilities}">
+
+            <ItemsControl Grid.Row="1" ItemsSource="{Binding CurrentQuestion.AnswerPossibilities}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Vertical"/>
@@ -58,10 +59,13 @@
 
             </ItemsControl>
         </Grid>
-        <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Content="previous" Style="{StaticResource NavigateButtonStyle}" Command="{Binding PreviousQuestionCommand}" Margin="20,20,0,20" />
-        <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Content="Next" Style="{StaticResource NavigateButtonStyle}" Command="{Binding NextQuestionCommand}" Margin="0,20,20,20"/>
+        <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Content="previous" Style="{StaticResource NavigateButtonStyle}" Command="{Binding PreviousQuestionCommand}" Margin="20,20,0,20" Height="Auto" />
+        <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Content="Next" Style="{StaticResource NavigateButtonStyle}" Command="{Binding NextQuestionCommand}" Margin="0,20,20,20" Height="Auto"/>
+        <GridSplitter  Grid.Column="0" Grid.Row="1" Width="10" />
+
         <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
-            <TextBlock Text="{Binding Description}" Margin="-17,38,-89,-38"></TextBlock>
+            
+            <TextBlock Text="{Binding Description}" Margin="10" TextWrapping="Wrap"></TextBlock>
         </Grid>
     </Grid>
 </UserControl>
