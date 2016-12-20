@@ -29,7 +29,6 @@ namespace LetsTalk.Agent.Modules.SurveyModule.Display
             
             var survey = new Survey
             {
-                Id = Guid.NewGuid(),
                 #region Survey settup
 
                 Title = "Undersøkelse om folks do vaner",

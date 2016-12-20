@@ -27,7 +27,7 @@ namespace LetsTalk.Services.SurveyService.Data
         protected override Survey GetEntity(SurveyDbContext entityContext, Guid id)
         {
             var query = from e in entityContext.SurveySet
-                where e.Id == id
+                where e.SurveyId == id
                 select e;
 
             var result = query.FirstOrDefault();
@@ -38,7 +38,7 @@ namespace LetsTalk.Services.SurveyService.Data
         protected override Survey UpdateEntity(SurveyDbContext entityContext, Survey entity)
         {
             return (from e in entityContext.SurveySet
-                where e.Id == entity.Id
+                where e.SurveyId == entity.SurveyId
                 select e).FirstOrDefault();
             ;
         }

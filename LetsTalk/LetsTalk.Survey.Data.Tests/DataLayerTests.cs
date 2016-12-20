@@ -40,13 +40,13 @@ namespace LetsTalk.Surveys.Data.Tests
             {
                 new Survey
                 {
-                    Id = Guid.Parse("DCDB4463-7918-49CD-9C78-4421A6731FB4"),
+                    SurveyId = Guid.Parse("DCDB4463-7918-49CD-9C78-4421A6731FB4"),
                     Title = "Suver 1",
                     Description = "The first survey"
                 },
                 new Survey
                 {
-                    Id = Guid.Parse("3BA55396-C3C0-40CE-BD91-E069A928A21A"),
+                    SurveyId = Guid.Parse("3BA55396-C3C0-40CE-BD91-E069A928A21A"),
                     Title = "Suver 2",
                     Description = "The second survey"
                 }
@@ -76,13 +76,13 @@ namespace LetsTalk.Surveys.Data.Tests
             {
                 new Survey
                 {
-                    Id = Guid.Parse("DCDB4463-7918-49CD-9C78-4421A6731FB4"),
+                    SurveyId = Guid.Parse("DCDB4463-7918-49CD-9C78-4421A6731FB4"),
                     Title = "Suver 1",
                     Description = "The first survey"
                 },
                 new Survey
                 {
-                    Id = Guid.Parse("3BA55396-C3C0-40CE-BD91-E069A928A21A"),
+                    SurveyId = Guid.Parse("3BA55396-C3C0-40CE-BD91-E069A928A21A"),
                     Title = "Suver 2",
                     Description = "The second survey"
                 }

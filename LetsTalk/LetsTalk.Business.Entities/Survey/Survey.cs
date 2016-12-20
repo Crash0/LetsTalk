@@ -14,7 +14,7 @@ namespace LetsTalk.Business.Entities.Survey
     public class Survey : EntityBase, IIdentifiableEntity, ISurvey
     {
         [DataMember]
-        public Guid Id { get; set; }
+        public Guid SurveyId { get; set; }
 
         [DataMember]
         public Guid CreatedBy { get; }
@@ -23,7 +23,7 @@ namespace LetsTalk.Business.Entities.Survey
         public DateTime CreatedDateTime { get; }
 
         [DataMember]
-        public DateTime LastModifyed { get; set; }
+        public DateTime LastModified { get; set; }
 
         [DataMember]
         public string Title { get; set; } 
@@ -33,8 +33,8 @@ namespace LetsTalk.Business.Entities.Survey
         
         public Guid EntityId
         {
-            get { return this.Id; }
-            set { this.Id = value; }
+            get { return this.SurveyId; }
+            set { this.SurveyId = value; }
         }
         [DataMember]
         public IDateRange ApplicableAgeGroup { get; set; }

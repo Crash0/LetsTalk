@@ -27,7 +27,7 @@ namespace LetsTalk.Services.SurveyService.Data
             modelBuilder.Ignore<IIdentifiableEntity>();
 
             modelBuilder.Entity<Survey>()
-                .HasKey(e => e.Id)
+                .HasKey(e => e.SurveyId)
                 .Ignore(e => e.EntityId);
 
         }

@@ -22,7 +22,7 @@ namespace LetsTalk.Business.Managers
         {
             return
                 ExecuteFaultHandeledOperation(
-                    () => new Survey {Id = Guid.NewGuid(), Description = "NotImplemented", Title = "NotImplemented"});
+                    () => new Survey {SurveyId = Guid.NewGuid(), Description = "NotImplemented", Title = "NotImplemented"});
         }
 
         public ISurvey AddSurvey(ISurvey survey)
@@ -53,8 +53,8 @@ namespace LetsTalk.Business.Managers
             {
                 Survey[] surveys =
                 {
-                    new Survey {Id = Guid.NewGuid(), Description = "NotImplemented", Title = "NotImplemented"},
-                    new Survey {Id = Guid.NewGuid(), Description = "NotImplemented", Title = "NotImplemented"}
+                    new Survey {SurveyId = Guid.NewGuid(), Description = "NotImplemented", Title = "NotImplemented"},
+                    new Survey {SurveyId = Guid.NewGuid(), Description = "NotImplemented", Title = "NotImplemented"}
                 };
 
                 if (surveys == null)
@@ -73,7 +73,7 @@ namespace LetsTalk.Business.Managers
             Survey updatedSurvey = null;
             return ExecuteFaultHandeledOperation(() =>
             {
-                if (survey.Id == Guid.Empty)
+                if (survey.SurveyId == Guid.Empty)
                 {
                     //add new survey
                     updatedSurvey = (Survey)survey;
