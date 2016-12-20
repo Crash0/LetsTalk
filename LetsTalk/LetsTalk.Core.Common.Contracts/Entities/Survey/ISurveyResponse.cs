@@ -17,9 +17,7 @@ namespace LetsTalk.Core.Common.Contracts.Entities
     public interface ISurveyResponse
     {
         Guid SurveyResponseId { get; }
-
-        // TODO deside if this is going to be a list of string 
-        // or a Entity of response tiems.
+        
         ICollection<ISurveyQuestionResponse> Responses { get; set; }
     }
 
@@ -35,7 +33,7 @@ namespace LetsTalk.Core.Common.Contracts.Entities
 
         Guid SelectedResponseId { get; set; }
 
-        ISurveyAlternative SelectedAlternative { get; }
+        IEnumerable<ISurveyAlternative> SelectedAlternative { get; }
 
 
     }

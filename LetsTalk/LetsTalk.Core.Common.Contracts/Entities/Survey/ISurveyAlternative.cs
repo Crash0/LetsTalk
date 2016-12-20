@@ -20,6 +20,8 @@ namespace LetsTalk.Core.Common.Contracts.Entities
 
         string Description { get; set; }
 
-        string Answer { get; }
+        string Alternative { get; }
+
+        bool Selected { get; set; }
     }
 }

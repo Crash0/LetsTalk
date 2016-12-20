@@ -37,7 +37,7 @@
                     <StackPanel x:Name="QStackPanel" Margin="10,41,167,10">
 
                     </StackPanel>
-                    <Label Content="Answer:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="182"/>
+                    <Label Content="Alternative:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="182"/>
                     <Label Content="Selected" Margin="0,10,79,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="83"/>
                 </Grid>
                 <Button Content="Add Question" Margin="498,0,10,10" Height="20" VerticalAlignment="Bottom" />

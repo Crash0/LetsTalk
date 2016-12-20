@@ -32,21 +32,21 @@ namespace LetsTalk.Agent.Modules.SurveyModule
         {
             Questions = new ObservableCollection<SurveyQuestion>();
 
-            Questions.Add(new SurveyQuestion
-            {
-                Question = "Can u lol?",
-                AnswerPossibilities = new List<string> {"Yes siry bob", "nope!"}
-            });
-            Questions.Add(new SurveyQuestion
-            {
-                Question = "how many did u lol?",
-                AnswerPossibilities = new List<string> {"1", "2 - 4", "5 - 7"}
-            });
-            Questions.Add(new SurveyQuestion
-            {
-                Question = "How old are u rely?",
-                AnswerPossibilities = new List<string> {"Yes siry bob", "nope!"}
-            });
+            //Questions.Add(new SurveyQuestion
+            //{
+            //    Question = "Can u lol?",
+            //    AnswerPossibilities = new List<string> {"Yes siry bob", "nope!"}
+            //});
+            //Questions.Add(new SurveyQuestion
+            //{
+            //    Question = "how many did u lol?",
+            //    AnswerPossibilities = new List<string> {"1", "2 - 4", "5 - 7"}
+            //});
+            //Questions.Add(new SurveyQuestion
+            //{
+            //    Question = "How old are u rely?",
+            //    AnswerPossibilities = new List<string> {"Yes siry bob", "nope!"}
+            //});
         }
 
         public Survey CurrentSurvey { get; set; }

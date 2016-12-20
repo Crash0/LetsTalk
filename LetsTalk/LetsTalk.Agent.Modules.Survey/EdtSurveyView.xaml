@@ -37,7 +37,7 @@
                                                     <TextBox Text="{Binding Path=.}"
                                                              Style="{StaticResource AnswerBoxStyle}">
                                                         <atachedProperties:WatermarkService.Watermark>
-                                                            <Label FontSize="20">Enter a Answer</Label>
+                                                            <Label FontSize="20">Enter a Alternative</Label>
                                                         </atachedProperties:WatermarkService.Watermark>
                                                     </TextBox>
                                                 </DataTemplate>

@@ -23,6 +23,6 @@ namespace LetsTalk.Core.Common.Contracts.Entities
         string Description { get; set; }
 
         // TODO: should this be in a separate Entity?
-        List<string> AnswerPossibilities { get; set; }
+        List<ISurveyAlternative> AnswerPossibilities { get; set; }
     }
 }

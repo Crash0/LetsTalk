@@ -18,6 +18,6 @@ namespace LetsTalk.Business.Entities.Survey
 
         public string Description { get; set; }
 
-        public List<string> AnswerPossibilities { get; set; }
+        public List<ISurveyAlternative> AnswerPossibilities { get; set; }
     }
 }

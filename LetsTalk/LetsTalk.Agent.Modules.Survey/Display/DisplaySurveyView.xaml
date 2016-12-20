@@ -8,7 +8,7 @@
              xmlns:regions="http://prismlibrary.com/"
              xmlns:controls="http://www.Crash0.com/Core"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="700" 
+             d:DesignHeight="600" d:DesignWidth="800" 
              d:DataContext="{d:DesignInstance Type=local:DisplaySurveyViewModel}">
     
     <Grid>
@@ -50,7 +50,7 @@
                     <DataTemplate>
                         <Grid Margin="20,5,20,5">
                             <controls:RoundedBox/>
-                            <RadioButton FontSize="20" GroupName="QuestionAlternatives" Content="{Binding}" IsChecked="{Binding Path=IsSelected}" VerticalContentAlignment="Center" />
+                            <RadioButton FontSize="20" GroupName="QuestionAlternatives" Content="{Binding Alternative}" IsChecked="{Binding Selected}" VerticalContentAlignment="Center" />
 
                         </Grid>
                     </DataTemplate>

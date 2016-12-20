@@ -27,7 +27,7 @@ namespace LetsTalk.Agent.Modules.SurveyModule.Display
         public DisplaySurveyViewModel()
         {
             
-            Survey = new Survey
+            var survey = new Survey
             {
                 Id = Guid.NewGuid(),
                 #region Survey settup
@@ -36,54 +36,39 @@ namespace LetsTalk.Agent.Modules.SurveyModule.Display
                 Description = "Dette er en test undersøkelse om folks do vaner",
                 
             };
-            Survey.AddQuestion(new SurveyQuestion
-            {
-                Question =
-                    "How Manny times do you go to the toilet in a day?",
-                AnswerPossibilities =
-                    new List<string>
-                    {
-                        "Never",
-                        "Once",
-                        "2 - 4",
-                        "5 or more"
-                        
-                    }
-            });
-            Survey.AddQuestion(new SurveyQuestion
-            {
-                Question =
-                    "How Manny times do you wach toilet in a month?",
-                AnswerPossibilities =
-                    new List<string>
-                    {
-                        "Once",
-                        "2 - 4",
-                        "5 or more"
-                    }
-            });
-            Survey.AddQuestion(new SurveyQuestion
-            {
-                Question =
-                    "How Manny times do you use others toilet in a week?",
-                AnswerPossibilities =
-                    new List<string>
-                    {
-                        "Once",
-                        "2 - 4",
-                        "5 or more"
-                    }
-            });
+
+            var question = new SurveyQuestion { Question = "How Manny times do you go to the toilet in a day?"};
+            question.AddAnswer(new SurveyAlternative("Never"));
+            question.AddAnswer(new SurveyAlternative("Once"));
+            question.AddAnswer(new SurveyAlternative("2 - 4"));
+            question.AddAnswer(new SurveyAlternative("5 or more"));
+            survey.AddQuestion(question);
+
+            question = new SurveyQuestion { Question = "How Manny times do you use others toilet in a week?" };
+            question.AddAnswer(new SurveyAlternative("Never"));
+            question.AddAnswer(new SurveyAlternative("Once"));
+            question.AddAnswer(new SurveyAlternative("2 - 4"));
+            question.AddAnswer(new SurveyAlternative("5 or more"));
+            survey.AddQuestion(question);
+
+            question = new SurveyQuestion { Question = "How Manny times do you wach toilet in a month?" };
+            question.AddAnswer(new SurveyAlternative("Never"));
+            question.AddAnswer(new SurveyAlternative("Once"));
+            question.AddAnswer(new SurveyAlternative("2 - 4"));
+            question.AddAnswer(new SurveyAlternative("5 or more"));
+            survey.AddQuestion(question);
             #endregion
-
-
-
-
-            CurrentQuestion = Survey.Questions[0] as SurveyQuestion;
             
+            SetupSurvey(survey);
             NextQuestionCommand = new DelegateCommand(NextQuestionAction);
             PreviousQuestionCommand = new DelegateCommand(PreviousQuestionAction);
             
+        }
+
+        private void SetupSurvey(Survey survey)
+        {
+            Survey = survey;
+            CurrentQuestion = survey.Questions[0] as SurveyQuestion;
         }
 
         private void PreviousQuestionAction()
@@ -104,8 +89,14 @@ namespace LetsTalk.Agent.Modules.SurveyModule.Display
             }
             else
             {
-                //Display EndOf Survey.
+                //Display EndOf Survey
+                EndSurvey();
             }
+        }
+
+        private void EndSurvey()
+        {
+            Survey.Validate();
         }
 
 
