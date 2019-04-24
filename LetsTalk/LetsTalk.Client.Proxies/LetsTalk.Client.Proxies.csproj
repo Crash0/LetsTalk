@@ -57,9 +57,9 @@
       <Project>{969e9d32-09f0-417b-b628-30b625303743}</Project>
       <Name>LetsTalk.Client.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Letstalk.Client.Enitites\Letstalk.Client.Entites.csproj">
+    <ProjectReference Include="..\Letstalk.Client.Enitites\LetsTalk.Client.Entites.csproj">
       <Project>{5578418c-82e6-45e4-8083-07aec8b672d1}</Project>
-      <Name>Letstalk.Client.Entites</Name>
+      <Name>LetsTalk.Client.Entites</Name>
     </ProjectReference>
     <ProjectReference Include="..\LetsTalk.Core.Common.Contracts\LetsTalk.Core.Common.Contracts.csproj">
       <Project>{2d8d79f4-8974-4830-8f87-ec6d4247c9cd}</Project>

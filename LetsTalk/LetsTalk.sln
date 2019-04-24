@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9D34DFC6-3A83-4CF8-9665-A0D0BFBD2703}"
 EndProject
@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Authentication Service", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Authentication", "LetsTalk.Authentication\LetsTalk.Authentication.csproj", "{683C9BC5-E226-497E-9B2C-4F38DE547E79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Letstalk.Client.Entites", "Letstalk.Client.Enitites\Letstalk.Client.Entites.csproj", "{5578418C-82E6-45E4-8083-07AEC8B672D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Client.Entites", "Letstalk.Client.Enitites\LetsTalk.Client.Entites.csproj", "{5578418C-82E6-45E4-8083-07AEC8B672D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Core.Common", "LetsTalk.Core.Common\LetsTalk.Core.Common.csproj", "{E19D81A5-BBF6-413E-A62D-A31307BBDBBC}"
 EndProject
@@ -494,5 +494,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45
+		SolutionGuid = {EEE3AFA8-AC8C-42FB-A545-8017EB0FA301}
 	EndGlobalSection
 EndGlobal

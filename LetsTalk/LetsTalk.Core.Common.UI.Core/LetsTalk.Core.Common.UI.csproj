@@ -67,7 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgentCommands.cs" />
-    <Compile Include="AttachedProperties\Class1.cs" />
+    <Compile Include="AttachedProperties\WatermarkService.cs" />
     <Compile Include="Behaviors\AutoPopulateExportedViewsBehavior.cs" />
     <Compile Include="Behaviors\ReturnCommandBehavior.cs" />
     <Compile Include="Behaviors\RegionPopupBehaviors.cs" />
@@ -157,9 +157,7 @@
   <ItemGroup>
     <Resource Include="Resources\shadow_tr.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AtachedProperties\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
