@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using LetsTalk.Core.Common.Contracts.Entities;
 
-namespace Letstalk.Client.Entities
+namespace LetsTalk.Client.Entities
 {
     public class SurveyQuestion : ISurveyQuestion, ISurveyQuestionResponse
     {

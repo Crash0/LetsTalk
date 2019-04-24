@@ -13,8 +13,8 @@ namespace LetsTalk.Agent.Modules.Targets.TargetViewer.Display
     using System.ComponentModel.Composition;
     using System.ComponentModel.Composition.Primitives;
 
-    using Letstalk.Client.Entities.Miscellaneous;
-    using Letstalk.Client.Entities.Targeting;
+    using LetsTalk.Client.Entities.Miscellaneous;
+    using LetsTalk.Client.Entities.Targeting;
 
     using LetsTalk.Core.Common.Contracts.Entities;
     using LetsTalk.Core.Common.UI.Core;

@@ -8,7 +8,7 @@
 // <summary>
 #endregion
 
-using Letstalk.Client.Entities;
+using LetsTalk.Client.Entities;
 
 namespace LetsTalk.Agent.Modules.SurveyModule.Display
 {

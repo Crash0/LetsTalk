@@ -9,17 +9,17 @@ namespace LetsTalk.Client.Proxies
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class ClientClient : UserClientBase<IClientService>, IClientService
     {
-        public Letstalk.Client.Entities.Client GetClient(string id)
+        public LetsTalk.Client.Entities.Client GetClient(string id)
         {
             return Channel.GetClient(id);
         }
 
-        public Letstalk.Client.Entities.Client CreateClient(Letstalk.Client.Entities.Client client)
+        public LetsTalk.Client.Entities.Client CreateClient(LetsTalk.Client.Entities.Client client)
         {
             return Channel.CreateClient(client);
         }
 
-        public Letstalk.Client.Entities.Client[] GetClients()
+        public LetsTalk.Client.Entities.Client[] GetClients()
         {
             var  d = Channel.GetClients();
             return d;

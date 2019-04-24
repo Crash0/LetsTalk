@@ -1,9 +1,8 @@
 ﻿using System;
-using Letstalk.Client.Entities.Miscellaneous;
 using LetsTalk.Client.Entities.Miscellaneous;
 using LetsTalk.Core.Common.Contracts;
 
-namespace Letstalk.Client.Entities.Targeting
+namespace LetsTalk.Client.Entities.Targeting
 {
     using LetsTalk.Core.Common.Contracts.Entities;
     using LetsTalk.Core.Common.Contracts.Entities.Targeting;

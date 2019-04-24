@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Letstalk.Client.Entities
+namespace LetsTalk.Client.Entities
 {
 
     public class Client : ObjectBase

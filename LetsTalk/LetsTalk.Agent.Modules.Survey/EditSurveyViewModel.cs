@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Windows;
-using Letstalk.Client.Entities;
+using LetsTalk.Client.Entities;
 using LetsTalk.Core.Common.UI.Core;
 
 #endregion

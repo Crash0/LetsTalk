@@ -3,7 +3,7 @@ using System.ComponentModel.Composition;
 using LetsTalk.Client.Contracts;
 using LetsTalk.Core.Common.Contracts;
 using LetsTalk.Core.Common.UI.Core;
-using CE = Letstalk.Client.Entities;
+using CE = LetsTalk.Client.Entities;
 
 namespace LetsTalk.Client.AgentClient.ViewModels
 {

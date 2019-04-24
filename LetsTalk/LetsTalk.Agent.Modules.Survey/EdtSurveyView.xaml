@@ -4,9 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LetsTalk.Agent.Modules.SurveyModule"
-             xmlns:entities="clr-namespace:Letstalk.Client.Entities;assembly=Letstalk.Client.Entities"
-             xmlns:atachedProperties="clr-namespace:LetsTalk.Core.Common.UI.AtachedProperties;assembly=LetsTalk.Core.Common.UI"
+             xmlns:entities="clr-namespace:LetsTalk.Client.Entities;assembly=LetsTalk.Client.Entities"
              xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:attachedProperties="clr-namespace:LetsTalk.Core.Common.UI.AttachedProperties;assembly=LetsTalk.Core.Common.UI"
              mc:Ignorable="d"
              d:DesignHeight="600" d:DesignWidth="700"
              d:DataContext="{d:DesignInstance Type=local:EditSurveyViewModel}">
@@ -36,9 +36,9 @@
                                                 <DataTemplate>
                                                     <TextBox Text="{Binding Path=.}"
                                                              Style="{StaticResource AnswerBoxStyle}">
-                                                        <atachedProperties:WatermarkService.Watermark>
+                                                        <attachedProperties:WatermarkService.Watermark>
                                                             <Label FontSize="20">Enter a Alternative</Label>
-                                                        </atachedProperties:WatermarkService.Watermark>
+                                                        </attachedProperties:WatermarkService.Watermark>
                                                     </TextBox>
                                                 </DataTemplate>
                                             </Setter.Value>
@@ -55,9 +55,9 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBox Grid.ColumnSpan="2" Text="{Binding Question}"
                                          Style="{StaticResource QuestionTitleStyle}">
-                                    <atachedProperties:WatermarkService.Watermark>
+                                    <attachedProperties:WatermarkService.Watermark>
                                         <Label FontSize="20">Enter Question</Label>
-                                    </atachedProperties:WatermarkService.Watermark>
+                                    </attachedProperties:WatermarkService.Watermark>
                                 </TextBox>
                                 <ItemsControl Grid.Row="1" Grid.Column="1" ItemsSource="{Binding AnswerPossibilities}"
                                               Style="{StaticResource AnswerItemsControlStyle}" />
@@ -79,9 +79,9 @@
 
         <TextBox Text="{Binding CurrentSurvey.Title}" Grid.Column="1"
                  Grid.Row="1" VerticalAlignment="Top" Style="{StaticResource SurveyTitle}">
-            <atachedProperties:WatermarkService.Watermark>
+            <attachedProperties:WatermarkService.Watermark>
                 <Label FontSize="20">Enter Survey Title</Label>
-            </atachedProperties:WatermarkService.Watermark>
+            </attachedProperties:WatermarkService.Watermark>
         </TextBox>
         <ItemsControl ItemsSource="{Binding Questions}" Grid.Column="1" Margin="10,50,10,10" Grid.Row="1"
                       Style="{StaticResource QuestionItemsControlStyle}">

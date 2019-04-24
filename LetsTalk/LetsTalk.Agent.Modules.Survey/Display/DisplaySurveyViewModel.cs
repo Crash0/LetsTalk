@@ -5,7 +5,7 @@ using System.ComponentModel.Composition.Primitives;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Letstalk.Client.Entities;
+using LetsTalk.Client.Entities;
 using LetsTalk.Core.Common.UI.Core;
 using System.ComponentModel.Composition;
 using System.Diagnostics;

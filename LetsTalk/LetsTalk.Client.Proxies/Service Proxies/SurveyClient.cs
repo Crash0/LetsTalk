@@ -5,7 +5,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
-using Letstalk.Client.Entities;
+using LetsTalk.Client.Entities;
 using LetsTalk.Client.Contracts;
 using LetsTalk.Core.Common.ServiceModel;
 

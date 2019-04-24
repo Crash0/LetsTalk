@@ -6,7 +6,7 @@
 //             See https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Letstalk.Client.Entities.Miscellaneous
+namespace LetsTalk.Client.Entities.Miscellaneous
 {
     #region Usings
 
@@ -30,7 +30,7 @@ namespace Letstalk.Client.Entities.Miscellaneous
         public static IAddress Unknown = new Address();
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:Letstalk.Client.Entities.Miscellaneous.Address" /> class.
+        ///     Initializes a new instance of the <see cref="T:LetsTalk.Client.Entities.Miscellaneous.Address" /> class.
         /// </summary>
         public Address()
         {
@@ -45,7 +45,7 @@ namespace Letstalk.Client.Entities.Miscellaneous
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Letstalk.Client.Entities.Miscellaneous.Address"/> class
+        /// Initializes a new instance of the <see cref="T:LetsTalk.Client.Entities.Miscellaneous.Address"/> class
         ///     using address information.
         /// </summary>
         /// <param name="addressLine1">

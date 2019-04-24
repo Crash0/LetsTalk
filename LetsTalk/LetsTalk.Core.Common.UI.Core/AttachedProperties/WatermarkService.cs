@@ -7,7 +7,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Documents;
 using LetsTalk.Core.Common.UI.msc;
 
-namespace LetsTalk.Core.Common.UI.AtachedProperties 
+namespace LetsTalk.Core.Common.UI.AttachedProperties 
 {
     /// <summary>
     /// Class that provides the Watermark attached property

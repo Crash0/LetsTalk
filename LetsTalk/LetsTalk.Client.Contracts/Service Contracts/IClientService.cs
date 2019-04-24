@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ServiceModel;
 using LetsTalk.Core.Common.Contracts;
-using CE = Letstalk.Client.Entities;
+using CE = LetsTalk.Client.Entities;
 
 namespace LetsTalk.Client.Contracts
 {

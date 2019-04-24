@@ -1,5 +1,5 @@
 ﻿using System;
-using Letstalk.Client.Entities;
+using LetsTalk.Client.Entities;
 using LetsTalk.Core.Common.Contracts.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

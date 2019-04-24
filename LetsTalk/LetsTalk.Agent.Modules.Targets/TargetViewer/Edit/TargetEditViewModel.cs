@@ -11,7 +11,7 @@ namespace LetsTalk.Agent.Modules.Targets.TargetViewer.Edit
 {
     using System.ComponentModel.Composition;
 
-    using Letstalk.Client.Entities.Targeting;
+    using LetsTalk.Client.Entities.Targeting;
 
     using LetsTalk.Core.Common.UI.Core;
 

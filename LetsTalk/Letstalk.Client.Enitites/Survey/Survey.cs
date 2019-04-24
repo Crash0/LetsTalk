@@ -7,7 +7,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Letstalk.Client.Entities
+namespace LetsTalk.Client.Entities
 {
     #region Usings
 

@@ -1,6 +1,6 @@
 ﻿using LetsTalk.Core.Common.Contracts.Entities;
 
-namespace Letstalk.Client.Entities.Miscellaneous
+namespace LetsTalk.Client.Entities.Miscellaneous
 {
     public class PhoneNumber : IPhoneNumber
     {
