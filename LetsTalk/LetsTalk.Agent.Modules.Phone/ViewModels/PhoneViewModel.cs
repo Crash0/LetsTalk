@@ -4,7 +4,7 @@ using System.ComponentModel.Composition;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using LetsTalk.Client.Contracts;
-using Microsoft.Expression.Interactivity.Core;
+//using Microsoft.Expression.Interactivity.Core;
 using Prism.Mvvm;
 
 namespace LetsTalk.Agent.Modules.Phone
@@ -84,14 +84,14 @@ namespace LetsTalk.Agent.Modules.Phone
                 new PhoneActionViewModel
                 {
                     DisplayName = "send Ping",
-                    Command = new ActionCommand(
-                        i => Task.Run(() => this.telephonyService.Ping()))
+                    //Command = new ActionCommand(
+                      //  i => Task.Run(() => this.telephonyService.Ping()))
                 },
                 new PhoneActionViewModel
                 {
                     DisplayName = "Connect",
-                    Command = new ActionCommand(
-                    i => Task.Run(() => this.telephonyService.Connect(Guid.Parse("D56F4395-3972-4CA9-9BDE-A4173B1EB051"))))
+                    //Command = new ActionCommand(
+                    //i => Task.Run(() => this.telephonyService.Connect(Guid.Parse("D56F4395-3972-4CA9-9BDE-A4173B1EB051"))))
                 },
                 new PhoneActionViewModel {DisplayName = "Testing name3"},
                 new PhoneActionViewModel {DisplayName = "Testing name4"},
