@@ -182,6 +182,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Client.Entites.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsTalk.Services.TimeCardService", "LetsTalk.Services.TimeCardService\LetsTalk.Services.TimeCardService.csproj", "{D859CEC3-D0AB-4571-9D05-9B4744E49E2B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lighthouse", "lighthouse", "{B5C0472E-0BF4-4773-996C-E9E4D471147A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lighthouse", "..\lighthouse\src\Lighthouse\Lighthouse.csproj", "{0C4C6D07-402A-410D-BE3E-672F7F664A9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -416,6 +420,10 @@ Global
 		{D859CEC3-D0AB-4571-9D05-9B4744E49E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D859CEC3-D0AB-4571-9D05-9B4744E49E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D859CEC3-D0AB-4571-9D05-9B4744E49E2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C4C6D07-402A-410D-BE3E-672F7F664A9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4C6D07-402A-410D-BE3E-672F7F664A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4C6D07-402A-410D-BE3E-672F7F664A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C4C6D07-402A-410D-BE3E-672F7F664A9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -498,9 +506,10 @@ Global
 		{47E70E83-73E8-466D-9056-19F7E7EA5A8E} = {A3586439-C99D-4F00-904D-2B61EF4BDD27}
 		{DE9AB180-3052-4247-A4D6-61FD3735F1B1} = {14C82874-70BB-4316-AF64-45F00A638C3E}
 		{D859CEC3-D0AB-4571-9D05-9B4744E49E2B} = {2833D5B2-0AD0-4EF4-A340-4F77259ABE6D}
+		{0C4C6D07-402A-410D-BE3E-672F7F664A9A} = {B5C0472E-0BF4-4773-996C-E9E4D471147A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EEE3AFA8-AC8C-42FB-A545-8017EB0FA301}
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45
+		SolutionGuid = {EEE3AFA8-AC8C-42FB-A545-8017EB0FA301}
 	EndGlobalSection
 EndGlobal
