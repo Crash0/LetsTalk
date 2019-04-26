@@ -8,13 +8,12 @@ using Microsoft.WindowsAzure.Diagnostics;
 using Microsoft.WindowsAzure.ServiceRuntime;
 using LetsTalk.Business.Managers;
 using LetsTalk.Core.Kernel;
-using NServiceBus;
 
 namespace LetsTalkDataService
 {
     public class WebRole : RoleEntryPoint
     {
-        private IStartableBus _bus;
+        //private IStartableBus _bus;
         private List<SM.ServiceHost> _hosts;
         public override bool OnStart()
         {
@@ -31,14 +30,14 @@ namespace LetsTalkDataService
 
                 Console.WriteLine("__________________________________________");
 
-                Console.WriteLine("Starting NServiceBus");
-                var busconfig = BusConfigurator.CreateConfig(EndPoint.WebService);
-                busconfig.RegisterComponents((components =>
-                {
-                    components.RegisterSingleton(typeof(IList<SM.ServiceHost>), _hosts);
-                }));
-                var bus = Bus.Create(busconfig);
-                bus.Start();
+                //Console.WriteLine("Starting NServiceBus");
+                //var busconfig = BusConfigurator.CreateConfig(EndPoint.WebService);
+                //busconfig.RegisterComponents((components =>
+                //{
+                //    components.RegisterSingleton(typeof(IList<SM.ServiceHost>), _hosts);
+                //}));
+                //var bus = Bus.Create(busconfig);
+                //bus.Start();
                 Console.WriteLine("Bus Start OK");
 
 
