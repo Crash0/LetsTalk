@@ -10,7 +10,6 @@
 
 using System;
 using LetsTalk.Core.Kernel;
-using NServiceBus;
 
 namespace LetsTalk.Authentication
 {
@@ -18,12 +17,12 @@ namespace LetsTalk.Authentication
     {
         static void Main(string[] args)
         {
-            var startableBus = Bus.Create(BusConfigurator.CreateConfig(EndPoint.Authorization));
+            //var startableBus = Bus.Create(BusConfigurator.CreateConfig(EndPoint.Authorization));
 
-            using (startableBus.Start())
-            {
-                Console.ReadLine();
-            }
+            //using (startableBus.Start())
+            //{
+            //    Console.ReadLine();
+            //}
 
 
         }   
