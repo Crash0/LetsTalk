@@ -1,0 +1,157 @@
+﻿<Window x:Class="LetsTalk.Client.AgentClient.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
+        Title="Welcome To LetsTalk"
+        WindowStyle="None"
+        Height="500" Width="700"
+        MaxHeight="500" MaxWidth="700"
+        ResizeMode="NoResize"
+        Loaded="LoginWindow_OnLoaded"
+        Closing="LoginWindow_OnClosing">
+    <!--Topmost="True"
+        ShowInTaskbar="False"-->
+    <Window.Resources>
+        <ControlTemplate x:Key="elBtn" TargetType="{x:Type Button}">
+            <Grid>
+                <Ellipse Stroke="Black" VerticalAlignment="Top" Width="36" Height="35" x:Name="theEllipse" />
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Fill" Value="Red" TargetName="theEllipse" />
+                    <Setter Property="Opacity" Value="20" TargetName="theEllipse" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Fill" Value="Gray" TargetName="theEllipse" />
+                </Trigger>
+
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="StatusTemplate" TargetType="{x:Type Label}">
+            <Grid>
+                <Ellipse Stroke="Black" VerticalAlignment="Stretch" Width="15" Height="15" x:Name="theEllipse"
+                         Margin="20,0,19,0" />
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Tag" Value="Connected">
+                    <Setter Property="Fill" Value="Green" TargetName="theEllipse" />
+                    <Setter Property="Opacity" Value="20" TargetName="theEllipse" />
+                </Trigger>
+                <Trigger Property="Tag" Value="NotConnected">
+                    <Setter Property="Fill" Value="red" TargetName="theEllipse" />
+                    <Setter Property="Opacity" Value="20" TargetName="theEllipse" />
+                </Trigger>
+
+
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="setBtn" TargetType="{x:Type Button}">
+            <Grid>
+                <Ellipse Stroke="Black" VerticalAlignment="Top" Width="36" Height="35" x:Name="theEllipse" />
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Fill" Value="#FFBBFF94" TargetName="theEllipse" />
+                    <Setter Property="Opacity" Value="20" TargetName="theEllipse" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Fill" Value="Gray" TargetName="theEllipse" />
+                </Trigger>
+
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="goBtn" TargetType="{x:Type Button}">
+            <Grid>
+                <Ellipse Stroke="Black" VerticalAlignment="Top" Width="36" Height="35" x:Name="theEllipse" />
+
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </Grid>
+
+            <ControlTemplate.Triggers>
+
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Fill" Value="Green" TargetName="theEllipse" />
+                    <Setter Property="Opacity" Value="20" TargetName="theEllipse" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Fill" Value="Gray" TargetName="theEllipse" />
+                </Trigger>
+
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Storyboard x:Key="LoginPoppUP">
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
+                Storyboard.TargetName="LoginControllerGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="486.0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="LoginPoppDown">
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
+                Storyboard.TargetName="LoginControllerGrid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="486.0" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded" />
+    </Window.Triggers>
+    <Grid>
+        <Button x:Name="SettingsButton" Template="{DynamicResource setBtn}" HorizontalAlignment="Left"
+                Margin="51,431,0,34" Width="75" Content="S" />
+        <Button x:Name="ExitButton" Template="{DynamicResource elBtn}" HorizontalAlignment="Left" Margin="10,431,0,34"
+                Width="75" Content="X" />
+        <ProgressBar x:Name="LoadProgresbar" HorizontalAlignment="Left" Height="10" Margin="10,10,0,0"
+                     VerticalAlignment="Top" Width="680" />
+        <Label x:Name="StatusLED" Template="{DynamicResource StatusTemplate}" Margin="0,431,10,34" Content=""
+               HorizontalAlignment="Right" Width="75" />
+        <!--Login form-->
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden" x:Name="LoginControllerGrid"
+              Height="449" Width="383" Margin="131,51,0,0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Grid.RenderTransform>
+
+
+            <Button x:Name="LoginButon" Template="{DynamicResource goBtn}" Opacity="30" Content="--&gt;"
+                    HorizontalAlignment="Left" Margin="308,381,0,0" VerticalAlignment="Top" Width="75"
+                    RenderTransformOrigin="-0.116,0.577" />
+            <TextBlock HorizontalAlignment="Left" Margin="43,39,0,0" TextWrapping="Wrap" Text="Login Details"
+                       VerticalAlignment="Top" FontSize="26" FontWeight="SemiBold" />
+            <Label Content="Username" HorizontalAlignment="Left" Margin="43,153,0,0" VerticalAlignment="Top" />
+            <Label Content="Password" HorizontalAlignment="Left" Margin="43,181,0,0" VerticalAlignment="Top" />
+            <CheckBox x:Name="remembleruname" Content="Remember Username" HorizontalAlignment="Left"
+                      Margin="10,424,0,0" VerticalAlignment="Top" />
+            <TextBox x:Name="uNameTextbox" Height="15" Margin="112,164,114,270" />
+            <PasswordBox x:Name="passwordTxtBox" Height="15" Margin="112,184,114,250" />
+            <Border Visibility="Visible" BorderBrush="Black" BorderThickness="1,1,1,0" />
+            <Label x:Name="statusLabel" Content="Could Not Connect to Server" Foreground="Red" Visibility="Hidden"
+                   HorizontalAlignment="Left" Margin="43,79,0,0" VerticalAlignment="Top"
+                   RenderTransformOrigin="-0.434,-0.346" Width="171" Height="46" />
+            <CheckBox x:Name="rememberPwdChkbx" Content="Remember Password" HorizontalAlignment="Left"
+                      Margin="149,424,0,0" VerticalAlignment="Top" />
+            <TextBox x:Name="PlaceTxtbox" HorizontalAlignment="Left" Height="23" Margin="112,204,0,0"
+                     TextWrapping="Wrap" Text="1004" VerticalAlignment="Top" Width="157" />
+            <Label Content="Place" HorizontalAlignment="Left" Margin="43,209,0,0" VerticalAlignment="Top" />
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" TextWrapping="Wrap" Text="WaSAP"
+                   VerticalAlignment="Top" FontSize="22" />
+        <Viewbox Height="100" Width="100" Margin="300,174,300,226">
+<!-- INSERT CIRCULAR PROGRESSBAR HERE -->
+        </Viewbox>
+
+
+    </Grid>
+</Window>

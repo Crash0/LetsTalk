@@ -17,7 +17,7 @@
         Title="Let`s Talk Agent Desktop" Height="768" Width="1024" WindowState="Maximized">
     <Window.Background>
         <!--Get youre own background image ! -->
-        <ImageBrush ImageSource="Resources/background.png" />
+        <ImageBrush ImageSource="../Resources/background.png" />
     </Window.Background>
     <Window.Resources>
         <Style TargetType="TabItem">

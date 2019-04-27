@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LetsTalk.Agent.Modules.TimeCard
 {
-    public class Class1
+    public class TimeCardModule
     {
     }
 }
