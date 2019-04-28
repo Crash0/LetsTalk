@@ -7,6 +7,9 @@
 // <summary>  
 // <summary>
 #endregion
+
+using Prism.Modularity;
+
 namespace LetsTalk.Agent.Modules.ToolBar
 {
     /*
@@ -14,8 +17,11 @@ namespace LetsTalk.Agent.Modules.ToolBar
      * https://msdn.microsoft.com/en-us/library/ff921122.aspx
      * and see phone viewmodel in old agentclient
      */
-    public class ToolbarModule
+    public class ToolbarModule : IModule
     {
-        
+        public void Initialize()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

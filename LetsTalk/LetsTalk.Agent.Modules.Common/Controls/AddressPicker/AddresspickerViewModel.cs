@@ -52,17 +52,17 @@ namespace LetsTalk.Agent.Modules.Common.Controls
 
         }
 
-        private IAddress selectedAddress;
+        private IAddress _selectedAddress;
 
         public IAddress SelectedAddress
         {
             get
             {
-                return this.selectedAddress;
+                return this._selectedAddress;
             }
             set
             {
-                this.selectedAddress = value;
+                this._selectedAddress = value;
                 OnPropertyChanged(() => this.SelectedAddress);
             }
         }

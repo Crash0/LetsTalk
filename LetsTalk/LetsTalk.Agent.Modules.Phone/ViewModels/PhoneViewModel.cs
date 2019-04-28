@@ -4,6 +4,9 @@ using System.ComponentModel.Composition;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using LetsTalk.Client.Contracts;
+using LetsTalk.Core.Common.UI.Commands;
+using LetsTalk.Core.Common.UI.Events;
+using Prism.Events;
 //using Microsoft.Expression.Interactivity.Core;
 using Prism.Mvvm;
 
@@ -11,8 +14,9 @@ namespace LetsTalk.Agent.Modules.Phone
 {
     [Export(typeof(IPhoneViewModel))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    internal class PhoneViewModel : BindableBase, IPhoneViewModel
+    internal class PhoneViewModel : BindableBase, IPhoneViewModel, IDisposable
     {
+        public IEventAggregator EventAggregator { get; }
         private readonly ITelephonyService telephonyService;
 
         private readonly ITargetingService targetingService;
@@ -22,16 +26,23 @@ namespace LetsTalk.Agent.Modules.Phone
         private bool isConnected = false;
         
         [ImportingConstructor]
-        public PhoneViewModel(ITelephonyService telephonyService, ITargetingService targetingService)
+        public PhoneViewModel(ITelephonyService telephonyService, ITargetingService targetingService, IEventAggregator eventAggregator)
         {
+            EventAggregator = eventAggregator;
             this.targetingService = targetingService;
             this.telephonyService = telephonyService;
             telephonyService.GetCallbacks().OnCallerConnect += PhoneViewModel_OnCallerConnect;
             telephonyService.GetCallbacks().OnConnectionSucceeded += PhoneViewModel_OnConnectionSucceeded;
             telephonyService.GetCallbacks().OnServerDisconnect += PhoneViewModel_OnServerDisconnect;
 
+            _subscriptionToken = EventAggregator.GetEvent<FinishedInitializingEvent>().Subscribe(InitAfterLoad);
+
+            
             this.GetDefaultCommands();
         }
+
+        private readonly SubscriptionToken _subscriptionToken;
+         
 
         private void PhoneViewModel_OnServerDisconnect(object sender)
         {
@@ -45,6 +56,11 @@ namespace LetsTalk.Agent.Modules.Phone
 
         public ICommand CallCommand { get; }
         
+        public void InitAfterLoad(int state)
+        {
+            EventAggregator.GetEvent<AddToolBarButtonEvent>().Publish(new ToolbarActionDelegate(){DisplayName = "PhoneSettings"});
+        }
+
         /// <summary>
         /// Gets the Current caller
         /// </summary>
@@ -114,6 +130,10 @@ namespace LetsTalk.Agent.Modules.Phone
         {
             IsConnected = true;
         }
-        
+
+        public void Dispose()
+        {
+            _subscriptionToken?.Dispose();
+        }
     }
 }

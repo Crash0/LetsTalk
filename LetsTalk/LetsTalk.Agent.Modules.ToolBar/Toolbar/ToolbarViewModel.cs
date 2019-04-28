@@ -34,7 +34,7 @@ namespace LetsTalk.Agent.Modules.ToolBar.Toolbar
             _toolbarActions = new ObservableCollection<ToolbarActionDelegate>();
             _eventAggregator = eventAggregator;
             _subscriptionToken = _eventAggregator.GetEvent<AddToolBarButtonEvent>().Subscribe(Action);
-
+           
             /*
              * TestData
              */

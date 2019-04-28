@@ -48,13 +48,15 @@ namespace LetsTalk.Agent
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(AutoPopulateExportedViewsBehavior).Assembly));
 
             // Modules
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ToolbarModule).Assembly));
+
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(TargetModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(PhoneModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(DashboardModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(CustomerModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(SurveyModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(HelpdeskModule).Assembly));
-            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ToolbarModule).Assembly));
+            
         }
 
         /// <summary>
