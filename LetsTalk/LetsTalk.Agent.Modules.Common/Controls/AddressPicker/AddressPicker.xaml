@@ -8,9 +8,10 @@
              d:DesignHeight="30" d:DesignWidth="200"
              d:DataContext="{ d:DesignInstance Type=controls:AddressPickerViewModel}"
              >
-    <UserControl.DataContext>
+    <!--TODO: This is breaking for SomeWiredReason-->
+    <!--<UserControl.DataContext>
         <controls:AddressPickerViewModel/>
-    </UserControl.DataContext>
+    </UserControl.DataContext>-->
     <Grid>
 
         <Grid.ColumnDefinitions>

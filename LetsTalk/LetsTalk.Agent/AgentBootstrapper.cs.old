@@ -24,13 +24,13 @@ namespace LetsTalk.Agent
     using LetsTalk.Core.Common.UI.Events;
 
     using Prism.Events;
-    using Prism.Mef;
+    using Prism.Unity;
     using Prism.Regions;
 
     /// <summary>
     ///     The boot class.
     /// </summary>
-    public partial class AgentBootstrapper : MefBootstrapper
+    public partial class AgentBootstrapper : boo
     {
         /// <summary>
         ///     TODO The configure aggregate catalog.

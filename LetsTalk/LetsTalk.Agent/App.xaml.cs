@@ -1,14 +1,35 @@
 ﻿using System;
 using System.Windows;
+using LetsTalk.Agent.Modules.TimeCard;
 using Microsoft.Practices.EnterpriseLibrary.ExceptionHandling;
+using Prism.Ioc;
+using Prism.Modularity;
+using Prism.Unity;
 
 namespace LetsTalk.Agent
 {
     /// <summary>
     ///     Interaction logic for App.xaml
     /// </summary>
-    public partial class App : Application
+    public partial class App : PrismApplication
     {
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            //TODO: What Do I do?
+        }
+
+        protected override Window CreateShell()
+        {
+            return Container.Resolve<Shell>();
+        }
+
+        protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
+        {
+            moduleCatalog.AddModule<TimeCardModule>();
+            base.ConfigureModuleCatalog(moduleCatalog);
+        }
+
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -26,8 +47,8 @@ namespace LetsTalk.Agent
 
             try
             {
-                var bootstrapper = new AgentBootstrapper();
-                bootstrapper.Run();
+                //var bootstrapper = new AgentBootstrapper();
+                //bootstrapper.Run();
 
             }
             catch (Exception ex)
@@ -53,8 +74,8 @@ namespace LetsTalk.Agent
 
         private static void RunInDebugMode()
         {
-            var bootstrapper = new AgentBootstrapper();
-            bootstrapper.Run();
+            //var bootstrapper = new AgentBootstrapper();
+            //bootstrapper.Run();
         }
     }
 }

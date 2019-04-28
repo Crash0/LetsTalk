@@ -7,14 +7,11 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Windows.Input;
+
 namespace LetsTalk.Agent.Modules.Common.Controls
 {
-    #region Usings
-
-    using System.ComponentModel.Composition;
-    using System.Windows;
-    using System.Windows.Input;
-    
+    #region Usings    
     using LetsTalk.Core.Common.Contracts.Entities;
     using LetsTalk.Core.Common.UI.Core;
 
@@ -25,8 +22,7 @@ namespace LetsTalk.Agent.Modules.Common.Controls
     /// <summary>
     /// TODO The address picker view model.
     /// </summary>
-    [Export(typeof(IAddressPickerViewModel))]
-    [PartCreationPolicy(CreationPolicy.NonShared)]
+    
     public class AddressPickerViewModel : ViewModelBase, IAddressPickerViewModel
     {
         //private DialogManager dialogManager;

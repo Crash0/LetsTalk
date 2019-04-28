@@ -17,11 +17,8 @@ namespace LetsTalk.Agent.Modules.ToolBar
      * https://msdn.microsoft.com/en-us/library/ff921122.aspx
      * and see phone viewmodel in old agentclient
      */
-    public class ToolbarModule : IModule
+    public class ToolbarModule 
     {
-        public void Initialize()
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }

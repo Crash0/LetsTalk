@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,26 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using LetsTalk.Agent.ViewModels;
-using Prism.Events;
 
-namespace LetsTalk.Agent
+namespace LetsTalk.Agent.Modules.TimeCard.Views
 {
     /// <summary>
-    /// Interaction logic for Shell.xaml
+    /// Interaction logic for StampingLog.xaml
     /// </summary>
-    public partial class Shell : Window
+    public partial class StampingLog : UserControl
     {
-        public Shell()
+        public StampingLog()
         {
             InitializeComponent();
-            
-        }
-
-        private ShellViewModel ViewModel
-        {
-            set { DataContext = value; }
         }
     }
 }
